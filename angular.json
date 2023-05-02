@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "tisp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -60,10 +60,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "time-spender-frontend:build:production"
+              "browserTarget": "time-spender-frontend:build:production",
+              "proxyConfig": "proxy.conf.json"
             },
             "development": {
-              "browserTarget": "time-spender-frontend:build:development"
+              "browserTarget": "time-spender-frontend:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
