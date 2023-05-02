@@ -1,0 +1,35 @@
+.card {
+    background-color: #E8E8E8;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    margin: 12px;
+    max-width: 300px;
+    padding: 10px;
+    text-align: center;
+}
+
+    .card h2 {
+        font-size: 1.3rem;
+        margin: 10px 0;
+    }
+
+    .card p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 10px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+    }
+
+    .card a {
+        color: #0094ffff;
+        text-decoration: none;
+    }
+
+@media screen and (min-width: 768px) {
+    .card {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
