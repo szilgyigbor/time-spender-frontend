@@ -1,4 +1,4 @@
-# Time Spender Frontend
+# Free Time Spender Frontend
 
 This is an Angular-based frontend application designed to help users manage and track their leisure time activities. It offers multiple features and connects to a custom ASP.NET backend to fetch and store data.
 
