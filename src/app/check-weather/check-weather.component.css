@@ -1,20 +1,12 @@
 .check-weather-container {
     background-color: #E8E8E8;
+    /* background-image: url('/assets/weather-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; */
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#weather {
-    display: none;
-    font-size: 20px;
-    max-width: 350px;
-    margin-right: 20px;
-    margin-left: 0px;
-    float: left;
-    border: 5px solid #ccc;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.6);
 }
 
 
