@@ -1,3 +1,10 @@
+.read-news-container {
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .card {
     background-color: #E8E8E8;
     border-radius: 5px;
