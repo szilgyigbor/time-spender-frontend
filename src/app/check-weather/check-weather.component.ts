@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { LocationItem, WeatherItem } from '../interfaces/weather-item';
 
 @Component({
   selector: 'tisp-check-weather',
@@ -8,34 +9,56 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CheckWeatherComponent {
 
-  location: string = 'budapest';
-  imageUrl: string = '';
+  location: string = '';
   pictureDatas: any = [];
+  imageUrl: string = '';
+  weatherItems: WeatherItem = {} as WeatherItem;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    
+  }
 
   sendLocation() {
-    this.http.post('/api/getimage', JSON.stringify(this.location), {
+    console.log('Location:', this.location);
+    this.getImageUrl(this.location);
+    this.getWeatherData(this.location);
+    
+  }
+
+  getImageUrl(location: string) {
+    this.http.post('/api/getimage', JSON.stringify(location), {
       headers: {
         'Content-Type': 'application/json'
       }
     })
       .subscribe((data) => {
-        console.log('Data:', data);
         this.pictureDatas = data
-        this.imageUrl = this.pictureDatas.sizes.size.find((size: { label: string; }) => size.label === "Large").source;
+        const imageUrl = this.pictureDatas.sizes.size.find((size: { label: string; }) => size.label === "Large").source;
+        this.imageUrl = `url('${imageUrl}')`;
         console.log('Image url:', this.imageUrl);
-        document.body.style.backgroundImage = "url('" + this.imageUrl + "')";
-        document.body.style.backgroundRepeat = "no-repeat";
-        document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundPosition = "center"; 
-        
       });
+  }
+
+  getWeatherData(location: string) {
+    this.http.post('/api/getweather', JSON.stringify(location), {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .subscribe((data: any) => {
+      console.log('WeatherData:', data);
+      this.weatherItems = data as WeatherItem;
+      console.log('WeatherData:', this.weatherItems.location.country);
+      console.log('WeatherData:', this.weatherItems.location.name);
+      console.log('WeatherData:', this.weatherItems.current.temp_c);
+      console.log('WeatherData:', this.weatherItems.current.condition.icon);
+      console.log('WeatherData:', this.weatherItems.current.condition.text);
+    });
   }
 
 
   ngOnInit(): void {
-    this.sendLocation();
+    //this.sendLocation();
   }
 
 }
