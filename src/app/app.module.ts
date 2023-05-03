@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReadNewsComponent } from './read-news/read-news.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReadNewsComponent,
-    HomePageComponent
+    HomePageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
