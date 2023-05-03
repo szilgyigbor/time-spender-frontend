@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { ReadNewsComponent } from './read-news/read-news.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
+import { CheckWeatherComponent } from './check-weather/check-weather.component';
+import { ChatWithGptComponent } from './chat-with-gpt/chat-with-gpt.component';
+import { PlayFowComponent } from './play-fow/play-fow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReadNewsComponent,
     HomePageComponent,
-    HeaderComponent
+    HeaderComponent,
+    CheckWeatherComponent,
+    ChatWithGptComponent,
+    PlayFowComponent
   ],
   imports: [
     BrowserModule,
