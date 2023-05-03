@@ -1,0 +1,21 @@
+header {
+    background-color: rgb(110, 106, 130);
+    padding: 10px;
+    width: 100%;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    font-size: larger;
+  }
+  
+  a:hover {
+    color: #04cdf0;
+  }

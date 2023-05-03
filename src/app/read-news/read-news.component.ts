@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { tap } from 'rxjs/operators';
+import { NewsItem } from '../interfaces/news-item';
 
 @Component({
   selector: 'tisp-read-news',
@@ -9,22 +9,19 @@ import { tap } from 'rxjs/operators';
 })
 export class ReadNewsComponent {
   title: string = 'time-spender-frontend';
-  news: string[] = [];
+  news: NewsItem[] = [];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     
-    /* this.getNews().pipe(
-      tap((data: any) => {
-        console.log('News data:', data);
-        this.news = data;
-      }),
-    ).subscribe(); */
+    this.getNews().subscribe((data: any) => {
+      console.log('News data:', data.articles);
+      this.news = data.articles;
+    });
   }
     
   getNews() {
     return this.http.get('/api/getnews');
   }
-
 }

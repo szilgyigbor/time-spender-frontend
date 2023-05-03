@@ -1,3 +1,10 @@
+.home-page-container {
+    background-color: #E8E8E8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .button {
     background-color: #4CAF50;
     color: white;
