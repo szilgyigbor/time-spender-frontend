@@ -31,6 +31,6 @@ import { WeatherDataComponent } from './check-weather/weather-data/weather-data.
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
