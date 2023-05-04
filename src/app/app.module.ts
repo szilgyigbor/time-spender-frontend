@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { CheckWeatherComponent } from './check-weather/check-weather.component';
 import { ChatWithGptComponent } from './chat-with-gpt/chat-with-gpt.component';
 import { PlayFowComponent } from './play-fow/play-fow.component';
+import { WeatherDataComponent } from './check-weather/weather-data/weather-data.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { PlayFowComponent } from './play-fow/play-fow.component';
     HeaderComponent,
     CheckWeatherComponent,
     ChatWithGptComponent,
-    PlayFowComponent
+    PlayFowComponent,
+    WeatherDataComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
