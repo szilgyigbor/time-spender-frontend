@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LocationItem, WeatherItem } from '../interfaces/weather-item';
+import { FlickrImage } from '../interfaces/flickr-image';
 
 @Component({
   selector: 'tisp-check-weather',
@@ -15,16 +16,16 @@ export class CheckWeatherComponent {
   weatherItems: WeatherItem = {} as WeatherItem;
 
   constructor(private http: HttpClient) { 
-    
   }
 
   sendLocation() {
     console.log('Location:', this.location);
     this.getImageUrl(this.location);
     this.getWeatherData(this.location);
-    
+    this.location = '';
   }
 
+  
   getImageUrl(location: string) {
     this.http.post('/api/getimage', JSON.stringify(location), {
       headers: {

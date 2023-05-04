@@ -1,17 +1,29 @@
 .check-weather-container {
     background-color: #E8E8E8;
-    /* background-image: url('/assets/weather-background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
-
 
 #input-field {
     padding: 15px;
     margin-left: auto;
-    margin-right: 0px;
+    margin-right: auto;
+}
+
+#input-field input {
+    font-size: 20px;
+    padding: 8px;
+    width: 250px;
+    height: 21px;
+}
+  
+#input-field button {
+font-size: 19px;
+padding: 8px 20px;
+height: 40px;
+}
+
+.center-content {
+    align-items: center;
+    justify-content: center;
 }
