@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'tisp-weather-data',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./weather-data.component.css']
 })
 export class WeatherDataComponent {
-
+  @Input() locationName!: string;
+  @Input() country!: string;
+  @Input() temperature!: number;
+  @Input() icon!: string;
+  @Input() text!: string;
+  @Input() windStrength!: number;
 }
