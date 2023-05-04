@@ -7,8 +7,8 @@
     float: left;
     border: 10px solid #ccc;
     padding: 15px;
-    background: url('/assets/weather-background2.png') no-repeat center center fixed;
-    background-color: rgba(255, 255, 255, 0.6);
+    /* background: url('/assets/weather-background2.png') no-repeat center center fixed;
+    background-color: rgba(255, 255, 255, 0.6); */
     align-items: center;
     justify-content: center;
 }
