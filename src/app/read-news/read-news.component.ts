@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { NewsItem } from '../interfaces/news-item';
+import { GetRequestsService } from '../services/get-requests.service';
 
 @Component({
   selector: 'tisp-read-news',
@@ -11,17 +11,14 @@ export class ReadNewsComponent {
   title: string = 'time-spender-frontend';
   news: NewsItem[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private getRequestsService: GetRequestsService) { }
 
   ngOnInit(): void {
     
-    this.getNews().subscribe((data: any) => {
+    this.getRequestsService.getNewsRequest().subscribe((data: any) => {
       console.log('News data:', data.articles);
       this.news = data.articles;
     });
   }
-    
-  getNews() {
-    return this.http.get('/api/getnews');
-  }
+ 
 }
