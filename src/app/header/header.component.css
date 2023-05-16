@@ -1,7 +1,8 @@
 header {
-    background-color: rgb(110, 106, 130);
+    background-color: rgb(164, 157, 197);
     padding: 10px;
     width: 100%;
+    font-size: 25px;
   }
   
   nav {
@@ -17,5 +18,5 @@ header {
   }
   
   a:hover {
-    color: #04cdf0;
+    color: #000000;
   }
