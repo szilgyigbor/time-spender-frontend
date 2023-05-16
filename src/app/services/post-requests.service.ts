@@ -23,4 +23,12 @@ export class PostRequestsService {
       }
     });
   }
+
+  sendAudioFile(file: File) {
+    const formData = new FormData();
+    formData.append('audioFile', file);
+  
+    return this.http.post('http://localhost:5000/transcribe', formData);
+}
+
 }
