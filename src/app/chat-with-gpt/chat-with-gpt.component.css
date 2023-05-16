@@ -55,3 +55,45 @@
     font-weight: bold;
     color: darksalmon;
 }
+
+
+.button {
+    border-radius: 30px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 13px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 10px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.startListenButton {
+    background-color: rgb(233, 255, 225);
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.startListenButton:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.stopListenButton {
+    background-color: rgb(255, 226, 226);
+    color: black;
+    border: 2px solid #cf462a;
+}
+
+.stopListenButton:hover {
+    background-color: #d74723;
+    color: white;
+}
+
+.recording {
+    background-color: #4CAF50;
+}

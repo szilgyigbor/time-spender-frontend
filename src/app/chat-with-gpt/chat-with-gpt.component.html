@@ -1,6 +1,10 @@
 <div>
     <h1 id="welcomeString">Talk With the ChatGPT</h1>
-    <div id="chat-messages"></div>
+    <p>
+        <button class="button startListenButton" [ngClass]="{'recording': isRecording}" (click)="startRecording()" >Start</button>
+        <button class="button stopListenButton" (click)="stopRecording()" >Stop</button>
+    </p>
+    <div id="chat-messages">{{textContent}}</div>
     <input type="text" id="chat-input">
     <button id="chat-send-button">Send</button>
 </div>
