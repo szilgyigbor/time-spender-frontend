@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { PostRequestsService } from '../services/post-requests.service';
-
-
 
 @Component({
   selector: 'tisp-chat-with-gpt',
   templateUrl: './chat-with-gpt.component.html',
   styleUrls: ['./chat-with-gpt.component.css']
 })
+
 export class ChatWithGptComponent implements OnInit {
+  @ViewChild('messagesContainer', { read: ElementRef })
+  private messagesContainer!: ElementRef;
 
   isRecording = false;
-  textContent: string = '';
-
+  conversationContent: {role: string, content: string}[] = [];
   mediaRecorder: any;
   audioChunks: any[] = [];
 
@@ -44,21 +43,39 @@ export class ChatWithGptComponent implements OnInit {
   startRecording() {
     this.audioChunks = [];
     this.isRecording = true;
-    //this.mediaRecorder.start();
+    this.mediaRecorder.start();
   }
 
   stopRecording() {
     this.isRecording = false;
-    //this.mediaRecorder.stop();
+    this.mediaRecorder.stop();
   }
 
 
   sendAudioToTranscript(audioFile: File) {
     this.postRequestService.sendAudioFile(audioFile).subscribe(response => {
+      this.conversationContent.push({role: 'user', content: response.toString()});
+      this.sendMessage();
       console.log(response);
-      this.textContent = response.toString();
     });
   }
 
+  sendMessage() {
+    this.postRequestService.sendMessageHistory(this.conversationContent).subscribe(response => {
+      console.log(response);
+      this.conversationContent = response;
+    });
+  }
+
+  ngAfterViewChecked() {
+    this.scrollToBottom();
+  }
+
+
+  scrollToBottom(): void {
+    try {
+      this.messagesContainer.nativeElement.scrollTop = this.messagesContainer.nativeElement.scrollHeight;
+    } catch(err) { }
+  }
  
 }
