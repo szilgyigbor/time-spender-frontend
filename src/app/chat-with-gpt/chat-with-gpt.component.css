@@ -1,3 +1,17 @@
+.chat-with-gpt {
+    background-color: #6b7280;
+    border: 1px solid #6b7280;
+}
+
+#welcomeString {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 05px;
+    text-align: center;
+}
+
 #chat-messages {
     margin-top: 30px;
     height: 420px;
@@ -9,7 +23,7 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #F0F0F0;
+    background-color: #9ca3af;
     line-height: 1.2em;
     font-size: 20px;
 }
@@ -18,7 +32,8 @@
         border: 1px solid #ccc;
         padding: 10px;
         border-radius: 10px;
-        background-color: #E8E8E8;
+        background-color: #4b5563;
+        color: white;
         margin: 5px 0;
     }
 
@@ -48,18 +63,18 @@
 
 .chat-me {
     font-weight: bold;
-    color: darkcyan;
+    color: lightblue;
 }
 
 .chat-bot {
     font-weight: bold;
-    color: darksalmon;
+    color: lightsalmon;
 }
 
 
 .button {
     border-radius: 30px;
-    background-color: #4CAF50;
+    /*background-color: #4CAF50;*/
     color: white;
     padding: 13px 13px;
     text-align: center;
@@ -73,27 +88,27 @@
 
 
 .startListenButton {
-    background-color: rgb(233, 255, 225);
-    color: black;
-    border: 2px solid #4CAF50;
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #e2f6e3;
 }
 
 .startListenButton:hover {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #237f23;  /* rgb(233, 255, 225)*/
+    border: 2px solid #020202;
 }
 
 .stopListenButton {
-    background-color: rgb(255, 226, 226);
-    color: black;
-    border: 2px solid #cf462a;
+    background-color: #d74723;
+    color: white;
+    border: 2px solid #e2f6e3;
 }
 
 .stopListenButton:hover {
-    background-color: #d74723;
-    color: white;
+    background-color: #a4391e;  /*rgb(255, 226, 226)*/
+    border: 2px solid #020202;
 }
 
 .recording {
-    background-color: #4CAF50;
+    background-color: #bc942d;
 }
