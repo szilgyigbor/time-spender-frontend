@@ -1,10 +1,12 @@
-<div>
-    <h1 id="welcomeString">Talk With the ChatGPT</h1>
-    <p>
+<div class="chat-with-gpt">
+    <h1 id="welcomeString">Speak with the ChatGPT</h1>
         <button class="button startListenButton" [ngClass]="{'recording': isRecording}" (click)="startRecording()" >Start</button>
         <button class="button stopListenButton" (click)="stopRecording()" >Stop</button>
-    </p>
-    <div id="chat-messages">{{textContent}}</div>
-    <input type="text" id="chat-input">
-    <button id="chat-send-button">Send</button>
+    <div id="chat-messages" #messagesContainer>
+        <p *ngFor="let message of conversationContent">
+            <span [ngClass]="{'chat-me': message.role === 'user', 'chat-bot': message.role === 'assistant'}">
+                {{message.role}}:</span> {{message.content}}
+            <br>
+        </p>
+    </div>
 </div>
