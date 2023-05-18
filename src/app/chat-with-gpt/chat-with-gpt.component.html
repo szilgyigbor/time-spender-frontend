@@ -1,6 +1,7 @@
 <div class="chat-with-gpt">
     <h1 id="welcomeString">Speak with the ChatGPT</h1>
-        <button class="button startListenButton" [ngClass]="{'recording': isRecording}" (click)="startRecording()" >Start</button>
+        <button class="button startListenButton" [ngClass]="{'recording': isRecording}" (click)="startRecording()">
+            {{isRecording ? 'Recording...' : 'Start record'}}</button>
         <button class="button stopListenButton" (click)="stopRecording()" >Stop</button>
     <div id="chat-messages" #messagesContainer>
         <p *ngFor="let message of conversationContent">
