@@ -64,11 +64,19 @@ export class ChatWithGptComponent implements OnInit {
     this.postRequestService.sendMessageHistory(this.conversationContent).subscribe(response => {
       console.log(response);
       this.conversationContent = response;
+      this.speak(response[response.length - 1].content);
     });
   }
 
   ngAfterViewChecked() {
     this.scrollToBottom();
+  }
+
+  speak(text: string): void {
+    const utterance = new SpeechSynthesisUtterance(text);
+    let voices = window.speechSynthesis.getVoices();
+    utterance.rate = 1.3;
+    window.speechSynthesis.speak(utterance);
   }
 
 
