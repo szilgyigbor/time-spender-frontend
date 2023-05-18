@@ -1,12 +1,13 @@
 .read-news-container {
-    background-color: #F0F0F0;
+    background-color: #6b7280;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .card {
-    background-color: #E8E8E8;
+    background-color: #4b5563;
     border-radius: 5px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     margin: 12px;
