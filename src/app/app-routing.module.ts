@@ -7,6 +7,7 @@ import { CheckWeatherComponent } from './check-weather/check-weather.component';
 import { ChatWithGptComponent } from './chat-with-gpt/chat-with-gpt.component';
 import { PlayFowComponent } from './play-fow/play-fow.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'chat-with-gpt', component: ChatWithGptComponent },
   { path: 'play-fow', component: PlayFowComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'sign-up', component: SignUpPageComponent },
 ];
 
 @NgModule({
