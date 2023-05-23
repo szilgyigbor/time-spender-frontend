@@ -20,7 +20,7 @@
 }
   
 #weather span.dynamic {
-    color: rgb(58, 56, 95);
+    color: white;
     font-style: italic;
     font-weight: bold;
     opacity: 0;
