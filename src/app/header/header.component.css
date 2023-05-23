@@ -12,6 +12,19 @@ nav {
   display: flex;
 }
 
+.button {
+  /*background-color: #4CAF50;*/
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 3px 3px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
 .right-buttons {
   margin-left: auto;
   display: flex;
@@ -20,25 +33,31 @@ nav {
 
 .home-button {
   text-decoration: none;
-  color: white;
+  background-color: #374151;
+  border: 2px solid darkgoldenrod;
+  color: darkgoldenrod;
   margin-left: 10px;
   font-size: 25px;
 }
 
 .home-button:hover {
-  color: #000000;
+  background-color: darkgoldenrod;
+  color: white;
 }
 
 .login-button, .signup-button {
-  text-decoration: none;
-  color: white;
+  /*text-decoration: none;*/
+  border: 2px solid #4CAF50;
+  background-color: #374151;
+  color: #4CAF50;
   margin-left: 10px;
   font-size: 25px;
-  padding-right: 10px;
+  /*padding-right: 10px;*/
 }
 
 .login-button:hover, .signup-button:hover {
-  color: #000000;
+  background-color: #4CAF50;
+  color: white;
 }
 
   
