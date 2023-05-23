@@ -28,11 +28,11 @@ export class PostRequestsService {
     const formData = new FormData();
     formData.append('audioFile', file);
   
-    return this.http.post('http://localhost:5000/api2/transcribe', formData);
+    return this.http.post('http://localhost:5000/pia/transcribe', formData);
   }
 
   sendMessageHistory(history: {role: string, content: string}[]) {
-    return this.http.post<{role: string, content: string}[]>('http://localhost:5000/api2/get-answer', JSON.stringify(history), {
+    return this.http.post<{role: string, content: string}[]>('http://localhost:5000/pia/get-answer', JSON.stringify(history), {
       headers: {
         'Content-Type': 'application/json'
       }
