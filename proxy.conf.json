@@ -5,7 +5,7 @@
       "changeOrigin": true,
       "logLevel": "debug"
     },
-    "/api2": {
+    "/pia": {
       "target": "http://localhost:5000",
       "secure": false,
       "changeOrigin": true,
