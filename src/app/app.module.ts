@@ -13,6 +13,7 @@ import { ChatWithGptComponent } from './chat-with-gpt/chat-with-gpt.component';
 import { PlayFowComponent } from './play-fow/play-fow.component';
 import { WeatherDataComponent } from './check-weather/weather-data/weather-data.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
     ChatWithGptComponent,
     PlayFowComponent,
     WeatherDataComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    SignUpPageComponent
   ],
   imports: [
     BrowserModule,
