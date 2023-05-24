@@ -60,5 +60,18 @@ nav {
   color: white;
 }
 
+.logout-button {
+  border: 2px solid #f44336;
+  background-color: #374151;
+  color: #f44336;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.logout-button:hover {
+  background-color: #f44336;
+  color: white;
+}
+
   
   
