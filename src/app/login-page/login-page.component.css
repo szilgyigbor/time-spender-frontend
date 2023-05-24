@@ -1,0 +1,36 @@
+.login-container{
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.input-field {
+    background-color: #475469;
+    color: white;
+    padding: 8px;
+    /*margin: 15px;*/
+    font-size: 22px;
+    width: 350px;
+    height: 30px;
+    border: #4CAF50;
+}
+
+.send-button {
+    border: 2px solid #4CAF50;
+    background-color: #475469;
+    padding: 5px 15px;
+    color: #4CAF50;
+    font-size: 25px;
+    margin-top: 40px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}

@@ -1,1 +1,21 @@
-<p>sign-up-page works!</p>
+<div ngClass="sign-up-container">
+    <div>
+        <h2>Username:</h2>
+        <input ngClass="input-field" type="text" [(ngModel)]="username" placeholder="Type in a Username...">
+    </div>
+    <div>
+        <h2>Email:</h2>
+        <input ngClass="input-field" type="text" [(ngModel)]="email" placeholder="Type in a Email...">
+    </div>
+    <div>
+        <h2>Password:</h2>
+        <input ngClass="input-field" type="text" [(ngModel)]="password" placeholder="Type in a Password...">
+    </div>
+    <div>
+        <h2>Password confirm:</h2>
+        <input ngClass="input-field" type="text" [(ngModel)]="passwordConfirm" placeholder="Type in the Password again...">
+    </div>
+    <div>
+        <button ngClass="send-button" (click)="sendSignUp()">Login</button>
+    </div>
+</div>

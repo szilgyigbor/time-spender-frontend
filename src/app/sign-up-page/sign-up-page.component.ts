@@ -7,4 +7,32 @@ import { Component } from '@angular/core';
 })
 export class SignUpPageComponent {
 
+  username: string = '';
+  password: string = '';
+  email: string = '';
+  passwordConfirm: string = '';
+
+  constructor() { 
+  }
+
+  ngOnInit(): void {}
+
+  sendSignUp() {
+
+    if (this.password !== this.passwordConfirm) {
+      alert('Passwords do not match!');
+      return;
+    }
+
+    console.log('Username:', this.username);
+    console.log('Password:', this.password);
+    console.log('Email:', this.email);
+    
+
+    this.username = '';
+    this.password = '';
+    this.email = '';
+    this.passwordConfirm = '';
+  }
+
 }
