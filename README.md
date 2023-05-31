@@ -7,7 +7,7 @@ It offers multiple features and connects to a custom ASP.NET backend to fetch an
 
 - Play Five in a Row
 - Read News
-- Chat with the AI (chatGPT)
+- Speak with the AI (chatGPT)
 - Check the weather
 
 ## Technologies
