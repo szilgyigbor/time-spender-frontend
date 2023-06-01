@@ -6,7 +6,7 @@
       "logLevel": "warn"
     },
     "/pia": {
-      "target": "http://localhost:5000",
+      "target": "http://localhost:1300",
       "secure": false,
       "changeOrigin": true,
       "logLevel": "warn"
