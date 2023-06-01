@@ -3,12 +3,12 @@
       "target": "https://localhost:44320",
       "secure": false,
       "changeOrigin": true,
-      "logLevel": "debug"
+      "logLevel": "warn"
     },
     "/pia": {
       "target": "http://localhost:5000",
       "secure": false,
       "changeOrigin": true,
-      "logLevel": "debug"
+      "logLevel": "warn"
     }
   }
