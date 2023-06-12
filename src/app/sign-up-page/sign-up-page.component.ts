@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PostRequestsService } from '../services/post-requests.service';
-import { SignUpData } from '../interfaces/sign-up-data';
+import { UserData } from '../interfaces/user-data';
 
 @Component({
   selector: 'tisp-sign-up-page',
@@ -9,7 +9,7 @@ import { SignUpData } from '../interfaces/sign-up-data';
 })
 export class SignUpPageComponent {
 
-  signUpData: SignUpData = {} as SignUpData;
+  signUpData: UserData = {} as UserData;
   passwordConfirm: string = '';
 
   constructor(private postRequestsService: PostRequestsService) { 
