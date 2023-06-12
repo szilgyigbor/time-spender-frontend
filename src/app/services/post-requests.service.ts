@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SignUpData } from '../interfaces/sign-up-data';
+import { UserData } from '../interfaces/user-data';
 
 @Injectable({
   providedIn: 'root'
@@ -40,12 +40,21 @@ export class PostRequestsService {
     });
   }
 
-  sendSignUpData(signUpData: SignUpData) { 
+  sendSignUpData(signUpData: UserData) { 
     return this.http.post('/api/user/signup', JSON.stringify(signUpData), {
       headers: {
         'Content-Type': 'application/json'
       }
     });
    }
+
+   sendLoginData(loginData: UserData) { 
+    return this.http.post('/api/user/login', JSON.stringify(loginData), {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+   }
+
 
 }
