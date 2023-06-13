@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { PostRequestsService } from '../services/post-requests.service';
 import { UserData } from '../interfaces/user-data';
+import { LoginService } from '../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tisp-login-page',
@@ -13,7 +15,8 @@ export class LoginPageComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private postRequestsService: PostRequestsService) { 
+  constructor(private postRequestsService: PostRequestsService, private loginService: LoginService, 
+    private router: Router) { 
   }
 
   sendLogin() {
@@ -30,15 +33,20 @@ export class LoginPageComponent {
       let currentUser = JSON.parse(localStorage.getItem('currentUser')!);
       console.log(currentUser.username);
       console.log(currentUser.email);
+      this.loginService.setLoggedIn(true);
+      this.router.navigate(['/']);
 
     });
 
 
     this.username = '';
     this.password = '';
+
+    
   }
 
   ngOnInit(): void {
+    
   }
 
 }
