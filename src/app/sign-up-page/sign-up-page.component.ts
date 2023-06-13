@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { PostRequestsService } from '../services/post-requests.service';
 import { UserData } from '../interfaces/user-data';
+import { LoginService } from '../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tisp-sign-up-page',
@@ -12,7 +14,8 @@ export class SignUpPageComponent {
   signUpData: UserData = {} as UserData;
   passwordConfirm: string = '';
 
-  constructor(private postRequestsService: PostRequestsService) { 
+  constructor(private postRequestsService: PostRequestsService, private loginService: LoginService, 
+    private router: Router) { 
   }
 
   ngOnInit(): void {}
@@ -24,19 +27,18 @@ export class SignUpPageComponent {
       return;
     }
 
-    console.log('Username:', this.signUpData.username);
-    console.log('Password:', this.signUpData.password);
-    console.log('Email:', this.signUpData.email);
-
     this.postRequestsService.sendSignUpData(this.signUpData).subscribe(response => {
       console.log('SignUpData:', response);
+      localStorage.setItem('currentUser', JSON.stringify(response));
+      this.loginService.setLoggedIn(true);
+      this.router.navigate(['/']);
     });
-
 
     this.signUpData.username = '';
     this.signUpData.password = '';
     this.signUpData.email = '';
     this.passwordConfirm = '';
+
   }
 
 }
