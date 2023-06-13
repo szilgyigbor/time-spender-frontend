@@ -28,16 +28,10 @@ export class SignUpPageComponent {
     }
 
     this.postRequestsService.sendSignUpData(this.signUpData).subscribe(response => {
-      console.log('SignUpData:', response);
       localStorage.setItem('currentUser', JSON.stringify(response));
       this.loginService.setLoggedIn(true);
       this.router.navigate(['/']);
     });
-
-    this.signUpData.username = '';
-    this.signUpData.password = '';
-    this.signUpData.email = '';
-    this.passwordConfirm = '';
 
   }
 
