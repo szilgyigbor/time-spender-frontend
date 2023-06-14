@@ -1,19 +1,23 @@
 <div ngClass="sign-up-container">
     <div>
         <h2>Username:</h2>
-        <input ngClass="input-field" type="text" [(ngModel)]="signUpData.username" placeholder="Type in a Username...">
+        <input ngClass="input-field" type="text" [(ngModel)]="signUpData.username" placeholder="Type in a Username..."
+        (keyup.enter)="sendSignUp()">
     </div>
     <div>
         <h2>Email:</h2>
-        <input ngClass="input-field" type="text" [(ngModel)]="signUpData.email" placeholder="Type in a Email...">
+        <input ngClass="input-field" type="text" [(ngModel)]="signUpData.email" placeholder="Type in a Email..."
+        (keyup.enter)="sendSignUp()">
     </div>
     <div>
         <h2>Password:</h2>
-        <input ngClass="input-field" type="text" [(ngModel)]="signUpData.password" placeholder="Type in a Password...">
+        <input ngClass="input-field" type="text" [(ngModel)]="signUpData.password" placeholder="Type in a Password..."
+        (keyup.enter)="sendSignUp()">
     </div>
     <div>
         <h2>Password confirm:</h2>
-        <input ngClass="input-field" type="text" [(ngModel)]="passwordConfirm" placeholder="Type in the Password again...">
+        <input ngClass="input-field" type="text" [(ngModel)]="passwordConfirm" placeholder="Type in the Password again..."
+        (keyup.enter)="sendSignUp()">
     </div>
     <div>
         <button ngClass="send-button" (click)="sendSignUp()">Sign Up</button>
