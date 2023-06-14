@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { PostRequestsService } from '../services/post-requests.service';
 import { WeatherItem } from '../interfaces/weather-item';
 
@@ -16,7 +16,7 @@ export class CheckWeatherComponent {
   imageUrl: string = '';
   weatherItems: WeatherItem = {} as WeatherItem;
 
-  constructor(private postRequestsService: PostRequestsService) { 
+  constructor(private postRequestsService: PostRequestsService, private router: Router) { 
   }
 
   sendLocation() {
@@ -30,6 +30,12 @@ export class CheckWeatherComponent {
     this.postRequestsService.postWeatherRequest(this.location).subscribe((data: any) => {
       console.log('WeatherData:', data);
       this.weatherItems = data as WeatherItem;
+    },
+    error => {
+      if (error.status === 401) {
+        alert("Please, login!");
+        this.router.navigate(['/login']);
+      }
     });
     this.location = '';
   }
