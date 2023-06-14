@@ -1,7 +1,7 @@
 <div class="check-weather-container center-content">
     <div id="input-field">
-        <input type="text" [(ngModel)]="location" placeholder="Type in a location..." (keyup.enter)="sendLocation()">
-        <button (click)="sendLocation()">Send</button>
+        <input ngClass="input-field" type="text" [(ngModel)]="location" placeholder="Type in a location..." (keyup.enter)="sendLocation()">
+        <button ngClass="send-button" (click)="sendLocation()">Send</button>
     </div>
     <div *ngIf="weatherItems?.location?.name">
         <tisp-weather-data [locationName]="weatherItems.location.name" [country]="weatherItems.location.country"

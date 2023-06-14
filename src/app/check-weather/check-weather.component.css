@@ -4,23 +4,31 @@
     flex-direction: column;
 }
 
-#input-field {
-    padding: 15px;
-    margin-left: auto;
-    margin-right: auto;
+.input-field {
+    background-color: #475469;
+    color: white;
+    padding: 8px;
+    /*margin: 15px;*/
+    font-size: 22px;
+    width: 300px;
+    height: 26px;
+    border: #4CAF50;
 }
 
-#input-field input {
-    font-size: 20px;
-    padding: 8px;
-    width: 250px;
-    height: 21px;
+.send-button {
+    border: 2px solid #4CAF50;
+    background-color: #475469;
+    padding: 5px 15px;
+    color: #4CAF50;
+    font-size: 25px;
+    margin-top: 40px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
-  
-#input-field button {
-font-size: 19px;
-padding: 8px 20px;
-height: 40px;
+
+.send-button:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .center-content {
