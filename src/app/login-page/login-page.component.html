@@ -1,11 +1,13 @@
 <div ngClass="login-container">
     <div>
         <h2>Username:</h2>
-        <input ngClass="input-field" [(ngModel)]="loginData.username" type="text" placeholder="Type in a Username...">
+        <input ngClass="input-field" [(ngModel)]="loginData.username" type="text" placeholder="Type in a Username..."
+        (keyup.enter)="sendLogin()">
     </div>
     <div>
         <h2>Password:</h2>
-        <input ngClass="input-field" [(ngModel)]="loginData.password" type="text" placeholder="Type in the Password..">
+        <input ngClass="input-field" [(ngModel)]="loginData.password" type="text" placeholder="Type in the Password.."
+        (keyup.enter)="sendLogin()">
     </div>
     <div>
         <button ngClass="send-button" (click)="sendLogin()">Login</button>
