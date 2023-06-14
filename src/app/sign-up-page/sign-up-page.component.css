@@ -5,7 +5,7 @@
 h2 {
     text-align: center;
     margin-top: 30px;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 .input-field {
@@ -13,9 +13,9 @@ h2 {
     color: white;
     padding: 8px;
     /*margin: 15px;*/
-    font-size: 22px;
-    width: 350px;
-    height: 30px;
+    font-size: 20px;
+    width: 300px;
+    height: 25px;
     border: #4CAF50;
 }
 
