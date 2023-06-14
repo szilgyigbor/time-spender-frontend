@@ -24,6 +24,11 @@ export class LoginPageComponent {
       localStorage.setItem('currentUser', JSON.stringify(response));
       this.loginService.setLoggedIn(true);
       this.router.navigate(['/']);
+    },
+    error => {
+      if (error.status === 401 || error.status === 400) {
+        alert("Username or password is incorrect!");
+      }
     });
   }
 
