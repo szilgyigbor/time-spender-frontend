@@ -22,10 +22,17 @@ export class SignUpPageComponent {
 
   sendSignUp() {
 
+    if (this.signUpData.username == undefined || this.signUpData.email == undefined) {
+      alert('Any field cant be empty!');
+      return;
+    }
+
+
     if (this.signUpData.password !== this.passwordConfirm) {
       alert('Passwords do not match!');
       return;
     }
+    
 
     this.postRequestsService.sendSignUpData(this.signUpData).subscribe(response => {
       localStorage.setItem('currentUser', JSON.stringify(response));
