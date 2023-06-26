@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   isLoggedIn$ = this.loginService.isLoggedIn$;
 
   constructor(private loginService: LoginService) { 
-    this.loginService.isLoggedIn$.subscribe(isLoggedIn => {
+    this.isLoggedIn$.subscribe(isLoggedIn => {
       if (isLoggedIn) {
         this.currentUser = JSON.parse(localStorage.getItem('currentUser')!);
       } else {
