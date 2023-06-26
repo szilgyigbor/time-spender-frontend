@@ -5,7 +5,7 @@
 
     <div ngClass="logout" *ngIf="(isLoggedIn$ | async); else notLoggedIn">
       <div ngClass="logout-text">
-        Welcome back, {{ currentUser?.username }}!
+        Welcome back, {{ currentUser?.username}}!
       </div>
         <button ngClass="button logout-button" (click)="logout()">Logout</button>
     </div>
@@ -15,7 +15,7 @@
         <button ngClass="button login-button" routerLink="/login">Login</button>
         <button ngClass="button signup-button" routerLink="/sign-up">Sign Up</button>
       </div>
-   </ng-template>
+    </ng-template>
 
   </nav>
 </header>
