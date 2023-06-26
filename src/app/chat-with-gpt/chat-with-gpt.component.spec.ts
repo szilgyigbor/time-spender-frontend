@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ChatWithGptComponent } from './chat-with-gpt.component';
 
 describe('ChatWithGptComponent', () => {
@@ -8,7 +9,8 @@ describe('ChatWithGptComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChatWithGptComponent ]
+      declarations: [ ChatWithGptComponent ],
+      imports: [ FormsModule, HttpClientTestingModule ],
     })
     .compileComponents();
 
