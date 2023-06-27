@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { LoginPageComponent } from './login-page.component';
 import { PostRequestsService } from '../services/post-requests.service';
+import { LoginService } from '../services/login.service';
 import { of } from 'rxjs';
 
 describe('LoginPageComponent', () => {
@@ -13,7 +14,7 @@ describe('LoginPageComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ LoginPageComponent ],
       imports: [ HttpClientTestingModule, FormsModule],
-      providers: [ PostRequestsService ]
+      providers: [ PostRequestsService, LoginService ]
     })
     .compileComponents();
 
@@ -34,6 +35,17 @@ describe('LoginPageComponent', () => {
     spyOn(postRequestsService, 'sendLoginData').and.returnValue(of(fakeResponse));
     component.sendLogin();
     expect(postRequestsService.sendLoginData).toHaveBeenCalledWith(component.loginData);
+  });
+
+
+  it('should call setLoggedIn with true', () => {
+    const fakeResponse = {access_token: 'test', expires_at: 'test', username: 'test', email: 'test@gmail.com'};
+    const postRequestsService = TestBed.inject(PostRequestsService);
+    spyOn(postRequestsService, 'sendLoginData').and.returnValue(of(fakeResponse));
+    const loginService = TestBed.inject(LoginService);
+    spyOn(loginService, 'setLoggedIn');
+    component.sendLogin();
+    expect(loginService.setLoggedIn).toHaveBeenCalledWith(true);
   });
 
 });
