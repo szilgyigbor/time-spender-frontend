@@ -17,6 +17,26 @@ export class LoginPageComponent {
     private router: Router) { 
   }
 
+
+  sendLogin() {
+    this.postRequestsService.sendLoginData(this.loginData).subscribe({
+      next: response => {
+        console.log('LoginData:', response);
+        localStorage.setItem('currentUser', JSON.stringify(response));
+        this.loginService.setLoggedIn(true);
+        this.router.navigate(['/']);
+      },
+      error: error => {
+        if (error.status === 401 || error.status === 400) {
+          alert("Username or password is incorrect!");
+        }
+      }
+    })
+
+  }
+
+  
+  /*
   sendLogin() {
    
     this.postRequestsService.sendLoginData(this.loginData).subscribe(response => {
@@ -30,7 +50,7 @@ export class LoginPageComponent {
         alert("Username or password is incorrect!");
       }
     });
-  }
+  }*/
 
   ngOnInit(): void {
   }
