@@ -45,4 +45,15 @@ describe('SignUpPageComponent', () => {
   });
  
 
+  it('should not call sendSignUpData if passwords do not match', () => {
+    const postRequestsService = TestBed.inject(PostRequestsService);
+    const sendSignUpDataSpy = spyOn(postRequestsService, 'sendSignUpData');
+    component.signUpData = { username: 'test', email: 'test@email.com', password: 'password1' };
+    component.passwordConfirm = 'password2';
+  
+    component.sendSignUp();
+  
+    expect(sendSignUpDataSpy).not.toHaveBeenCalled();
+  });
+
 });
