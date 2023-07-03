@@ -1,14 +1,9 @@
 {
     "/api": {
-      "target": "https://localhost:44320",
-      "secure": false,
-      "changeOrigin": true,
-      "logLevel": "warn"
-    },
-    "/pia": {
-      "target": "http://localhost:1300",
+      "target": "http://localhost:8080",
       "secure": false,
       "changeOrigin": true,
       "logLevel": "warn"
     }
+    
   }
