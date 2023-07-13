@@ -74,7 +74,7 @@ export class ChatWithGptComponent implements OnInit {
 
   speak(text: string): void {
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.rate = 1.3;
+    utterance.rate = 1.1;
     window.speechSynthesis.speak(utterance);
   }
 
