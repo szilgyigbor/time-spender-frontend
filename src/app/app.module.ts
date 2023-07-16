@@ -16,6 +16,7 @@ import { PlayFowComponent } from './play-fow/play-fow.component';
 import { WeatherDataComponent } from './check-weather/weather-data/weather-data.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
+import { OnlineShooterComponent } from './online-shooter/online-shooter.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
     PlayFowComponent,
     WeatherDataComponent,
     LoginPageComponent,
-    SignUpPageComponent
+    SignUpPageComponent,
+    OnlineShooterComponent
   ],
   imports: [
     BrowserModule,
