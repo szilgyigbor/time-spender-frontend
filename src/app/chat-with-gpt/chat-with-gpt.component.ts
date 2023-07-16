@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { PostRequestsService } from '../services/post-requests.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tisp-chat-with-gpt',
@@ -16,7 +17,7 @@ export class ChatWithGptComponent implements OnInit {
   mediaRecorder: any;
   audioChunks: any[] = [];
 
-  constructor(private postRequestService: PostRequestsService) { }
+  constructor(private postRequestService: PostRequestsService, private router: Router ) { }
 
   ngOnInit(): void {
     navigator.mediaDevices.getUserMedia({ audio: true })
@@ -41,6 +42,12 @@ export class ChatWithGptComponent implements OnInit {
 
 
   startRecording() {
+    if (!!localStorage.getItem('currentUser') ==  false) {
+      alert('You must be logged in to use this feature!');
+      this.router.navigate(['/login']);
+      return;
+    }
+
     this.audioChunks = [];
     this.isRecording = true;
     this.mediaRecorder.start();
