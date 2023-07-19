@@ -1,0 +1,11 @@
+.online-shooter-container {
+    background-color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+p {
+    font-size: 30px;
+}
