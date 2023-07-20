@@ -17,6 +17,10 @@ export class CheckWeatherComponent {
   weatherItems: WeatherItem = {} as WeatherItem;
 
   constructor(private postRequestsService: PostRequestsService, private router: Router) { 
+    if (!!localStorage.getItem('currentUser') ==  false) {
+      alert('You must be logged in to use this feature!');
+      this.router.navigate(['/login']);
+    }
   }
 
   sendLocation() {
@@ -27,22 +31,21 @@ export class CheckWeatherComponent {
       this.imageUrl = `url('${imageUrl}')`;
     });
     
-    this.postRequestsService.postWeatherRequest(this.location).subscribe((data: any) => {
-      console.log('WeatherData:', data);
-      this.weatherItems = data as WeatherItem;
-    },
-    error => {
-      if (error.status === 401) {
-        alert("Please, login!");
-        this.router.navigate(['/login']);
+    this.postRequestsService.postWeatherRequest(this.location).subscribe({
+      next: (data: any) => {
+        console.log('WeatherData:', data);
+        this.weatherItems = data as WeatherItem;
+      },
+      error: error => {
+        if (error.status === 401) {
+          alert("Please, login!");
+          this.router.navigate(['/login']);
+        }
       }
     });
+
     this.location = '';
   }
-
-  
-  
-
 
   ngOnInit(): void {
   }
