@@ -9,3 +9,7 @@
 p {
     font-size: 30px;
 }
+
+.player-name {
+    position: absolute;
+  }

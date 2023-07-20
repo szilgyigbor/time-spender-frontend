@@ -2,3 +2,7 @@
     <p>online-shooter is not working yet!</p>
 </div>
 
+<div *ngFor="let player of players" [style.left.px]="player.positionX" [style.top.px]="player.positionY" class="player-name">
+    {{ player.name }}
+</div>
+
