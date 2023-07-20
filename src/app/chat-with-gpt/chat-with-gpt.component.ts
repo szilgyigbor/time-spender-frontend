@@ -17,7 +17,14 @@ export class ChatWithGptComponent implements OnInit {
   mediaRecorder: any;
   audioChunks: any[] = [];
 
-  constructor(private postRequestService: PostRequestsService, private router: Router ) { }
+  constructor(private postRequestService: PostRequestsService, private router: Router ) {
+
+    if (!!localStorage.getItem('currentUser') ==  false) {
+      alert('You must be logged in to use this feature!');
+      this.router.navigate(['/login']);
+    }
+
+  }
 
   ngOnInit(): void {
     navigator.mediaDevices.getUserMedia({ audio: true })
@@ -42,12 +49,6 @@ export class ChatWithGptComponent implements OnInit {
 
 
   startRecording() {
-    if (!!localStorage.getItem('currentUser') ==  false) {
-      alert('You must be logged in to use this feature!');
-      this.router.navigate(['/login']);
-      return;
-    }
-
     this.audioChunks = [];
     this.isRecording = true;
     this.mediaRecorder.start();
