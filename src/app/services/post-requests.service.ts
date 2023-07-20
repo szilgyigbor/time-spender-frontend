@@ -15,7 +15,7 @@ export class PostRequestsService {
         'Content-Type': 'application/json'
       }*/
 
-    return this.http.post('http://localhost:23982/api/getimage', JSON.stringify(location), {
+    return this.http.post('/api/getimage', JSON.stringify(location), {
       headers: {
         'Content-Type': 'application/json'
       }
@@ -29,7 +29,7 @@ export class PostRequestsService {
         'Content-Type': 'application/json'
       }*/
 
-    return this.http.post('http://localhost:23982/api/getweather', JSON.stringify(location), {
+    return this.http.post('/api/getweather', JSON.stringify(location), {
       headers: {
         'Content-Type': 'application/json'
       }
