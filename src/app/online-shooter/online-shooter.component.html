@@ -3,6 +3,7 @@
 </div>
 
 <div *ngFor="let player of players" [style.left.px]="player.positionX" [style.top.px]="player.positionY" class="player-name">
-    {{ player.name }}
+    <p>{{player.name}}</p>
+    <img src="assets/soldier.gif" alt="animated soldier" width="40">
 </div>
 

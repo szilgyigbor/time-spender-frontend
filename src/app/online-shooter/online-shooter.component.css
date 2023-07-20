@@ -7,9 +7,29 @@
 }
 
 p {
-    font-size: 30px;
+    font-size: 20px;
+    color: white;
 }
 
 .player-name {
     position: absolute;
+    font-size: 20px;
+    color: white;
+  }
+
+
+.character {
+width: 19px;  
+height: 21px; 
+background-image: url("/assets/wombats.png");
+animation: walk-animation 4s steps(4) infinite;
+transform: scale(2);
+}
+
+@keyframes walk-animation {
+    0%   { background-position: -132px -14px; }
+    25%  { background-position: -155px -14px; }
+    50%  { background-position: -180px -14px; }
+    75%  { background-position: -204px -14px; }
+    100% { background-position: -132px -14px; }
   }
