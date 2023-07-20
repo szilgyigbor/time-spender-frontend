@@ -12,22 +12,28 @@ export class ReadNewsComponent {
   title: string = 'time-spender-frontend';
   news: NewsItem[] = [];
 
-  constructor(private getRequestsService: GetRequestsService, private router: Router ) { }
+  constructor(private getRequestsService: GetRequestsService, private router: Router ) { 
+    if (!!localStorage.getItem('currentUser') ==  false) {
+      alert('You must be logged in to use this feature!');
+      this.router.navigate(['/login']);
+    }
+  }
 
   ngOnInit(): void {
     
-    this.getRequestsService.getNewsRequest().subscribe((data: any) => {
-      console.log('News data:', data.articles);
-      this.news = data.articles;
-    },
-    error => {
-      if (error.status === 401) {
-        alert("Please, login!");
-        this.router.navigate(['/login']);
+    this.getRequestsService.getNewsRequest().subscribe({
+      next: (data: any) => {
+        console.log('News data:', data.articles);
+        this.news = data.articles;
+      },
+      error: error => {
+        if (error.status === 401) {
+          alert("Please, login!");
+          this.router.navigate(['/login']);
+        }
       }
-    }
-    
-    );
+    });
+
   }
  
 }
