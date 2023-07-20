@@ -8,10 +8,12 @@ import { Subject } from 'rxjs';
 })
 export class SignalrService {
 
+  
   private hubConnection: HubConnection;
 
   private characterMovedSource = new Subject<any>();
   characterMoved$ = this.characterMovedSource.asObservable();
+  
   BASE_URL = 'https://localhost:44320';
 
   constructor() {
