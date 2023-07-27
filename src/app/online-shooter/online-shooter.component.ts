@@ -48,18 +48,23 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
     this.connectionSubscription = this.signalrService.isConnectionStarted$.subscribe(isStarted => {
       if (isStarted) {
           this.signalrService.startUpdatingStatus();
+          this.signalrService.startBot();
       }
     });
         
   }
 
   ngOnDestroy() {
-    this.signalrService.stopUpdatingStatus();
-    this.signalrService.stopConnection();
-    this.signalrService.stopTransferCharacterDataListener();
-    this.charecterSubscription?.unsubscribe();
-    this.connectionSubscription?.unsubscribe();
-    this.players = [];
+    Promise.all([
+      this.signalrService.stopBot(),
+      this.signalrService.stopUpdatingStatus(),
+      this.signalrService.stopTransferCharacterDataListener()
+    ]).then(() => {
+      this.signalrService.stopConnection();
+      this.charecterSubscription?.unsubscribe();
+      this.connectionSubscription?.unsubscribe();
+      this.players = [];
+    }).catch(err => console.error(err));
   }
 
 
