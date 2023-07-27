@@ -1,6 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { SignalrService } from '../services/signalr.service';
-import { Subscription } from 'rxjs';
+import { Subscription, timer } from 'rxjs';
 import { Router } from '@angular/router';
 
 import { PlayerData } from '../interfaces/player-data';
@@ -14,10 +14,14 @@ import { PlayerData } from '../interfaces/player-data';
 export class OnlineShooterComponent implements OnInit, OnDestroy {
 
   players: PlayerData[] = [];
-  playerPosition = { x: 300, y: 300 };
+  playerPosition = { 
+    x: Math.floor(Math.random() * (1000 - 200 + 1)) + 200, 
+    y: Math.floor(Math.random() * (600 - 200 + 1)) + 200 
+  };
   currentUsername : string = "";
   moveNumber = 3;
-  private subscription?: Subscription;
+  private charecterSubscription?: Subscription;
+  private connectionSubscription?: Subscription;
 
   constructor(public signalrService: SignalrService, private router: Router) { 
 
@@ -34,20 +38,28 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     
-    
     this.signalrService.startConnection();
     this.signalrService.addTransferCharacterDataListener();
-    this.subscription = this.signalrService.characterMoved$.subscribe(data => {
+    this.charecterSubscription = this.signalrService.characterMoved$.subscribe(data => {
       console.log(data[0]);
       this.players = data;
     });
-    
+
+    this.connectionSubscription = this.signalrService.isConnectionStarted$.subscribe(isStarted => {
+      if (isStarted) {
+          this.signalrService.startUpdatingStatus();
+      }
+    });
+        
   }
 
   ngOnDestroy() {
+    this.signalrService.stopUpdatingStatus();
     this.signalrService.stopConnection();
     this.signalrService.stopTransferCharacterDataListener();
-    this.subscription?.unsubscribe();
+    this.charecterSubscription?.unsubscribe();
+    this.connectionSubscription?.unsubscribe();
+    this.players = [];
   }
 
 
