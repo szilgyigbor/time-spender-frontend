@@ -10,6 +10,7 @@ export class GetRequestsService {
 
   getNewsRequest() {
     return this.http.get('/api/getnews');
+    //return this.http.get('https://spender-backend-7753b2e4b87a.herokuapp.com/api/getnews');
   }
 
 }
