@@ -90,5 +90,18 @@ export class SignalrService {
     this.hubConnection
       .invoke('UpdateStatus')
       .catch(err => console.error(err));
-  } 
+  }
+  
+  public startBot = () => {
+    this.hubConnection
+      .invoke('TurnOnBot')
+      .catch(err => console.error(err));
+  }
+
+  public stopBot = (): Promise<void> => {
+    return this.hubConnection
+      .invoke('TurnOffBot')
+      .catch(err => console.error(err));
+}
+  
 }
