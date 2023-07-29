@@ -1,7 +1,8 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit, Renderer2, Inject } from '@angular/core';
 import { SignalrService } from '../services/signalr.service';
 import { Subscription, timer } from 'rxjs';
 import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 
 import { PlayerData } from '../interfaces/player-data';
 
@@ -18,12 +19,17 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
     x: Math.floor(Math.random() * (1000 - 200 + 1)) + 200, 
     y: Math.floor(Math.random() * (600 - 200 + 1)) + 200 
   };
+  showRules: boolean = true;
   currentUsername : string = "";
   moveNumber = 3;
+  isKilled: boolean = false;
   private charecterSubscription?: Subscription;
   private connectionSubscription?: Subscription;
+  private killedNameSubscription?: Subscription;
+  private originalOverflow!: string;
 
-  constructor(public signalrService: SignalrService, private router: Router) { 
+  constructor(public signalrService: SignalrService, private router: Router,
+    private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) { 
 
 
     if (!!localStorage.getItem('currentUser') ==  false) {
@@ -37,28 +43,35 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    
+    this.originalOverflow = getComputedStyle(this.document.body).overflow;
+    this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
     this.signalrService.startConnection();
     this.signalrService.addTransferCharacterDataListener();
     this.charecterSubscription = this.signalrService.characterMoved$.subscribe(data => {
-      console.log(data[0]);
+      //console.log(data[0]);
       this.players = data;
     });
 
     this.connectionSubscription = this.signalrService.isConnectionStarted$.subscribe(isStarted => {
       if (isStarted) {
           this.signalrService.startUpdatingStatus();
-          this.signalrService.startBot();
+      }
+    });
+    this.killedNameSubscription = this.signalrService.killedCharacter$.subscribe(name => {
+      if (name == this.currentUsername) {
+        alert('You were killed!');
+        this.isKilled = true;
+       
       }
     });
         
   }
 
   ngOnDestroy() {
+    this.renderer.setStyle(this.document.body, 'overflow', this.originalOverflow);
     Promise.all([
-      this.signalrService.stopBot(),
       this.signalrService.stopUpdatingStatus(),
-      this.signalrService.stopTransferCharacterDataListener()
+      this.signalrService.stopTransferCharacterDataListener(),
     ]).then(() => {
       this.signalrService.stopConnection();
       this.charecterSubscription?.unsubscribe();
@@ -84,12 +97,14 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
         this.playerPosition.x += this.moveNumber;
         break;
     }
-
-    this.signalrService.movePlayer(this.currentUsername, this.playerPosition.x, this.playerPosition.y);
+    if (!this.isKilled) {
+      this.signalrService.movePlayer(this.currentUsername, this.playerPosition.x, this.playerPosition.y);
+    }
   }
 
-
-
+  hideRules() {
+    this.showRules = false;
+  }
 
 
 }

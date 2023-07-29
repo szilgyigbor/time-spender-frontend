@@ -1,10 +1,15 @@
-<div class="online-shooter-container">
-    <p>online-shooter is not working yet!</p>
-    <p>but press arrow keys...</p>
+<div *ngIf="showRules">
+        <p>This game is far from ready.</p>
+        <p>Press an arrow key, and try to avoid the Bot to catch you</p>
+    <button ngClass="ok-button" (click)="hideRules()">I understood to the rules</button>
 </div>
 
-<div *ngFor="let player of players" [style.left.px]="player.positionX" [style.top.px]="player.positionY" class="player-name">
-    <p>{{player.name}}</p>
-    <img src="assets/soldier.gif" alt="animated soldier" width="40">
-</div>
 
+
+<div *ngIf="!showRules" ngClass="online-shooter-container">
+    <img src="assets/background.png" alt="grass terrain" class="full-width-image">
+    <div *ngFor="let player of players" [style.left.px]="player.positionX" [style.top.px]="player.positionY" class="player-name">
+        <p>{{player.name}}</p>
+        <img src="assets/soldier.gif" alt="animated soldier" width="40">
+    </div>
+</div>
