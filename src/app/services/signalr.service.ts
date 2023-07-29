@@ -17,6 +17,9 @@ export class SignalrService {
   private isConnectionStarted = new BehaviorSubject<boolean>(false);
   isConnectionStarted$ = this.isConnectionStarted.asObservable();
 
+  private killedCharacter = new Subject<any>();
+  killedCharacter$ = this.killedCharacter.asObservable();
+
   private isUpdating: boolean;
 
   //BASE_URL = 'https://spender-backend-7753b2e4b87a.herokuapp.com';
@@ -55,15 +58,23 @@ export class SignalrService {
 
   public addTransferCharacterDataListener = () => {
     this.hubConnection.on('PlayersMoved', (data) => {
-      console.log(data);
+      //console.log(data);
       this.characterMovedSource.next(data);
     });
+    this.hubConnection.on('KilledPlayer', (data) => {
+      //console.log(data);
+      this.killedCharacter.next(data);
+    });
+    
   }
 
+ 
   public stopTransferCharacterDataListener = () => {
     this.hubConnection.off('PlayersMoved');
+    this.hubConnection.off('KilledPlayer');
   }
 
+ 
   public movePlayer = (username: string, positionX: number, positionY: number) => {
     this.hubConnection
       .invoke('MoveCharacter', username, positionX, positionY)
@@ -92,15 +103,10 @@ export class SignalrService {
       .catch(err => console.error(err));
   }
   
-  public startBot = () => {
-    this.hubConnection
-      .invoke('TurnOnBot')
-      .catch(err => console.error(err));
-  }
 
   public stopBot = (): Promise<void> => {
     return this.hubConnection
-      .invoke('TurnOffBot')
+      .invoke('KillTheBot')
       .catch(err => console.error(err));
 }
   
