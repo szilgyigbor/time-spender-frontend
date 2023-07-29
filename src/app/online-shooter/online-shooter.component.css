@@ -4,17 +4,22 @@
     align-items: center;
     justify-content: center;
     color: white;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
 }
 
+
 p {
-    font-size: 20px;
+    font-size: 28px;
     color: white;
 }
 
 .player-name {
     position: absolute;
     font-size: 20px;
-    color: white;
+    color: black;
   }
 
 
@@ -26,10 +31,25 @@ animation: walk-animation 4s steps(4) infinite;
 transform: scale(2);
 }
 
-@keyframes walk-animation {
-    0%   { background-position: -132px -14px; }
-    25%  { background-position: -155px -14px; }
-    50%  { background-position: -180px -14px; }
-    75%  { background-position: -204px -14px; }
-    100% { background-position: -132px -14px; }
-  }
+.ok-button {
+  border: 2px solid #4CAF50;
+  background-color: #475469;
+  padding: 5px 15px;
+  color: #4CAF50;
+  font-size: 25px;
+  margin-top: 40px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.ok-button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.full-width-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
