@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserData } from '../interfaces/user-data';
+import { MessageData } from '../interfaces/message-data';
 
 @Injectable({
   providedIn: 'root'
@@ -40,7 +41,7 @@ export class PostRequestsService {
 
   }
 
-  sendMessageHistory(history: {role: string, content: string}[]) {
+  sendGptMessageHistory(history: {role: string, content: string}[]) {
     return this.http.post<{role: string, content: string}[]>(this.gpt_backend_url + '/pia/get-answer', JSON.stringify(history), {
       headers: {
         'Content-Type': 'application/json'
@@ -60,6 +61,15 @@ export class PostRequestsService {
 
    sendLoginData(loginData: UserData) { 
     return this.http.post(this.backend_url + '/api/user/login', JSON.stringify(loginData), {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+  
+   }
+
+   sendMainPageMessage(messageData: MessageData) {
+    return this.http.post(this.backend_url + '/api/messages/addmessage', JSON.stringify(messageData), {
       headers: {
         'Content-Type': 'application/json'
       }
