@@ -17,6 +17,7 @@ import { WeatherDataComponent } from './check-weather/weather-data/weather-data.
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { OnlineShooterComponent } from './online-shooter/online-shooter.component';
+import { HomePageMessagesComponent } from './home-page/home-page-messages/home-page-messages.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { OnlineShooterComponent } from './online-shooter/online-shooter.componen
     WeatherDataComponent,
     LoginPageComponent,
     SignUpPageComponent,
-    OnlineShooterComponent
+    OnlineShooterComponent,
+    HomePageMessagesComponent
   ],
   imports: [
     BrowserModule,
