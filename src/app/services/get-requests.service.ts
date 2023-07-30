@@ -6,11 +6,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GetRequestsService {
 
+  //backend_url = 'https://spender-backend-7753b2e4b87a.herokuapp.com';
+  backend_url = '';
+
+
   constructor(private http: HttpClient) { }
 
   getNewsRequest() {
-    return this.http.get('/api/getnews');
-    //return this.http.get('https://spender-backend-7753b2e4b87a.herokuapp.com/api/getnews');
+    return this.http.get(this.backend_url + '/api/getnews');
   }
+
+  getMainPageMessagesRequest() {
+    return this.http.get(this.backend_url + '/api/messages/getmessages');
+  }
+    
 
 }
