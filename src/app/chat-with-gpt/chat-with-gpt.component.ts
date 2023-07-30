@@ -69,7 +69,7 @@ export class ChatWithGptComponent implements OnInit {
   }
 
   sendMessage() {
-    this.postRequestService.sendMessageHistory(this.conversationContent).subscribe(response => {
+    this.postRequestService.sendGptMessageHistory(this.conversationContent).subscribe(response => {
       console.log(response);
       this.conversationContent = response;
       this.speak(response[response.length - 1].content);
