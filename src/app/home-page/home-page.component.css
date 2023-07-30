@@ -6,6 +6,29 @@
     color: white;
 }
 
+h1 {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0;
+    padding: 40px 0px;
+}
+
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 0px;
+
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
 .button {
     /*background-color: #4CAF50;*/
     color: white;
