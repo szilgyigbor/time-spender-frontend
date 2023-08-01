@@ -3,4 +3,5 @@ export interface PlayerData {
     positionX: number;
     positionY: number;
     health: number;
+    isReversed: boolean;
   }
