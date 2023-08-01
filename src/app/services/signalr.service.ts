@@ -2,6 +2,7 @@ import { Injectable, OnInit } from '@angular/core';
 import * as signalR from '@aspnet/signalr';
 import { HubConnection, HubConnectionBuilder } from '@aspnet/signalr';
 import { BehaviorSubject, Subject } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -22,12 +23,9 @@ export class SignalrService {
 
   private isUpdating: boolean;
 
-  //BASE_URL = 'https://spender-backend-7753b2e4b87a.herokuapp.com';
-  BASE_URL = 'https://localhost:44320';
-
   constructor() {
     this.hubConnection = new signalR.HubConnectionBuilder()
-    .withUrl(this.BASE_URL + '/gamehub')
+    .withUrl(`${environment.backend_url}/gamehub`)
     .configureLogging(signalR.LogLevel.Information)  // Enable logging
     .build();
     this.isUpdating = false;

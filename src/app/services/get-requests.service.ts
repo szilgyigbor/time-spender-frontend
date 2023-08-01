@@ -1,23 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetRequestsService {
 
-  //backend_url = 'https://spender-backend-7753b2e4b87a.herokuapp.com';
-  backend_url = '';
-
-
   constructor(private http: HttpClient) { }
 
   getNewsRequest() {
-    return this.http.get(this.backend_url + '/api/getnews');
+    return this.http.get(`${environment.backend_url}/api/getnews`);
   }
 
   getMainPageMessagesRequest() {
-    return this.http.get(this.backend_url + '/api/messages/getmessages');
+    return this.http.get(`${environment.backend_url}/api/messages/getmessages`);
   }
     
 
