@@ -17,6 +17,7 @@ export class ChatWithGptComponent implements OnInit {
   mediaRecorder: any;
   audioChunks: any[] = [];
   inputText: string = '';
+  username: string = '';
 
   constructor(private postRequestService: PostRequestsService, private router: Router ) {
 
@@ -25,6 +26,7 @@ export class ChatWithGptComponent implements OnInit {
       this.router.navigate(['/login']);
     }
 
+    this.username = JSON.parse(localStorage.getItem('currentUser')!).username;
   }
 
   ngOnInit(): void {

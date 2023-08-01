@@ -5,8 +5,9 @@
         <button class="button stopListenButton" (click)="stopRecording()" >Stop</button>
     <div id="chat-messages" #messagesContainer>
         <p *ngFor="let message of conversationContent">
-            <span [ngClass]="{'chat-me': message.role === 'user', 'chat-bot': message.role === 'assistant'}">
-                {{message.role}}:</span> {{message.content}}
+            <span *ngIf="message.role === 'user'" [ngClass]="'chat-me'">{{username}}:</span>
+            <span *ngIf="message.role === 'assistant'" [ngClass]="'chat-bot'">Bot:</span>
+            {{message.content}}
             <br>
         </p>
     </div>
