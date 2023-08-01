@@ -11,12 +11,12 @@
     </div>
     <div>
         <h2>Password:</h2>
-        <input ngClass="input-field" type="text" [(ngModel)]="signUpData.password" placeholder="Type in a Password..."
+        <input ngClass="input-field" type="password" [(ngModel)]="signUpData.password" placeholder="Type in a Password..."
         (keyup.enter)="sendSignUp()">
     </div>
     <div>
         <h2>Password confirm:</h2>
-        <input ngClass="input-field" type="text" [(ngModel)]="passwordConfirm" placeholder="Type in the Password again..."
+        <input ngClass="input-field" type="password" [(ngModel)]="passwordConfirm" placeholder="Type in the Password again..."
         (keyup.enter)="sendSignUp()">
     </div>
     <div>
