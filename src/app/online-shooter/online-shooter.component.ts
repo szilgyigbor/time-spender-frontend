@@ -20,7 +20,7 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
   };
   showRules: boolean = true;
   currentUsername : string = "";
-  moveNumber = 3;
+  moveNumber = 2;
   isKilled: boolean = false;
   private charecterSubscription?: Subscription;
   private connectionSubscription?: Subscription;
