@@ -73,10 +73,11 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
       this.signalrService.stopUpdatingStatus(),
       this.signalrService.stopTransferCharacterDataListener(),
     ]).then(() => {
-      this.signalrService.stopConnection();
       this.charecterSubscription?.unsubscribe();
       this.connectionSubscription?.unsubscribe();
+      this.killedNameSubscription?.unsubscribe();
       this.players = [];
+      this.signalrService.stopConnection();
     }).catch(err => console.error(err));
   }
 
