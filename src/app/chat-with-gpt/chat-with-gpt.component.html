@@ -10,4 +10,8 @@
             <br>
         </p>
     </div>
+    <div id="input-field">
+        <input ngClass="input-field" type="text" [(ngModel)]="inputText" placeholder="Start record or type your message here..." (keyup.enter)="sendTextMessage()">
+        <button ngClass="send-button" (click)="sendTextMessage()">Send</button>
+    </div>
 </div>

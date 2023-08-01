@@ -16,6 +16,7 @@ export class ChatWithGptComponent implements OnInit {
   conversationContent: {role: string, content: string}[] = [];
   mediaRecorder: any;
   audioChunks: any[] = [];
+  inputText: string = '';
 
   constructor(private postRequestService: PostRequestsService, private router: Router ) {
 
@@ -66,6 +67,12 @@ export class ChatWithGptComponent implements OnInit {
       this.sendMessage();
       console.log(response);
     });
+  }
+
+  sendTextMessage() {
+    this.conversationContent.push({role: 'user', content: this.inputText});
+    this.sendMessage();
+    this.inputText = '';
   }
 
   sendMessage() {
