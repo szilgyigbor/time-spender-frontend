@@ -28,6 +28,7 @@ export class ReadNewsComponent {
       },
       error: error => {
         if (error.status === 401) {
+          localStorage.removeItem('currentUser');
           alert("Please, login!");
           this.router.navigate(['/login']);
         }
