@@ -23,7 +23,6 @@ export class ReadNewsComponent {
     
     this.getRequestsService.getNewsRequest().subscribe({
       next: (data: any) => {
-        console.log('News data:', data.articles);
         this.news = data.articles;
       },
       error: error => {

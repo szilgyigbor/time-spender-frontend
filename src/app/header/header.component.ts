@@ -9,7 +9,6 @@ import { LoginService } from '../services/login.service';
 export class HeaderComponent implements OnInit {
   
   currentUser: any = null;
-
   isLoggedIn$ = this.loginService.isLoggedIn$;
 
   constructor(private loginService: LoginService) { 

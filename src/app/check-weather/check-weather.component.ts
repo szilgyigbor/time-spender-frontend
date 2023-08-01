@@ -24,7 +24,6 @@ export class CheckWeatherComponent {
   }
 
   sendLocation() {
-    console.log('Location:', this.location);
     this.postRequestsService.postImageRequest(this.location).subscribe((data: any) => {
       this.pictureDatas = data;
       const imageUrl = this.pictureDatas.sizes.size.find((size: { label: string; }) => size.label === "Large").source;

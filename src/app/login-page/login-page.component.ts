@@ -21,7 +21,6 @@ export class LoginPageComponent {
   sendLogin() {
     this.postRequestsService.sendLoginData(this.loginData).subscribe({
       next: response => {
-        console.log('LoginData:', response);
         localStorage.setItem('currentUser', JSON.stringify(response));
         this.loginService.setLoggedIn(true);
         this.router.navigate(['/']);

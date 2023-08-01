@@ -3,7 +3,6 @@ import { SignalrService } from '../services/signalr.service';
 import { Subscription, timer } from 'rxjs';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-
 import { PlayerData } from '../interfaces/player-data';
 
 
@@ -31,7 +30,6 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
   constructor(public signalrService: SignalrService, private router: Router,
     private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) { 
 
-
     if (!!localStorage.getItem('currentUser') ==  false) {
       alert('You must be logged in to use this feature!');
       this.router.navigate(['/login']);}
@@ -48,7 +46,6 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
     this.signalrService.startConnection();
     this.signalrService.addTransferCharacterDataListener();
     this.charecterSubscription = this.signalrService.characterMoved$.subscribe(data => {
-      //console.log(data[0]);
       this.players = data;
     });
 
@@ -107,10 +104,8 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
     this.showRules = false;
   }
 
-
   getSoldierImage(isReversed: boolean): string {
     return isReversed ? 'assets/soldier-reversed.gif' : 'assets/soldier.gif';
   }
-
 
 }

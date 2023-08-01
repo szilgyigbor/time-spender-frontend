@@ -24,22 +24,17 @@ export class HomePageMessagesComponent {
     this.getAllMessages();
   }
 
-
   sendMessage() {
     if (!!localStorage.getItem('currentUser') ==  false) {
       alert('You must be logged in to use this feature!');
       this.router.navigate(['/login']);
     }
     this.userName = JSON.parse(localStorage.getItem('currentUser')!).username;
-
     this.newMessage.id = 0;
     this.newMessage.username = this.userName;
     this.newMessage.message = this.messageContent;
     this.newMessage.postedAt = new Date().toISOString()
-
-    console.log('Date:', this.newMessage.postedAt);
     this.messageContent = '';
-
     this.postRequestService.sendMainPageMessage(this.newMessage).subscribe({
       next: () => {
         this.getAllMessages();
@@ -53,8 +48,6 @@ export class HomePageMessagesComponent {
         }
       }
     });
-   
-
   }
 
   getAllMessages() {

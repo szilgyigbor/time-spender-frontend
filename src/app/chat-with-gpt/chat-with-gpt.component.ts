@@ -41,15 +41,11 @@ export class ChatWithGptComponent implements OnInit {
           const audioBlob = new Blob(this.audioChunks, {
             type: 'audio/m4a'
           });
-
           const audioFile = new File([audioBlob], 'voice.m4a', { type: 'audio/m4a' });
-
           this.sendAudioToTranscript(audioFile);
-          console.log(audioBlob);
         });
       });
   }
-
 
   startRecording() {
     this.audioChunks = [];
@@ -62,12 +58,10 @@ export class ChatWithGptComponent implements OnInit {
     this.mediaRecorder.stop();
   }
 
-
   sendAudioToTranscript(audioFile: File) {
     this.postRequestService.sendAudioFile(audioFile).subscribe(response => {
       this.conversationContent.push({role: 'user', content: response.toString()});
       this.sendMessage();
-      console.log(response);
     });
   }
 
@@ -79,7 +73,6 @@ export class ChatWithGptComponent implements OnInit {
 
   sendMessage() {
     this.postRequestService.sendGptMessageHistory(this.conversationContent).subscribe(response => {
-      console.log(response);
       this.conversationContent = response;
       this.speak(response[response.length - 1].content);
     });
@@ -94,7 +87,6 @@ export class ChatWithGptComponent implements OnInit {
     utterance.rate = 1.1;
     window.speechSynthesis.speak(utterance);
   }
-
 
   scrollToBottom(): void {
     try {
