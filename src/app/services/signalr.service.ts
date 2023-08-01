@@ -25,7 +25,7 @@ export class SignalrService {
 
   constructor() {
     this.hubConnection = new signalR.HubConnectionBuilder()
-    .withUrl(`${environment.backend_url}/gamehub`)
+    .withUrl(`${environment.backend_for_signal_url}/gamehub`)
     .configureLogging(signalR.LogLevel.Information)  // Enable logging
     .build();
     this.isUpdating = false;
