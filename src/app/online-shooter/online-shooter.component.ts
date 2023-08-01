@@ -108,4 +108,9 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
   }
 
 
+  getSoldierImage(isReversed: boolean): string {
+    return isReversed ? 'assets/soldier-reversed.gif' : 'assets/soldier.gif';
+  }
+
+
 }
