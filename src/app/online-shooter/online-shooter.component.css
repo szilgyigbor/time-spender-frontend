@@ -7,28 +7,29 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-
 }
-
 
 p {
     font-size: 28px;
     color: white;
 }
 
+.player {
+  position: absolute;
+}
+
 .player-name {
-    position: absolute;
-    font-size: 20px;
-    color: black;
-  }
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
 
-
-.character {
-width: 19px;  
-height: 21px; 
-background-image: url("/assets/wombats.png");
-animation: walk-animation 4s steps(4) infinite;
-transform: scale(2);
+.player-health {
+  font-size: 20px;
+  color: rgb(223, 222, 223);
+  margin: 0;
+  padding: 0;
 }
 
 .ok-button {
@@ -46,7 +47,6 @@ transform: scale(2);
   background-color: #4CAF50;
   color: white;
 }
-
 
 .full-width-image {
   width: 100%;
