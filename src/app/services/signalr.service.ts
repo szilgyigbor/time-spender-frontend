@@ -116,6 +116,14 @@ export class SignalrService {
       .catch(err => console.error(err));
   }
 
+
+  public addPlayer = (username: string, positionX: number, positionY: number): Promise<void> => {
+    return this.hubConnection
+      .invoke('AddPlayer', username, positionX, positionY)
+      .catch(err => console.error(err));
+  }
+
+
   public killPlayer = (username: string): Promise<void> => {
     return this.hubConnection
       .invoke('KillPlayer', username)
