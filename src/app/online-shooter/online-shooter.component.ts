@@ -114,16 +114,21 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
 
   hideRules() {
     this.showRules = false;
+    this.addPlayer();
   }
 
   getImage(player: any): string {
-  if (player.name.startsWith('bullet-')) {
-    return 'assets/bullet-small.gif';
-  } 
-  else {
-    return player.isReversed ? 'assets/soldier-reversed.gif' : 'assets/soldier.gif';
+    if (player.name.startsWith('bullet-')) {
+      return 'assets/bullet-small.gif';
+    } 
+    else {
+      return player.isReversed ? 'assets/soldier-reversed.gif' : 'assets/soldier.gif';
+    }
   }
-}
+
+  addPlayer() {
+    this.signalrService.addPlayer(this.currentUsername, this.playerPosition.x, this.playerPosition.y);
+  }
 
   makeAShoot() {
     this.signalrService.makeAShot(this.lookRight, this.playerPosition.x, this.playerPosition.y, this.currentUsername);
