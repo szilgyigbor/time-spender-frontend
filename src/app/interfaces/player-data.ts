@@ -4,4 +4,5 @@ export interface PlayerData {
     positionY: number;
     health: number;
     isReversed: boolean;
+    shooter: string;
   }
