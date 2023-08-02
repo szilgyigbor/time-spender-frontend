@@ -21,6 +21,7 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
   showRules: boolean = true;
   currentUsername : string = "";
   moveNumber = 2;
+  lookRight: boolean = true;
   isKilled: boolean = false;
   private charecterSubscription?: Subscription;
   private connectionSubscription?: Subscription;
@@ -67,6 +68,7 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.renderer.setStyle(this.document.body, 'overflow', this.originalOverflow);
     Promise.all([
+      this.signalrService.killPlayer(this.currentUsername),
       this.signalrService.stopUpdatingStatus(),
       this.signalrService.stopTransferCharacterDataListener(),
     ]).then(() => {
@@ -89,12 +91,18 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
         this.playerPosition.y += this.moveNumber;
         break;
       case 'ArrowLeft':
+        this.lookRight = false;
         this.playerPosition.x -= this.moveNumber;
         break;
       case 'ArrowRight':
+        this.lookRight = true;
         this.playerPosition.x += this.moveNumber;
         break;
+      case ' ':
+        this.makeAShoot();
+        break;
     }
+
     if (!this.isKilled) {
       this.signalrService.movePlayer(this.currentUsername, this.playerPosition.x, this.playerPosition.y);
     }
@@ -104,8 +112,17 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
     this.showRules = false;
   }
 
-  getSoldierImage(isReversed: boolean): string {
-    return isReversed ? 'assets/soldier-reversed.gif' : 'assets/soldier.gif';
+  getImage(player: any): string {
+  if (player.name.startsWith('bullet-')) {
+    return 'assets/bullet-small.gif';
+  } 
+  else {
+    return player.isReversed ? 'assets/soldier-reversed.gif' : 'assets/soldier.gif';
+  }
+}
+
+  makeAShoot() {
+    this.signalrService.makeAShot(this.lookRight, this.playerPosition.x, this.playerPosition.y, this.currentUsername);
   }
 
 }
