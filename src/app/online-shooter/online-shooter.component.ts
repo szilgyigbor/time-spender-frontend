@@ -23,6 +23,7 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
   moveNumber = 2;
   lookRight: boolean = true;
   isKilled: boolean = false;
+  private lastShotTime = Date.now();
   private charecterSubscription?: Subscription;
   private connectionSubscription?: Subscription;
   private killedNameSubscription?: Subscription;
@@ -99,8 +100,11 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
         this.playerPosition.x += this.moveNumber;
         break;
       case ' ':
-        this.makeAShoot();
-        break;
+        const now = Date.now();
+        if (now - this.lastShotTime > 400) {
+          this.makeAShoot();
+          this.lastShotTime = now;
+      }
     }
 
     if (!this.isKilled) {
