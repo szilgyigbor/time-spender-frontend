@@ -14,7 +14,7 @@ p {
     color: white;
 }
 
-.player {
+/*.player {
   position: absolute;
 }
 
@@ -30,14 +30,43 @@ p {
   color: rgb(223, 222, 223);
   margin: 0;
   padding: 0;
+}*/
+
+.player {
+  position: absolute;
+  text-align: center;
 }
+
+.player-name {
+  position: relative;
+  top: 0px; 
+  font-size: 22px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.player-health {
+  position: relative;
+  top: 0px; 
+  font-size: 18px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.player img {
+  position: relative;
+  top: 0px;
+}
+
 
 .ok-button {
   border: 2px solid #4CAF50;
   background-color: #475469;
   padding: 5px 15px;
   color: #4CAF50;
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 40px;
   transition-duration: 0.4s;
   cursor: pointer;
