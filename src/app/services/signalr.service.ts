@@ -79,6 +79,14 @@ export class SignalrService {
       .catch(err => console.error(err));
   }
 
+
+  public makeAShot = (lookRight: boolean, positionX: number, positionY: number, username: string) => {
+    this.hubConnection
+      .invoke('MakeAShot', lookRight, positionX, positionY, username)
+      .catch(err => console.error(err));
+  }
+
+
   public async startUpdatingStatus() {
     this.isUpdating = true;
     while (this.isUpdating) {
@@ -106,6 +114,12 @@ export class SignalrService {
     return this.hubConnection
       .invoke('KillTheBot')
       .catch(err => console.error(err));
-}
+  }
+
+  public killPlayer = (username: string): Promise<void> => {
+    return this.hubConnection
+      .invoke('KillPlayer', username)
+      .catch(err => console.error(err));
+  }
   
 }
