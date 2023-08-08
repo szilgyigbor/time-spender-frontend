@@ -108,13 +108,6 @@ export class SignalrService {
       .invoke('UpdateStatus')
       .catch(err => console.error(err));
   }
-  
-
-  public stopBot = (): Promise<void> => {
-    return this.hubConnection
-      .invoke('KillTheBot')
-      .catch(err => console.error(err));
-  }
 
 
   public addPlayer = (username: string, positionX: number, positionY: number): Promise<void> => {
