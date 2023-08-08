@@ -16,6 +16,9 @@ export class GetRequestsService {
   getMainPageMessagesRequest() {
     return this.http.get(`${environment.backend_url}/api/messages/getmessages`);
   }
-    
 
+  getOneNewsRequest() {
+    return this.http.get(`${environment.backend_url}/api/getonenews`);
+  }
+  
 }
