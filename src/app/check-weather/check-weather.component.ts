@@ -37,9 +37,16 @@ export class CheckWeatherComponent {
       },
       error: error => {
         if (error.status === 401) {
-          localStorage.removeItem('currentUser');
-          alert("Please, login!");
-          this.router.navigate(['/login']);
+          if (!!localStorage.getItem('currentUser') ==  true)
+          {
+            localStorage.removeItem('currentUser');
+            alert("Your token has expired, please login!");
+            this.router.navigate(['/login']);
+          }
+          else {
+            alert("Please, login!");
+            this.router.navigate(['/login']);
+          }
         }
       }
     });
