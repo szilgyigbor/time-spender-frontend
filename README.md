@@ -33,4 +33,18 @@ The project includes unit tests to ensure the quality and reliability of the cod
 2. Run the unit tests using the Angular CLI: **`ng test`**.
 3. The test runner will start and execute all the unit tests. You will see the test results in a new browser tab.
 
+## Live Demo
+
+A live demo of this application is available at the following URL: [www.digitalisjatszoter.hu](https://www.digitalisjatszoter.hu). Feel free to explore and test the features in a real-world scenario!
+
+## Related Projects
+
+This frontend application is part of a larger project that includes two other repositories:
+
+- [Free Time Spender Backend](https://github.com/szilgyigbor/free_time_spender_web) - The ASP.NET backend that provides the APIs required for the application to work.
+
+- [Speech GPT Backend](https://github.com/szilgyigbor/speech-gpt-backend) - A Python-based backend for the AI ChatGPT integration.
+
+These three projects together make up the complete Free Time Spender application.
+
 Have fun exploring the features of Free Time Spender!
