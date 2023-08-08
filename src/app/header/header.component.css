@@ -3,7 +3,8 @@
 }
 
 header {
-  background-color: #374151;
+  background-color:  #262626;
+  /*background: linear-gradient(245.59deg, #88884c 10%, #a86745 28.53%, #57239a 85.52%);*/
   padding: 10px;
   width: 100%;
 }
@@ -46,7 +47,7 @@ nav {
 
 .home-button {
   text-decoration: none;
-  background-color: #374151;
+  background: linear-gradient(85deg,#151515,#262626);
   border: 2px solid darkgoldenrod;
   color: darkgoldenrod;
   margin-left: 10px;
@@ -54,14 +55,15 @@ nav {
 }
 
 .home-button:hover {
-  background-color: darkgoldenrod;
+  background: linear-gradient(85deg,darkgoldenrod,#262626);
+  /*background: darkgoldenrod;*/
   color: white;
 }
 
 .login-button, .signup-button {
   /*text-decoration: none;*/
   border: 2px solid #4CAF50;
-  background-color: #374151;
+  background: linear-gradient(85deg,#151515,#262626);
   color: #4CAF50;
   margin-left: 10px;
   font-size: 25px;
@@ -69,19 +71,21 @@ nav {
 }
 
 .login-button:hover, .signup-button:hover {
-  background-color: #4CAF50;
+  background: linear-gradient(85deg,#4CAF50,#262626);
+  /*background: #4CAF50;*/
   color: white;
 }
 
 .logout-button {
   border: 2px solid #f44336;
-  background-color: #374151;
+  background: linear-gradient(85deg,#151515,#262626);
   color: #f44336;
   font-size: 25px;
 }
 
 .logout-button:hover {
-  background-color: #f44336;
+  background: linear-gradient(85deg,#f44336,#262626);
+  /*background: #f44336;*/
   color: white;
 }
 

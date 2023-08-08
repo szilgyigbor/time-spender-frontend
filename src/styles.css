@@ -1,7 +1,11 @@
 body {
-    background-color: #6b7280;
+    /*background-color: #6b7280;*/
+    /*background: linear-gradient(245.59deg, #5aa266 0%, #478d4d 28.53%, #205f26 75.52%);*/
+    background: linear-gradient(85deg,#434343,#262626);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    position: relative;
+    /*display: flex;*/
 }
 
 h1 {

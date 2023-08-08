@@ -1,6 +1,6 @@
 .chat-with-gpt {
-    background-color: #6b7280;
-    border: 1px solid #6b7280;
+    background: linear-gradient(85deg,#434343,#262626);
+    /*border: 1px solid #6b7280;*/
 }
 
 #welcomeString {
@@ -23,7 +23,7 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #9ca3af;
+    background: linear-gradient(85deg,#222222,#343434);
     line-height: 1.2em;
     font-size: 20px;
 }
@@ -32,13 +32,14 @@
         border: 1px solid #ccc;
         padding: 10px;
         border-radius: 10px;
-        background-color: #4b5563;
+        background: linear-gradient(85deg,#3f3f3f,#343434);
         color: white;
         margin: 5px 0;
     }
 
 
 #chat-input {
+    
     width: 40%;
     height: 50px;
     margin-top: 30px;
@@ -53,7 +54,7 @@
     width: 10%;
     height: 40px;
     margin-bottom: 10px;
-    background-color: #2196F3;
+    background: linear-gradient(85deg,#222222,#343434);
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -63,12 +64,12 @@
 
 .chat-me {
     font-weight: bold;
-    color: lightblue;
+    color: rgb(96, 142, 156);
 }
 
 .chat-bot {
     font-weight: bold;
-    color: lightsalmon;
+    color: rgb(255, 135, 87);
 }
 
 
@@ -88,24 +89,26 @@
 
 
 .startListenButton {
-    background-color: #4CAF50;
+    /*background-color: #4CAF50;*/
+    background: linear-gradient(85deg,#4CAF50,#343434);    
     color: white;
     border: 2px solid #e2f6e3;
 }
 
 .startListenButton:hover {
-    background-color: #237f23;  /* rgb(233, 255, 225)*/
+    background: #26ac26;
     border: 2px solid #020202;
 }
 
 .stopListenButton {
-    background-color: #d74723;
+    background: linear-gradient(85deg,#d74723,#343434);    
+    /*background-color: #d74723;*/
     color: white;
     border: 2px solid #e2f6e3;
 }
 
 .stopListenButton:hover {
-    background-color: #a4391e;  /*rgb(255, 226, 226)*/
+    background: #a4391e;  /*rgb(255, 226, 226)*/
     border: 2px solid #020202;
 }
 
@@ -114,7 +117,7 @@
 }
 
 .input-field {
-    background-color: #475469;
+    background: linear-gradient(85deg,#222222,#343434);
     color: white;
     padding: 8px;
     /*margin: 15px;*/
@@ -126,7 +129,7 @@
 
 .send-button {
     border: 2px solid #4CAF50;
-    background-color: #475469;
+    background: linear-gradient(85deg,#222222,#343434);
     padding: 5px 15px;
     color: #4CAF50;
     font-size: 25px;
@@ -137,6 +140,6 @@
 }
 
 .send-button:hover {
-    background-color: #4CAF50;
+    background: linear-gradient(85deg,#4CAF50,#343434);
     color: white;
 }
