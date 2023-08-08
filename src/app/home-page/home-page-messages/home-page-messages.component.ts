@@ -29,6 +29,12 @@ export class HomePageMessagesComponent {
       alert('You must be logged in to use this feature!');
       this.router.navigate(['/login']);
     }
+
+    if (this.messageContent == '' || this.messageContent == ' ') {
+      alert('You cannot send empty message!');
+      return;
+    }
+
     this.userName = JSON.parse(localStorage.getItem('currentUser')!).username;
     this.newMessage.id = 0;
     this.newMessage.username = this.userName;
