@@ -1,16 +1,14 @@
 <div class="home-page-container">
-    <div class="random-news-container">
-        <div class="message-card">
-            {{randomNews.title}}
-        </div>
-        
-    </div>
     <div>
         <h1>Welcome to my digital playground!</h1>
         <h2>Come and check the features!</h2>
         <h4>(This site is optimized for Pc, you can experience display issues on mobile)</h4>
+        <div class="message-card">"{{randomNews.title}}"
+            <h5>Interesting, isn't it? Check out the news section for more!</h5>
+        </div>
         <p></p>
         <h2>What would you like to do?</h2>
+        
         <div>
             <button class="button amobaButton" routerLink="/online-shooter">Play Online shooter</button>
             <!-- <button class="button amobaButton" routerLink="/play-fow">Play Five in a Row</button> -->
@@ -21,7 +19,5 @@
     </div>
 </div>
 
-
 <tisp-home-page-messages>
-
 </tisp-home-page-messages>

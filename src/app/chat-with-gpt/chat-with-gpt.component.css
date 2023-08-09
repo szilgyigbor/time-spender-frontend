@@ -50,7 +50,7 @@
     font-size: 16px;
 }
 
-#chat-send-button {
+/*#chat-send-button {
     width: 10%;
     height: 40px;
     margin-bottom: 10px;
@@ -60,7 +60,7 @@
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-}
+}*/
 
 .chat-me {
     font-weight: bold;
@@ -81,7 +81,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 25px;
+    font-size: 22px;
     margin: 10px 10px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -132,7 +132,7 @@
     background: linear-gradient(85deg,#222222,#343434);
     padding: 5px 15px;
     color: #4CAF50;
-    font-size: 25px;
+    font-size: 22px;
     margin-top: 40px;
     transition-duration: 0.4s;
     cursor: pointer;
