@@ -7,7 +7,9 @@
 }
 
 .card {
-    background: linear-gradient(85deg,#252525,#262626);
+    background: linear-gradient(85deg,#222222,#343434);
+    border: 2px solid #36515b;
+    font-size: 18px;
     border-radius: 5px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     margin: 12px;
