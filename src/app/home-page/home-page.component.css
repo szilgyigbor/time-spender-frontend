@@ -7,14 +7,7 @@
     color: white;
 }
 
-.random-news-container {
-    position: absolute;
-    left: 10px;  /* vagy bármilyen egyéb távolság a képernyő bal szélétől */
-    top: 28%;
-    transform: translateY(-50%); /* A vertikális középre igazításhoz */
-}
-
-.message-card {
+.random-news-card {
     background: linear-gradient(85deg,#222222,#343434);
     border: 2px solid #36515b;
     font-size: 18px;
@@ -23,6 +16,10 @@
     border-radius: 2px;
     color: white;
 }
+    .random-news-card a {
+        color: #fcb900;  /*#008CBA #fcb900 */
+        text-decoration: none;
+    }
 
 h1 {
     font-size: 60px;
