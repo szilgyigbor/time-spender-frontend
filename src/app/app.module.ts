@@ -19,6 +19,8 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { OnlineShooterComponent } from './online-shooter/online-shooter.component';
 import { HomePageMessagesComponent } from './home-page/home-page-messages/home-page-messages.component';
 import { NumberSortingComponent } from './number-sorting/number-sorting.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { NumberSortingComponent } from './number-sorting/number-sorting.componen
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [ { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }, ],
   bootstrap: [AppComponent],
