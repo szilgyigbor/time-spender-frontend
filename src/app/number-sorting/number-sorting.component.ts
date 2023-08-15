@@ -8,4 +8,9 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class NumberSortingComponent {
 
+  sourceNumbers: number[] = this.generateNumbers();
+  targetNumbers: number[] = [];
+  timer: any;
+  secondsPassed: number = 0;
+
 }
