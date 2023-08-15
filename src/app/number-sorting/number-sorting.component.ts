@@ -13,4 +13,12 @@ export class NumberSortingComponent {
   timer: any;
   secondsPassed: number = 0;
 
+  generateNumbers(): number[] {
+    let numbers: number[] = [];
+    while (numbers.length < 20) {
+      let num = Math.floor(Math.random() * 200) + 1;
+      if (numbers.indexOf(num) === -1) numbers.push(num);
+    }
+    return numbers;
+  }
 }
