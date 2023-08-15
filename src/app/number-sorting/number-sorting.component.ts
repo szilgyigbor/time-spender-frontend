@@ -35,4 +35,8 @@ export class NumberSortingComponent {
       this.secondsPassed++;
     }, 1000);
   }
+  
+  stopTimer() {
+    clearInterval(this.timer);
+  }
 }
