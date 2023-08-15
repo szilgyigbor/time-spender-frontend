@@ -39,4 +39,19 @@ export class NumberSortingComponent {
   stopTimer() {
     clearInterval(this.timer);
   }
+
+  checkOrder() {
+    let isCorrectOrder = true;
+    for (let i = 0; i < this.targetNumbers.length - 1; i++) {
+      if (this.targetNumbers[i] > this.targetNumbers[i + 1]) {
+        isCorrectOrder = false;
+        break;
+      }
+    }
+    if (isCorrectOrder) {
+      this.stopTimer();
+      // Mentés az adatbázisba...
+    }
+  }
+
 }
