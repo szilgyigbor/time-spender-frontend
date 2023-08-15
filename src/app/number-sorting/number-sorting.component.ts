@@ -29,4 +29,10 @@ export class NumberSortingComponent {
       transferArrayItem(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
     }
   }
+
+  startTimer() {
+    this.timer = setInterval(() => {
+      this.secondsPassed++;
+    }, 1000);
+  }
 }
