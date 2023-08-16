@@ -81,15 +81,26 @@ export class NumberSortingComponent {
 
   checkOrder() {
     let isCorrectOrder = true;
-    for (let i = 0; i < this.targetNumbers.length - 1; i++) {
-      if (this.targetNumbers[i] > this.targetNumbers[i + 1]) {
+    for (let i = 0; i < this.numbers.length - 1; i++) {
+      if (this.numbers[i] > this.numbers[i + 1]) {
         isCorrectOrder = false;
         break;
       }
     }
     if (isCorrectOrder) {
       this.stopTimer();
-      // Mentés az adatbázisba...
+      this.isGameOver = true;
+      this.newResult.username = this.currentUsername;
+      this.newResult.timeInSeconds = this.tenthsOfSecondPassed / 10;
+
+      this.postRequestsService.sendSortingGameResult(this.newResult).subscribe(
+        () => {
+          this.getRequestsService.getSortingGameResultsRequest().subscribe(
+            (response) => {
+              this.topList = response as SortingGameResult[];
+          });
+      });
+
     }
   }
 
