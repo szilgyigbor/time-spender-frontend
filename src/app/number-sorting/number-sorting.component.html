@@ -1,1 +1,12 @@
-<p>number-sorting works!</p>
+<div *ngIf="!isGameOver" class="number-sorting-container">
+    <div cdkDropList (cdkDropListDropped)="drop($event)">
+        <div *ngFor="let number of numbers" cdkDrag ngClass="numbers">{{ number }}</div>
+    </div>
+</div>
+
+<div *ngIf="isGameOver">
+    <h1>You finished this round.</h1>
+    <h2>It took you <span> {{ secondsPassed }} </span> seconds.</h2>
+    <button class="ok-button">Restart</button>
+</div>
+
