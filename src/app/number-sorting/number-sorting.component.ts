@@ -44,7 +44,7 @@ export class NumberSortingComponent {
 
   generateNumbers(): number[] {
     let numbers: number[] = [];
-    while (numbers.length < 20) {
+    while (numbers.length < 22) {
       let num = Math.floor(Math.random() * 200) + 1;
       if (numbers.indexOf(num) === -1) numbers.push(num);
     }
