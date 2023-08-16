@@ -40,6 +40,7 @@ export class NumberSortingComponent {
   }
 
   ngOnDestroy() {
+    this.stopTimer();
   }
 
   generateNumbers(): number[] {
