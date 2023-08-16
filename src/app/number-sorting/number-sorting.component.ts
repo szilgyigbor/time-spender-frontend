@@ -71,6 +71,14 @@ export class NumberSortingComponent {
     this.startTimer();
   }
 
+  restartGame() {
+    this.numbers = this.generateNumbers();
+    this.isGameOver = false;
+    this.showRules = true;
+    this.tenthsOfSecondPassed = 0;
+    this.startTimer();
+  }
+
   checkOrder() {
     let isCorrectOrder = true;
     for (let i = 0; i < this.targetNumbers.length - 1; i++) {
