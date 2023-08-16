@@ -1,12 +1,27 @@
-<div *ngIf="!isGameOver" class="number-sorting-container">
-    <div cdkDropList (cdkDropListDropped)="drop($event)">
-        <div *ngFor="let number of numbers" cdkDrag ngClass="numbers">{{ number }}</div>
+<div *ngIf="showRules">
+    <h1>Arrange the numbers in ascending order from top to bottom.</h1>
+    <h3>Click on a number to move it up or down.</h3>
+    <h3>Click on the button below to start the timer.</h3>
+    <button ngClass="ok-button" (click)="hideRules()">Start the game</button>
+    <div class="top-list-container">
+        <h2>Top 10 Players</h2>
+        <div *ngFor="let item of topList" class="list-item">
+            <span class="username">{{ item.username }}</span>
+            <span class="time">{{ item.timeInSeconds }}s</span>
+        </div>
     </div>
 </div>
 
-<div *ngIf="isGameOver">
-    <h1>You finished this round.</h1>
-    <h2>It took you <span> {{ secondsPassed }} </span> seconds.</h2>
-    <button class="ok-button">Restart</button>
-</div>
+<div *ngIf="!showRules">
+    <div *ngIf="!isGameOver" class="number-sorting-container">
+        <div cdkDropList (cdkDropListDropped)="drop($event)">
+            <div *ngFor="let number of numbers" cdkDrag ngClass="numbers">{{ number }}</div>
+        </div>
+    </div>
 
+    <div *ngIf="isGameOver">
+        <h1>You finished this round.</h1>
+        <h2>It took you <span> {{ tenthsOfSecondPassed / 10 }} </span> seconds.</h2>
+        <button class="ok-button" (click)="restartGame()">Restart</button>
+    </div>
+</div>
