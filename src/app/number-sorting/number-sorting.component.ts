@@ -39,6 +39,9 @@ export class NumberSortingComponent {
     });
   }
 
+  ngOnDestroy() {
+  }
+
   generateNumbers(): number[] {
     let numbers: number[] = [];
     while (numbers.length < 20) {
