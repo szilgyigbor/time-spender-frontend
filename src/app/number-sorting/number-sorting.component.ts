@@ -93,7 +93,7 @@ export class NumberSortingComponent {
       this.isGameOver = true;
       this.newResult.username = this.currentUsername;
       this.newResult.timeInSeconds = this.tenthsOfSecondPassed / 10;
-
+      this.tenthsOfSecondPassed = 0;
       this.postRequestsService.sendSortingGameResult(this.newResult).subscribe(
         () => {
           this.getRequestsService.getSortingGameResultsRequest().subscribe(
