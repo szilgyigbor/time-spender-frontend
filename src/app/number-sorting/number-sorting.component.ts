@@ -41,7 +41,6 @@ export class NumberSortingComponent {
 
   ngOnDestroy() {
     this.stopTimer();
-    this.tenthsOfSecondPassed = 0;
   }
 
   generateNumbers(): number[] {
@@ -59,6 +58,7 @@ export class NumberSortingComponent {
   }
 
   startTimer() {
+    this.stopTimer();
     this.timer = setInterval(() => {
       this.tenthsOfSecondPassed++;
     }, 100);
@@ -74,11 +74,11 @@ export class NumberSortingComponent {
   }
 
   restartGame() {
+    this.stopTimer();
     this.numbers = this.generateNumbers();
     this.isGameOver = false;
     this.showRules = true;
     this.tenthsOfSecondPassed = 0;
-    this.startTimer();
   }
 
   checkOrder() {
@@ -94,7 +94,6 @@ export class NumberSortingComponent {
       this.isGameOver = true;
       this.newResult.username = this.currentUsername;
       this.newResult.timeInSeconds = this.tenthsOfSecondPassed / 10;
-      this.tenthsOfSecondPassed = 0;
       this.postRequestsService.sendSortingGameResult(this.newResult).subscribe(
         () => {
           this.getRequestsService.getSortingGameResultsRequest().subscribe(
@@ -102,7 +101,6 @@ export class NumberSortingComponent {
               this.topList = response as SortingGameResult[];
           });
       });
-
     }
   }
 
