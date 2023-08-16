@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { SortingGameResult } from '../interfaces/sorting-result-data';
+import { PostRequestsService } from '../services/post-requests.service';
+import { GetRequestsService } from '../services/get-requests.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'tisp-number-sorting',
