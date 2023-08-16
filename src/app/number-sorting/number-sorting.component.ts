@@ -51,12 +51,9 @@ export class NumberSortingComponent {
     return numbers;
   }
 
-  onDrop(event: CdkDragDrop<number[]>) {
-    if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-    } else {
-      transferArrayItem(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
-    }
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.numbers, event.previousIndex, event.currentIndex);
+    this.checkOrder();
   }
 
   startTimer() {
