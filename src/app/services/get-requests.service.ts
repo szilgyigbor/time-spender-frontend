@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { SortingGameResult } from '../interfaces/sorting-result-data';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,10 @@ export class GetRequestsService {
 
   getOneNewsRequest() {
     return this.http.get(`${environment.backend_url}/api/getonenews`);
+  }
+
+  getSortingGameResultsRequest() {
+    return this.http.get(`${environment.backend_url}/api/getsortingresults`);
   }
   
 }
