@@ -22,6 +22,16 @@ export class NumberSortingComponent {
   topList: SortingGameResult[] = [];
   currentUsername: string = "";
 
+  constructor(private postRequestsService: PostRequestsService, private getRequestsService: GetRequestsService,
+    private router: Router) {
+    if (!!localStorage.getItem('currentUser') ==  false) {
+      alert('You must be logged in to use this feature!');
+      this.router.navigate(['/login']);}
+    else {
+      this.currentUsername = JSON.parse(localStorage.getItem('currentUser')!).username;
+    }
+  }
+
   generateNumbers(): number[] {
     let numbers: number[] = [];
     while (numbers.length < 20) {
