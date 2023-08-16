@@ -66,6 +66,11 @@ export class NumberSortingComponent {
     clearInterval(this.timer);
   }
 
+  hideRules() {
+    this.showRules = false;
+    this.startTimer();
+  }
+
   checkOrder() {
     let isCorrectOrder = true;
     for (let i = 0; i < this.targetNumbers.length - 1; i++) {
