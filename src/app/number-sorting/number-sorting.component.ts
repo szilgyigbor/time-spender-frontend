@@ -58,8 +58,8 @@ export class NumberSortingComponent {
 
   startTimer() {
     this.timer = setInterval(() => {
-      this.secondsPassed++;
-    }, 1000);
+      this.tenthsOfSecondPassed++;
+    }, 100);
   }
   
   stopTimer() {
