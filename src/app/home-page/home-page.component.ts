@@ -20,7 +20,6 @@ export class HomePageComponent {
 
   getANews() {
     this.getRequestsService.getOneNewsRequest().subscribe((data: any) => {
-      console.log(data);
       this.randomNews = data;
     });
   }
