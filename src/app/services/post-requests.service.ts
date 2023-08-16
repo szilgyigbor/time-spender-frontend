@@ -3,11 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { UserData } from '../interfaces/user-data';
 import { MessageData } from '../interfaces/message-data';
 import { environment } from '../../environments/environment';
+import { SortingGameResult } from '../interfaces/sorting-result-data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostRequestsService {
+
 
   constructor(private http: HttpClient) { }
 
@@ -66,6 +68,15 @@ export class PostRequestsService {
 
    sendMainPageMessage(messageData: MessageData) {
     return this.http.post(`${environment.backend_url}/api/messages/addmessage`, JSON.stringify(messageData), {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+  
+   }
+
+   sendSortingGameResult(sortingGameResult: SortingGameResult) {
+    return this.http.post(`${environment.backend_url}/api/addsortingresult`, JSON.stringify(sortingGameResult), {
       headers: {
         'Content-Type': 'application/json'
       }
