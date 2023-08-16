@@ -32,6 +32,13 @@ export class NumberSortingComponent {
     }
   }
 
+  ngOnInit() {
+    this.getRequestsService.getSortingGameResultsRequest().subscribe(
+      (response) => {
+        this.topList = response as SortingGameResult[];
+    });
+  }
+
   generateNumbers(): number[] {
     let numbers: number[] = [];
     while (numbers.length < 20) {
