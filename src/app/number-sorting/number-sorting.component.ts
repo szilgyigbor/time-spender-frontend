@@ -41,6 +41,7 @@ export class NumberSortingComponent {
 
   ngOnDestroy() {
     this.stopTimer();
+    this.tenthsOfSecondPassed = 0;
   }
 
   generateNumbers(): number[] {
