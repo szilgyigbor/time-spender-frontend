@@ -13,10 +13,14 @@ import { Router } from '@angular/router';
 })
 export class NumberSortingComponent {
 
+  showRules: boolean = true;
   isGameOver: boolean = false;
   numbers: number[] = this.generateNumbers();
   timer: any;
-  secondsPassed: number = 0;
+  tenthsOfSecondPassed: number = 0;
+  newResult: SortingGameResult = {} as SortingGameResult;
+  topList: SortingGameResult[] = [];
+  currentUsername: string = "";
 
   generateNumbers(): number[] {
     let numbers: number[] = [];
