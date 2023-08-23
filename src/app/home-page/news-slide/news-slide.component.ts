@@ -17,4 +17,6 @@ export class NewsSlideComponent {
 
   displayedNews: NewsItem[] = [];
 
+  constructor(private getRequestsService: GetRequestsService) { 
+  }
 }
