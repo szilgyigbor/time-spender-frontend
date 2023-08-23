@@ -40,4 +40,18 @@ export class NewsSlideComponent {
   updateDisplayedNews() {
     this.displayedNews = this.news.slice(this.currentSlideStartIndex, this.currentSlideEndIndex);
   }
+  
+  next() {
+    this.slideState = 'right';
+    if (this.currentSlideEndIndex < this.news.length - 1) {
+      this.currentSlideStartIndex += 1;
+      this.currentSlideEndIndex += 1;
+      this.updateDisplayedNews();
+    }
+    else {
+      this.currentSlideStartIndex = 0;
+      this.currentSlideEndIndex = 3;
+      this.updateDisplayedNews();
+    }
+  }
 }
