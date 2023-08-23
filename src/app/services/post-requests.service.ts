@@ -76,7 +76,7 @@ export class PostRequestsService {
    }
 
    sendSortingGameResult(sortingGameResult: SortingGameResult) {
-    return this.http.post(`${environment.backend_url}/api/addsortingresult`, JSON.stringify(sortingGameResult), {
+    return this.http.post(`${environment.backend_url}/api/addsortinggameresult`, JSON.stringify(sortingGameResult), {
       headers: {
         'Content-Type': 'application/json'
       }

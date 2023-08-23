@@ -23,7 +23,7 @@ export class GetRequestsService {
   }
 
   getSortingGameResultsRequest() {
-    return this.http.get(`${environment.backend_url}/api/getsortingresults`);
+    return this.http.get(`${environment.backend_url}/api/getsortinggameresults`);
   }
   
 }
