@@ -54,4 +54,19 @@ export class NewsSlideComponent {
       this.updateDisplayedNews();
     }
   }
+  
+  prev() {
+    this.slideState = 'left';
+    if (this.currentSlideStartIndex > 0) {
+      this.currentSlideStartIndex -= 1;
+      this.currentSlideEndIndex -= 1;
+      this.updateDisplayedNews();
+    }
+    else {
+      this.currentSlideStartIndex = this.news.length - 3;
+      this.currentSlideEndIndex = this.news.length;
+      this.updateDisplayedNews();
+    }
+  }
+
 }
