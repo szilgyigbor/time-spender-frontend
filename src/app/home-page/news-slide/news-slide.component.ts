@@ -9,5 +9,12 @@ import { GetRequestsService } from 'src/app/services/get-requests.service';
   styleUrls: ['./news-slide.component.css']
 })
 export class NewsSlideComponent {
+  news: NewsItem[] = [];
+  slideState: string = 'left';
+
+  currentSlideStartIndex: number = 0;
+  currentSlideEndIndex: number = 3;
+
+  displayedNews: NewsItem[] = [];
 
 }
