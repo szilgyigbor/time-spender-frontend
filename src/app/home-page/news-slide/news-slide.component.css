@@ -35,12 +35,12 @@ h1 {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     margin: 12px;
     max-width: 300px;
-    height: 110px; /* Fix magasság */
+    height: 110px;
     padding: 10px;
     text-align: center;
-    display: flex; /* Flex elrendezés */
-    flex-direction: column; /* Oszlopos elrendezés */
-    justify-content: space-between; /* Egyenletes térköz az elemek között */
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
   }
     .news-card a {
         color: #fcb900;  /*#008CBA #fcb900 */
@@ -62,8 +62,8 @@ h1 {
     border-radius: 2px;
     width: 20px;
     height: 20px;
-    border-top: 5px solid #008CBA;
-    border-right: 5px solid #008CBA;
+    border-top: 5px solid #0a7497;
+    border-right: 5px solid #0a7497;
     cursor: pointer;
   }
   
