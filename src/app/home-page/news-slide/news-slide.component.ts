@@ -19,4 +19,21 @@ export class NewsSlideComponent {
 
   constructor(private getRequestsService: GetRequestsService) { 
   }
+
+  ngOnInit(): void {
+    
+    this.getRequestsService.getNewsRequest().subscribe({
+      next: (data: any) => {
+        this.news = data.articles;
+        console.log(this.news);
+        this.updateDisplayedNews();
+      },
+      error: error => {
+        console.log(error);
+      }
+    });
+    
+    setInterval(() => this.next(), 10000);
+
+  }
 }
