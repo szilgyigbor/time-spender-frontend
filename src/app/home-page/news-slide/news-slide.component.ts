@@ -36,4 +36,8 @@ export class NewsSlideComponent {
     setInterval(() => this.next(), 10000);
 
   }
+
+  updateDisplayedNews() {
+    this.displayedNews = this.news.slice(this.currentSlideStartIndex, this.currentSlideEndIndex);
+  }
 }
