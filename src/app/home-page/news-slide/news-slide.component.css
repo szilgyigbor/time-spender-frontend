@@ -1,0 +1,83 @@
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+    background-image: linear-gradient(to left, #b3ef5f, #c73707);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding: 5px 0px;
+}
+
+.news-container {
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    /*-webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;*/
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-container h3{
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.news-card {
+    background: linear-gradient(85deg,#222222,#343434);
+    border: 2px solid #36515b;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    margin: 12px;
+    max-width: 300px;
+    height: 110px; /* Fix magasság */
+    padding: 10px;
+    text-align: center;
+    display: flex; /* Flex elrendezés */
+    flex-direction: column; /* Oszlopos elrendezés */
+    justify-content: space-between; /* Egyenletes térköz az elemek között */
+  }
+    .news-card a {
+        color: #fcb900;  /*#008CBA #fcb900 */
+        text-decoration: none;
+    }
+
+@media screen and (min-width: 768px) {
+    .news-card {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+
+
+.arrow-button {
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid #008CBA;
+    border-right: 5px solid #008CBA;
+    cursor: pointer;
+  }
+  
+    .arrow-button:hover {
+        border-top: 5px solid #555;
+        border-right: 5px solid #555;
+    }
+
+    .arrow-button.right {
+        transform: rotate(45deg);
+    }
+
+    .arrow-button.left {
+        transform: rotate(-135deg);
+    }
+
+
