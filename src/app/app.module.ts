@@ -21,6 +21,7 @@ import { HomePageMessagesComponent } from './home-page/home-page-messages/home-p
 import { NumberSortingComponent } from './number-sorting/number-sorting.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { NewsSlideComponent } from './home-page/news-slide/news-slide.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     SignUpPageComponent,
     OnlineShooterComponent,
     HomePageMessagesComponent,
-    NumberSortingComponent
+    NumberSortingComponent,
+    NewsSlideComponent
   ],
   imports: [
     BrowserModule,
