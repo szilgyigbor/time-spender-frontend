@@ -1,8 +1,12 @@
 <div class="home-page-container">
     <div>
         <h1>Welcome to my digital playground!</h1>
-        <h2>Come and check the features!</h2>
-        <h4>(This site is optimized for Pc, you can experience display issues on mobile)</h4>
+        <p>
+            If you are bored, come and check this site.
+            <br>
+            You can play games, read news, check the weather, speak with an AI, and more!
+        </p>
+        
         <div class="random-news-card">"{{randomNews.title}}"
             <br>
             <a [href]="randomNews.url" target="_blank">Interesting, isn't it? Check this news!</a>
@@ -19,6 +23,9 @@
         </div>
     </div>
 </div>
+<hr>
+<div>
+    <tisp-home-page-messages>
+    </tisp-home-page-messages>
+</div>
 
-<tisp-home-page-messages>
-</tisp-home-page-messages>

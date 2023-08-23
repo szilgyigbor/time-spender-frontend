@@ -21,11 +21,24 @@
         text-decoration: none;
     }
 
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    display: block;
+    margin-block-start: 1.3em;
+    margin-block-end: 2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 h1 {
     font-size: 60px;
-    /*font-weight: bold;*/
-    margin: 0;
-    padding: 35px 0px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #b694d8, #765eb8);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding: 30px 0px;
 }
 
 
@@ -48,6 +61,14 @@ h5 {
     margin-top: 5px;
     color: #008CBA;
     font-weight: 100;
+}
+
+hr {
+    border: solid #666a79;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 30px 200px 30px;
+    height: 0;
 }
 
 .button {
