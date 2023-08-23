@@ -22,7 +22,7 @@
     }
 
 p {
-    font-size: 20px;
+    font: 20px notosans-regular, sans-serif;
     line-height: 1.5;
     display: block;
     margin-block-start: 1.3em;
