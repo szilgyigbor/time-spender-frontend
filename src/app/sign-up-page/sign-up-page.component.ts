@@ -34,7 +34,7 @@ export class SignUpPageComponent {
     }
     
 
-    this.postRequestsService.sendSignUpData(this.signUpData).subscribe(response => {
+    this.postRequestsService.sendSignUpData(this.signUpData).subscribe((response: any) => {
       localStorage.setItem('currentUser', JSON.stringify(response));
       this.loginService.setLoggedIn(true);
       this.router.navigate(['/']);

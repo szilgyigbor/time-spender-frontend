@@ -45,7 +45,7 @@ export class HomePageMessagesComponent {
       next: () => {
         this.getAllMessages();
       },
-      error: error => {
+      error: () => {
         if (!!localStorage.getItem('currentUser') ==  true)
           {
             localStorage.removeItem('currentUser');
@@ -61,7 +61,7 @@ export class HomePageMessagesComponent {
   }
 
   getAllMessages() {
-    this.getRequestService.getMainPageMessagesRequest().subscribe((messageData) => {
+    this.getRequestService.getMainPageMessagesRequest().subscribe((messageData : any) => {
       this.messagesData = (messageData as MessageData[]).sort((a, b) => new Date(b.postedAt).getTime() - new Date(a.postedAt).getTime());
     });
   }

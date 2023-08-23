@@ -59,7 +59,7 @@ export class ChatWithGptComponent implements OnInit {
   }
 
   sendAudioToTranscript(audioFile: File) {
-    this.postRequestService.sendAudioFile(audioFile).subscribe(response => {
+    this.postRequestService.sendAudioFile(audioFile).subscribe((response: { toString: () => any; }) => {
       this.conversationContent.push({role: 'user', content: response.toString()});
       this.sendMessage();
     });
@@ -72,7 +72,7 @@ export class ChatWithGptComponent implements OnInit {
   }
 
   sendMessage() {
-    this.postRequestService.sendGptMessageHistory(this.conversationContent).subscribe(response => {
+    this.postRequestService.sendGptMessageHistory(this.conversationContent).subscribe((response: {role: string, content: string}[]) => {
       this.conversationContent = response;
       this.speak(response[response.length - 1].content);
     });

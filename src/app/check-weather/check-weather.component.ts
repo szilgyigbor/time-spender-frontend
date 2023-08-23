@@ -35,7 +35,7 @@ export class CheckWeatherComponent {
         console.log('WeatherData:', data);
         this.weatherItems = data as WeatherItem;
       },
-      error: error => {
+      error: (error: { status: number; }) => {
         if (error.status === 401) {
           if (!!localStorage.getItem('currentUser') ==  true)
           {

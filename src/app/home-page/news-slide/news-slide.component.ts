@@ -28,7 +28,7 @@ export class NewsSlideComponent {
         console.log(this.news);
         this.updateDisplayedNews();
       },
-      error: error => {
+      error: (error: any) => {
         console.log(error);
       }
     });

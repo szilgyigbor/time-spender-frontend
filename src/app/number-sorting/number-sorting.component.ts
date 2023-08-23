@@ -34,7 +34,7 @@ export class NumberSortingComponent {
 
   ngOnInit() {
     this.getRequestsService.getSortingGameResultsRequest().subscribe(
-      (response) => {
+      (response: any) => {
         this.topList = response as SortingGameResult[];
     });
   }
@@ -97,7 +97,7 @@ export class NumberSortingComponent {
       this.postRequestsService.sendSortingGameResult(this.newResult).subscribe(
         () => {
           this.getRequestsService.getSortingGameResultsRequest().subscribe(
-            (response) => {
+            (response: any) => {
               this.topList = response as SortingGameResult[];
           });
       });

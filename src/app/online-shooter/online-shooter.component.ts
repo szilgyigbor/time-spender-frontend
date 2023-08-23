@@ -47,16 +47,16 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
     this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
     this.signalrService.startConnection();
     this.signalrService.addTransferCharacterDataListener();
-    this.charecterSubscription = this.signalrService.characterMoved$.subscribe(data => {
+    this.charecterSubscription = this.signalrService.characterMoved$.subscribe((data: PlayerData[]) => {
       this.players = data;
     });
 
-    this.connectionSubscription = this.signalrService.isConnectionStarted$.subscribe(isStarted => {
+    this.connectionSubscription = this.signalrService.isConnectionStarted$.subscribe((isStarted: any) => {
       if (isStarted) {
           this.signalrService.startUpdatingStatus();
       }
     });
-    this.killedNameSubscription = this.signalrService.killedCharacter$.subscribe(name => {
+    this.killedNameSubscription = this.signalrService.killedCharacter$.subscribe((name: string) => {
       if (name == this.currentUsername) {
         alert('You were killed!');
         this.isKilled = true;

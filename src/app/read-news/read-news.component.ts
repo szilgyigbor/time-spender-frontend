@@ -25,7 +25,7 @@ export class ReadNewsComponent {
       next: (data: any) => {
         this.news = data.articles;
       },
-      error: error => {
+      error: (error: { status: number; }) => {
         if (error.status === 401) {
           if (!!localStorage.getItem('currentUser') ==  true)
           {

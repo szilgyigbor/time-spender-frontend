@@ -20,12 +20,12 @@ export class LoginPageComponent {
 
   sendLogin() {
     this.postRequestsService.sendLoginData(this.loginData).subscribe({
-      next: response => {
+      next: (response: any) => {
         localStorage.setItem('currentUser', JSON.stringify(response));
         this.loginService.setLoggedIn(true);
         this.router.navigate(['/']);
       },
-      error: error => {
+      error: (error: { status: number; }) => {
         if (error.status === 401 || error.status === 400) {
           alert("Username or password is incorrect!");
         }
