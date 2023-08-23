@@ -1,1 +1,11 @@
-<p>news-slide works!</p>
+<h1>News from Hungary</h1>
+<div class="news-container">
+    <button class="arrow-button left" (click)="prev()"></button>
+    <div *ngFor="let item of displayedNews; let i = index">
+        <div class="news-card">"{{item.title}}"
+            <br>
+            <a [href]="item.url" target="_blank">Check this</a>
+        </div>
+    </div>
+    <button class="arrow-button right" (click)="next()"></button>
+</div>
