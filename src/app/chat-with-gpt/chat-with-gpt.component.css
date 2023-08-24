@@ -5,17 +5,26 @@
 
 #welcomeString {
     font-size: 40px;
-    font-weight: bold;
     color: #fff;
     margin-top: 25px;
-    margin-bottom: 05px;
+    margin-bottom: 15px;
     text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    #welcomeString {
+        font-size: 30px;
+        color: #fff;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
 }
 
 #chat-messages {
     margin-top: 30px;
-    height: 420px;
-    width: 60%;
+    height: 400px;
+    width: 50%;
     overflow-y: scroll;
     margin-left: auto;
     margin-right: auto;
@@ -25,7 +34,7 @@
     border-radius: 10px;
     background: linear-gradient(85deg,#222222,#343434);
     line-height: 1.2em;
-    font-size: 20px;
+    font-size: 18px;
 }
 
     #chat-messages p {
@@ -38,29 +47,27 @@
     }
 
 
-#chat-input {
+@media only screen and (max-width: 768px) {
+    #chat-messages {
+        margin-top: 30px;
+        height: 400px;
+        width: 80%;
+        padding: 4px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        line-height: 1.2em;
+        font-size: 16px;
+    }
     
-    width: 40%;
-    height: 50px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 16px;
+        #chat-messages p {
+            border: 1px solid #ccc;
+            padding: 4px;
+            border-radius: 10px;
+            background: linear-gradient(85deg,#3f3f3f,#343434);
+            color: white;
+            margin: 5px 0;
+        }
 }
-
-/*#chat-send-button {
-    width: 10%;
-    height: 40px;
-    margin-bottom: 10px;
-    background: linear-gradient(85deg,#222222,#343434);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}*/
 
 .chat-me {
     font-weight: bold;
@@ -75,21 +82,33 @@
 
 .button {
     border-radius: 30px;
-    /*background-color: #4CAF50;*/
     color: white;
-    padding: 13px 13px;
+    padding: 7px 7px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 22px;
+    font-size: 20px;
     margin: 10px 10px;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+    .button {
+        border-radius: 30px;
+        color: white;
+        padding: 7px 7px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 10px 10px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+}
 
 .startListenButton {
-    /*background-color: #4CAF50;*/
     background: linear-gradient(85deg,#4CAF50,#343434);    
     color: white;
     border: 2px solid #e2f6e3;
@@ -120,23 +139,41 @@
     background: linear-gradient(85deg,#222222,#343434);
     color: white;
     padding: 8px;
-    /*margin: 15px;*/
-    font-size: 22px;
-    width: 500px;
-    height: 26px;
+    font-size: 18px;
+    width: 400px;
+    height: 20px;
     border: #4CAF50;
+}
+
+@media only screen and (max-width: 768px) {
+    .input-field {
+        background: linear-gradient(85deg,#222222,#343434);
+        color: white;
+        padding: 8px;
+        font-size: 16px;
+        width: 300px;
+        height: 18px;
+        border: #4CAF50;
+    }
 }
 
 .send-button {
     border: 2px solid #4CAF50;
     background: linear-gradient(85deg,#222222,#343434);
-    padding: 5px 15px;
+    padding: 3px 13px;
     color: #4CAF50;
-    font-size: 22px;
+    font-size: 18px;
     margin-top: 40px;
     transition-duration: 0.4s;
     cursor: pointer;
     margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .send-button {
+        padding: 3px 13px;
+        font-size: 17px;
+    }
 }
 
 .send-button:hover {
