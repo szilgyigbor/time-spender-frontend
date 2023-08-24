@@ -1,13 +1,9 @@
+<h1>Read News</h1>
 <div class="read-news-container">
-    <div class="text-center">
-        <h1>Read News</h1>
-        <div id="cards">
-            <div *ngFor="let item of news" class="card">
-                <h2>{{ item.title }}</h2>
-                <p>{{ item.author }}</p>
-                <p>{{ item.description }}</p>
-                <a [href]="item.url" target="_blank">Read more</a>
-            </div>
+    <div id="cards">
+        <div *ngFor="let item of news" class="card">
+            <h2>{{ item.title }}</h2>
+            <a [href]="item.url" target="_blank">Read more</a>
         </div>
     </div>
 </div>

@@ -33,7 +33,7 @@ export class NewsSlideComponent {
       }
     });
     
-    setInterval(() => this.next(), 10000);
+    /*setInterval(() => this.next(), 10000);*/
 
   }
 

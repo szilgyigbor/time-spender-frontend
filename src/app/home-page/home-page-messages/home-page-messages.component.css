@@ -1,24 +1,65 @@
+.messages-container {
+    background: linear-gradient(85deg,#434343,#262626);
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #fac04c, #1a5243);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding: 30px 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 25px;
+        padding: 15px 0px;
+    }
+}
+
 .input-field {
     background: linear-gradient(85deg,#222222,#343434);
     color: white;
     padding: 8px;
-    /*margin: 15px;*/
     font-size: 22px;
     width: 300px;
-    height: 26px;
+    height: 23px;
     border: #4CAF50;
+}
+
+@media only screen and (max-width: 768px) {
+    .input-field {
+        width: 200px;
+        height: 16px;
+        padding: 8px;
+        font-size: 15px;
+    }
+
 }
 
 .send-button {
     border: 2px solid #4CAF50;
     background: linear-gradient(85deg,#222222,#343434);
-    padding: 5px 15px;
+    padding: 3px 13px;
     color: #4CAF50;
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 40px;
     transition-duration: 0.4s;
     cursor: pointer;
     margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .send-button {
+        padding: 3px 13px;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+    
 }
 
 .send-button:hover {
@@ -29,6 +70,7 @@
 
 
 .message-container {
+    background: linear-gradient(85deg,#434343,#262626);
     display: flex;
     flex-wrap: wrap;
 }
@@ -59,4 +101,30 @@
 .message-card .date {
     font-size: 12px;
     color: #aaa;
+}
+
+@media only screen and (max-width: 768px) {
+    .message-card {
+        margin: 6px;
+        max-width: 200px;
+        padding: 4px;
+        text-align: center;
+    }
+    
+    .message-card .content {
+        font-size: 13px;
+        line-height: 1.3;
+        font-weight: 350;
+    }
+    
+    .message-card .author {
+        font-size: 11px;
+        color: #ccc;
+    }
+    
+    .message-card .date {
+        font-size: 10px;
+        color: #aaa;
+        padding: 0px;
+    }
 }
