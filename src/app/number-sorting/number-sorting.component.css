@@ -10,11 +10,19 @@
 .numbers {
     padding: 6px 40px;
     font-size: 22px;
+    width: 80px;
     background-color: #f2f2f2;
     border: 1px solid #292929;
     border-radius: 5px;
     cursor: pointer;
-    /*transition: transform 0.1s;*/
+}
+
+@media screen and (max-width: 768px) {
+    .numbers {
+        font-size: 20px;
+        width: 90px;
+    }
+    
 }
 
 .ok-button {
@@ -22,8 +30,8 @@
     background: linear-gradient(85deg,#222222,#343434);
     padding: 5px 15px;
     color: #4CAF50;
-    font-size: 22px;
-    margin-top: 40px;
+    font-size: 20px;
+    margin-top: 20px;
     margin-bottom: 30px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -36,23 +44,48 @@
 
 h1 {
     color: white;
-    font-size: 30px;
+    font-size: 26px;
     margin-bottom: 0;
     margin-top: 40px;
 }
 
+
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 22px;
+        margin-top: 20px;
+    }
+}
+
 h2 {
-    color: white;
     font-size: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+    background-image: linear-gradient(to left, #c9a8e9, #61d7ac);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+    }
 }
 
 h3 {
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
 }
 
 span {
@@ -63,18 +96,31 @@ span {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 2px 4px;
     background: linear-gradient(85deg,#222222,#343434);
     border: 2px solid #36515b;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (max-width: 768px) {
+    .top-list-container {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 2px 4px;
+        background: linear-gradient(85deg,#222222,#343434);
+        border: 2px solid #36515b;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
 .list-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 6px 14px;
     background: linear-gradient(85deg,#222222,#343434);
     border: 2px solid #36515b;
     border-radius: 5px;
@@ -90,6 +136,18 @@ span {
 .time {
     color: white;
     font-size: 1.1em;
+}
+
+@media screen and (max-width: 768px) {
+    .username {
+        font-size: 1.2em;
+        color: white;
+    }
+
+    .time {
+        color: white;
+        font-size: 1em;
+    }
 }
 
 .list-item:hover {

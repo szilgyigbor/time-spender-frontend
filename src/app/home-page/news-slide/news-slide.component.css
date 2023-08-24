@@ -1,7 +1,7 @@
 h1 {
     font-size: 30px;
     font-weight: 400;
-    background-image: linear-gradient(to left, #b3ef5f, #c73707);
+    background-image: linear-gradient(85deg, #4866c8, #42ca98);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -10,29 +10,26 @@ h1 {
 
 @media only screen and (max-width: 768px) {
     h1 {
-        font-size: 25px;
-        padding: 5px 0px;
+        font-size: 22px;
+        padding: 0px 0px;
     }
 }
 
 .news-container {
     color: white;
-    padding-top: 10px;
     padding-bottom: 15px;
-    /*-webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;*/
     transition: all .3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/*.news-container h3{
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 24px;
-}*/
+@media screen and (max-width: 768px) {
+    .news-container {
+        display: flex;
+        margin: 0px 5px;
+    }
+}
 
 .news-card {
     background: linear-gradient(85deg,#222222,#343434);
@@ -42,8 +39,8 @@ h1 {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     margin: 12px;
     max-width: 300px;
-    height: 110px;
-    padding: 10px;
+    height: 120px;
+    padding: 2px 5px;
     text-align: center;
     display: flex;
     flex-direction: column; 
@@ -56,22 +53,19 @@ h1 {
 
 @media screen and (max-width: 768px) {
     .news-card {
-        font-size: 11px;
-        line-height: 1.3;
+        font-size: 12px;
+        line-height: 1.2;
         border-radius: 2px;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-        margin: 5px;
+        margin: 2px;
         max-width: 300px;
-        height: 140px;
-        padding: 5px;
+        height: 160px;
+        padding: 2px 1px;
         text-align: center;
         display: flex;
         flex-direction: column; 
-        /*justify-content: space-between;*/
     }
 }
-
-
 
 .arrow-button {
     background: transparent;
@@ -82,7 +76,7 @@ h1 {
     border-top: 5px solid #0a7497;
     border-right: 5px solid #0a7497;
     cursor: pointer;
-  }
+}
   
     .arrow-button:hover {
         border-top: 5px solid #555;

@@ -4,7 +4,7 @@
 
 h1 {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 400;
     background-image: linear-gradient(to left, #fac04c, #1a5243);
     color: transparent;
     background-clip: text;
@@ -14,7 +14,7 @@ h1 {
 
 @media only screen and (max-width: 768px) {
     h1 {
-        font-size: 25px;
+        font-size: 22px;
         padding: 15px 0px;
     }
 }
