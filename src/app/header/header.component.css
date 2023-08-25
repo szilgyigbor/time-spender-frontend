@@ -3,17 +3,17 @@
 }
 
 header {
-  background-color:  #262626;
-  /*background: linear-gradient(245.59deg, #88884c 10%, #a86745 28.53%, #57239a 85.52%);*/
-  padding: 14px 0px;
-  position: fixed; /* Ez rögzíti a header helyzetét */
-  top: 0; /* A header a képernyő tetején lesz */
-  left: 0; /* A header a képernyő bal oldalán lesz */
-  width: 100%; /* A header az egész képernyő szélességét kitölti */
-  z-index: 1000; /* Biztosítja, hogy a header a többi elem felett jelenik meg */
+  background-color:  #212529;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 nav {
+  padding: 10px 0px;
   display: flex;
 }
 
@@ -26,7 +26,7 @@ nav {
 
 .logout-text {
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   margin-right: 10px;
 }
 
@@ -42,7 +42,8 @@ nav {
   border: 2px solid darkgoldenrod;
   color: darkgoldenrod;
   margin-left: 10px;
-  font-size: 25px;
+  height: 30px;
+  font-size: 21px;
 }
 
 .home-button:hover {
@@ -52,18 +53,16 @@ nav {
 }
 
 .login-button, .signup-button {
-  /*text-decoration: none;*/
   border: 2px solid #4CAF50;
   background: linear-gradient(85deg,#151515,#262626);
   color: #4CAF50;
   margin-left: 10px;
-  font-size: 25px;
-  /*padding-right: 10px;*/
+  height: 30px;
+  font-size: 21px;
 }
 
 .login-button:hover, .signup-button:hover {
   background: linear-gradient(85deg,#4CAF50,#262626);
-  /*background: #4CAF50;*/
   color: white;
 }
 
@@ -71,20 +70,22 @@ nav {
   border: 2px solid #f44336;
   background: linear-gradient(85deg,#151515,#262626);
   color: #f44336;
-  font-size: 25px;
+  height: 30px;
+  font-size: 21px;
 }
 
 .logout-button:hover {
   background: linear-gradient(85deg,#f44336,#262626);
-  /*background: #f44336;*/
   color: white;
 }
 
 @media only screen and (max-width: 768px) {
   .logout-text {
     color: white;
-    font-size: 16px;
+    font-size: 12px;
     margin-right: 10px;
+    width: 100px;
+    line-height: 1rem;
   }
 
   .right-buttons {
