@@ -5,7 +5,7 @@ h1 {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    padding: 5px 0px;
+    padding: 20px 0px;
 }
 
 @media only screen and (max-width: 768px) {

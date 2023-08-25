@@ -1,5 +1,15 @@
-.home-page-container {
+.home-page-header-container {
     padding-top: 50px;
+    /*background-color: #6b7280;*/  /*#E8E8E8;*/  
+    background: linear-gradient(85deg,#434343,#262626);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.home-page-container {
     /*background-color: #6b7280;*/  /*#E8E8E8;*/  
     background: linear-gradient(85deg,#434343,#262626);
     display: flex;
@@ -61,13 +71,12 @@ h1 {
 h2 {
     font-size: 30px;
     margin: 0;
-    padding: 10px 0px;
+    padding: 20px 0px;
     font-weight: 400;
     background-image: linear-gradient(to left, #65d5a1, #493b71);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    padding: 20px 0px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -75,6 +84,7 @@ h2 {
         font-size: 22px;
         margin: 0;
         padding: 0px 0px;
+        padding-bottom: 10px;
     }
 }
 
