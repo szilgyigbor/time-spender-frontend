@@ -1,4 +1,10 @@
+.rules-container {
+  padding-top: 63px;
+}
+
+
 .online-shooter-container {
+    padding-top: 63px;
     background-color: #6b7280;
     display: flex;
     align-items: center;

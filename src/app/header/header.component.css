@@ -6,7 +6,11 @@ header {
   background-color:  #262626;
   /*background: linear-gradient(245.59deg, #88884c 10%, #a86745 28.53%, #57239a 85.52%);*/
   padding: 14px 0px;
-  width: 100%;
+  position: fixed; /* Ez rögzíti a header helyzetét */
+  top: 0; /* A header a képernyő tetején lesz */
+  left: 0; /* A header a képernyő bal oldalán lesz */
+  width: 100%; /* A header az egész képernyő szélességét kitölti */
+  z-index: 1000; /* Biztosítja, hogy a header a többi elem felett jelenik meg */
 }
 
 nav {
