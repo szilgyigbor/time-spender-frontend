@@ -3,13 +3,20 @@
 }
 
 header {
-  background-color:  #212529;
   height: 50px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+}
+
+header.dark-mode {
+  background-color: #212529;
+}
+
+header.light-mode {
+  background-color: #8ab762;
 }
 
 nav {
@@ -25,9 +32,16 @@ nav {
   }
 
 .logout-text {
-  color: white;
   font-size: 20px;
   margin-right: 10px;
+}
+
+.logout-text.dark-mode {
+  color: white;
+}
+
+.logout-text.light-mode {
+  color: #34260e;
 }
 
 .right-buttons {
@@ -46,6 +60,18 @@ nav {
   font-size: 21px;
 }
 
+.home-button.dark-mode {
+  background: linear-gradient(85deg,#151515,#262626);
+  border: 2px solid darkgoldenrod;
+  color: darkgoldenrod;
+}
+
+.home-button.light-mode {
+  background: linear-gradient(85deg,rgb(231, 80, 226),#c5cc0e);
+  border: 2px solid #382323;
+  color: #362424;
+}
+
 .home-button:hover {
   background: linear-gradient(85deg,darkgoldenrod,#262626);
   /*background: darkgoldenrod;*/
@@ -53,9 +79,24 @@ nav {
 }
 
 .login-button, .signup-button {
+  margin-left: 10px;
+  height: 30px;
+  font-size: 21px;
+}
+
+.login-button.dark-mode, .signup-button.dark-mode {
   border: 2px solid #4CAF50;
   background: linear-gradient(85deg,#151515,#262626);
   color: #4CAF50;
+  margin-left: 10px;
+  height: 30px;
+  font-size: 21px;
+}
+
+.login-button.light-mode, .signup-button.light-mode {
+  border: 2px solid #12355d;
+  background: linear-gradient(85deg,#4CAF50,#3befbf);
+  color: #12355d;
   margin-left: 10px;
   height: 30px;
   font-size: 21px;
@@ -67,9 +108,22 @@ nav {
 }
 
 .logout-button {
+  height: 30px;
+  font-size: 21px;
+}
+
+.logout-button.dark-mode {
   border: 2px solid #f44336;
   background: linear-gradient(85deg,#151515,#262626);
   color: #f44336;
+  height: 30px;
+  font-size: 21px;
+}
+
+.logout-button.light-mode {
+  border: 2px solid #12355d;
+  background: linear-gradient(85deg,#f44336,#f56969);
+  color: #12355d;
   height: 30px;
   font-size: 21px;
 }
@@ -139,5 +193,42 @@ nav {
   }
 }
 
+
+.light-theme-button {
+  text-decoration: none;
+  background: linear-gradient(85deg,#1e9372,#2ba3df);
+  border: 2px solid rgb(97, 29, 161);
+  border-radius: 20px;
+  color: black;
+  margin-left: 28px;
+  font-size: 21px;
+}
+
+.light-theme-button:hover {
+  color: rgb(200, 200, 200);
+}
+
+.dark-theme-button {
+  text-decoration: none;
+  background: linear-gradient(85deg,#151515,#262626);
+  border: 2px solid rgb(92, 10, 136);
+  border-radius: 20px;
+  color: rgb(170, 170, 170);
+  margin-left: 28px;
+  font-size: 21px;
+}
+
+.dark-theme-button:hover {
+  color:rgb(97, 29, 161);
+}
+
+@media only screen and (max-width: 768px) {
   
-  
+  .light-theme-button {
+    font-size: 20px;
+  }
+
+  .dark-theme-button {
+    font-size: 20px;
+  }
+}

@@ -6,32 +6,61 @@
 h2 {
     text-align: center;
     margin-top: 30px;
-    font-size: 26px;
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 768px) {
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+    }
 }
 
 .input-field {
-    background-color: #475469;
+    background: linear-gradient(85deg,#222222,#343434);
     color: white;
     padding: 8px;
-    /*margin: 15px;*/
     font-size: 20px;
     width: 300px;
-    height: 25px;
+    height: 20px;
     border: #4CAF50;
+}
+
+@media only screen and (max-width: 768px) {
+    .input-field {
+        font-size: 16px;
+        width: 200px;
+        height: 16px;
+        border: #4CAF50;
+    }
 }
 
 .send-button {
     border: 2px solid #4CAF50;
-    background-color: #475469;
-    padding: 5px 15px;
+    background: linear-gradient(85deg,#222222,#343434);
+    padding: 3px 13px;
     color: #4CAF50;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 40px;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+    .send-button {
+        border: 2px solid #4CAF50;
+        background: linear-gradient(85deg,#222222,#343434);
+        padding: 3px 13px;
+        color: #4CAF50;
+        font-size: 16px;
+        margin-top: 20px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+}
+
 .send-button:hover {
-    background-color: #4CAF50;
+    background: linear-gradient(85deg,#4CAF50,#343434);
     color: white;
 }

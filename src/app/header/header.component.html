@@ -1,19 +1,22 @@
 <div ngClass="header-container">
-<header>
+<header [ngClass]="isDarkMode ? 'dark-mode' : 'light-mode'">
   <nav>
-    <button ngClass="home-button" routerLink="/">Home</button>
+    <button Class="home-button" [ngClass]="isDarkMode ? 'dark-mode' : 'light-mode'" routerLink="/">Home</button>
+
+    <button [ngClass]="isDarkMode ? 'light-theme-button' : 'dark-theme-button'"
+    (click)="toggleMode()">Theme</button>
 
     <div ngClass="logout" *ngIf="(isLoggedIn$ | async); else notLoggedIn">
-      <div ngClass="logout-text">
+      <div Class="logout-text" [ngClass]="isDarkMode ? 'dark-mode' : 'light-mode'">
         Welcome back, {{ currentUser?.username}}!
       </div>
-        <button ngClass="logout-button" (click)="logout()">Logout</button>
+        <button Class="logout-button" [ngClass]="isDarkMode ? 'dark-mode' : 'light-mode'" (click)="logout()">Logout</button>
     </div>
 
     <ng-template #notLoggedIn>
       <div ngClass="right-buttons">
-        <button ngClass="login-button" routerLink="/login">Login</button>
-        <button ngClass="signup-button" routerLink="/sign-up">Sign Up</button>
+        <button Class="login-button" [ngClass]="isDarkMode ? 'dark-mode' : 'light-mode'" routerLink="/login">Login</button>
+        <button Class="signup-button" [ngClass]="isDarkMode ? 'dark-mode' : 'light-mode'" routerLink="/sign-up">Sign Up</button>
       </div>
     </ng-template>
 
