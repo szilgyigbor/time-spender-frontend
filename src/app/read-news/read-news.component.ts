@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NewsItem } from '../interfaces/news-item';
 import { GetRequestsService } from '../services/get-requests.service';
 import { Router } from '@angular/router';
+import { DialogService } from '../services/dialog.service';
 
 @Component({
   selector: 'tisp-read-news',
@@ -12,11 +13,11 @@ export class ReadNewsComponent {
   title: string = 'time-spender-frontend';
   news: NewsItem[] = [];
 
-  constructor(private getRequestsService: GetRequestsService, private router: Router ) { 
-    if (!!localStorage.getItem('currentUser') ==  false) {
-      alert('You must be logged in to use this feature!');
-      this.router.navigate(['/login']);
-    }
+  constructor(private getRequestsService: GetRequestsService, private router: Router, 
+    private dialogService: DialogService ) { 
+      if (!!localStorage.getItem('currentUser') ==  false) {
+        this.dialogService.openDialog('You must be logged in to use this feature!', '/login');
+      }
   }
 
   ngOnInit(): void {
@@ -34,8 +35,7 @@ export class ReadNewsComponent {
             this.router.navigate(['/login']);
           }
           else {
-            alert("Please, login!");
-            this.router.navigate(['/login']);
+            this.dialogService.openDialog('You must be logged in to use this feature!', '/login');
           }
         }
       }

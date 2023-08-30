@@ -3,7 +3,6 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { SortingGameResult } from '../interfaces/sorting-result-data';
 import { PostRequestsService } from '../services/post-requests.service';
 import { GetRequestsService } from '../services/get-requests.service';
-import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,14 +21,8 @@ export class NumberSortingComponent {
   topList: SortingGameResult[] = [];
   currentUsername: string = "";
 
-  constructor(private postRequestsService: PostRequestsService, private getRequestsService: GetRequestsService,
-    private router: Router) {
-    if (!!localStorage.getItem('currentUser') ==  false) {
-      alert('You must be logged in to use this feature!');
-      this.router.navigate(['/login']);}
-    else {
-      this.currentUsername = JSON.parse(localStorage.getItem('currentUser')!).username;
-    }
+  constructor(private postRequestsService: PostRequestsService, private getRequestsService: GetRequestsService) {
+    this.currentUsername = JSON.parse(localStorage.getItem('currentUser')!).username;
   }
 
   ngOnInit() {

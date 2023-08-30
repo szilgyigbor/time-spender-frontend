@@ -1,7 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit, Renderer2, Inject } from '@angular/core';
 import { SignalrService } from '../services/signalr.service';
 import { Subscription, timer } from 'rxjs';
-import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { PlayerData } from '../interfaces/player-data';
 
@@ -29,17 +28,10 @@ export class OnlineShooterComponent implements OnInit, OnDestroy {
   private killedNameSubscription?: Subscription;
   private originalOverflow!: string;
 
-  constructor(public signalrService: SignalrService, private router: Router,
-    private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) { 
+  constructor(public signalrService: SignalrService, private renderer: Renderer2, 
+    @Inject(DOCUMENT) private document: Document) { 
 
-    if (!!localStorage.getItem('currentUser') ==  false) {
-      alert('You must be logged in to use this feature!');
-      this.router.navigate(['/login']);}
-    
-    else {
-      this.currentUsername = JSON.parse(localStorage.getItem('currentUser')!).username;
-    }
-
+    this.currentUsername = JSON.parse(localStorage.getItem('currentUser')!).username;
   }
 
   ngOnInit() {

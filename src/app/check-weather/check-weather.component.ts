@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostRequestsService } from '../services/post-requests.service';
 import { WeatherItem } from '../interfaces/weather-item';
-import { DialogService } from '../services/dialog.service';
 
 
 @Component({
@@ -17,11 +16,8 @@ export class CheckWeatherComponent {
   imageUrl: string = '';
   weatherItems: WeatherItem = {} as WeatherItem;
 
-  constructor(private postRequestsService: PostRequestsService, private router: Router, 
-    private dialogService: DialogService) { 
-    if (!!localStorage.getItem('currentUser') ==  false) {
-      this.dialogService.openDialog('You must be logged in to use this feature!', '/login');
-    }
+  constructor(private postRequestsService: PostRequestsService, private router: Router) { 
+    
   }
 
   sendLocation() {
@@ -36,19 +32,8 @@ export class CheckWeatherComponent {
         console.log('WeatherData:', data);
         this.weatherItems = data as WeatherItem;
       },
-      error: (error: { status: number; }) => {
-        if (error.status === 401) {
-          if (!!localStorage.getItem('currentUser') ==  true)
-          {
-            localStorage.removeItem('currentUser');
-            alert("Your token has expired, please login!");
-            this.router.navigate(['/login']);
-          }
-          else {
-            alert("Please, login!");
-            this.router.navigate(['/login']);
-          }
-        }
+      error: (error) => {
+        console.log('Error', error);
       }
     });
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition} from '@angular/animations';
 import { NewsItem } from 'src/app/interfaces/news-item';
 import { GetRequestsService } from 'src/app/services/get-requests.service';
 
@@ -25,7 +24,6 @@ export class NewsSlideComponent {
     this.getRequestsService.getNewsRequest().subscribe({
       next: (data: any) => {
         this.news = data.articles;
-        console.log(this.news);
         this.updateDisplayedNews();
       },
       error: (error: any) => {

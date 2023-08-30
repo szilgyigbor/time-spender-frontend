@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { MessageData } from 'src/app/interfaces/message-data';
 import { PostRequestsService } from 'src/app/services/post-requests.service';
 import { GetRequestsService } from 'src/app/services/get-requests.service';
-import { Router } from '@angular/router';
-import { LoginService } from 'src/app/services/login.service';
+import { DialogService } from 'src/app/services/dialog.service';
 
 @Component({
   selector: 'tisp-home-page-messages',
@@ -18,7 +17,7 @@ export class HomePageMessagesComponent {
   userName: string = '';
 
   constructor(private getRequestService: GetRequestsService, private postRequestService: PostRequestsService,
-    private router: Router, private loginService: LoginService) { }
+    private dialogService: DialogService) { }
 
   ngOnInit(): void {
     this.getAllMessages();
@@ -26,12 +25,12 @@ export class HomePageMessagesComponent {
 
   sendMessage() {
     if (!!localStorage.getItem('currentUser') ==  false) {
-      alert('You must be logged in to use this feature!');
-      this.router.navigate(['/login']);
+      this.dialogService.openDialog('You must be logged in to use this feature!', '/login');
+      return;
     }
 
-    if (this.messageContent == '' || this.messageContent == ' ') {
-      alert('You cannot send empty message!');
+    else if (this.messageContent == '' || this.messageContent == ' ') {
+      this.dialogService.openDialog('You cannot send empty message!');
       return;
     }
 
@@ -45,17 +44,8 @@ export class HomePageMessagesComponent {
       next: () => {
         this.getAllMessages();
       },
-      error: () => {
-        if (!!localStorage.getItem('currentUser') ==  true)
-          {
-            localStorage.removeItem('currentUser');
-            alert("Your token has expired, please login!");
-            this.router.navigate(['/login']);
-          }
-          else {
-            alert("Please, login!");
-            this.router.navigate(['/login']);
-          }
+      error: (error) => {
+        console.log('Error', error);
       }
     });
   }

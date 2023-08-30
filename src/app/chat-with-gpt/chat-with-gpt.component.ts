@@ -1,6 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { PostRequestsService } from '../services/post-requests.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'tisp-chat-with-gpt',
@@ -19,13 +18,7 @@ export class ChatWithGptComponent implements OnInit {
   inputText: string = '';
   username: string = '';
 
-  constructor(private postRequestService: PostRequestsService, private router: Router ) {
-
-    if (!!localStorage.getItem('currentUser') ==  false) {
-      alert('You must be logged in to use this feature!');
-      this.router.navigate(['/login']);
-    }
-
+  constructor(private postRequestService: PostRequestsService ) {
     this.username = JSON.parse(localStorage.getItem('currentUser')!).username;
   }
 
