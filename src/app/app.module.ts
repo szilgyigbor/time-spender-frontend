@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +23,7 @@ import { NumberSortingComponent } from './number-sorting/number-sorting.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NewsSlideComponent } from './home-page/news-slide/news-slide.component';
+import { UniDialogComponent } from './uni-dialog/uni-dialog.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { NewsSlideComponent } from './home-page/news-slide/news-slide.component'
     OnlineShooterComponent,
     HomePageMessagesComponent,
     NumberSortingComponent,
-    NewsSlideComponent
+    NewsSlideComponent,
+    UniDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { NewsSlideComponent } from './home-page/news-slide/news-slide.component'
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    MatDialogModule,
   ],
   providers: [ { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }, ],
   bootstrap: [AppComponent],
