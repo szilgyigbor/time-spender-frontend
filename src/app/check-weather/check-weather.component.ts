@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostRequestsService } from '../services/post-requests.service';
 import { WeatherItem } from '../interfaces/weather-item';
+import { DialogService } from '../services/dialog.service';
 
 
 @Component({
@@ -16,10 +17,10 @@ export class CheckWeatherComponent {
   imageUrl: string = '';
   weatherItems: WeatherItem = {} as WeatherItem;
 
-  constructor(private postRequestsService: PostRequestsService, private router: Router) { 
+  constructor(private postRequestsService: PostRequestsService, private router: Router, 
+    private dialogService: DialogService) { 
     if (!!localStorage.getItem('currentUser') ==  false) {
-      alert('You must be logged in to use this feature!');
-      this.router.navigate(['/login']);
+      this.dialogService.openDialog('You must be logged in to use this feature!', '/login');
     }
   }
 
@@ -56,5 +57,6 @@ export class CheckWeatherComponent {
 
   ngOnInit(): void {
   }
+  
 
 }
