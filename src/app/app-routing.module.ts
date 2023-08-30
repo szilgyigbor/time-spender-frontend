@@ -10,17 +10,18 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { OnlineShooterComponent } from './online-shooter/online-shooter.component';
 import { NumberSortingComponent } from './number-sorting/number-sorting.component';
+import { AdminGuard } from './guards/auth-guard';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'read-news', component: ReadNewsComponent },
-  { path: 'check-weather', component: CheckWeatherComponent },
-  { path: 'chat-with-gpt', component: ChatWithGptComponent },
-  { path: 'play-fow', component: PlayFowComponent },
+  { path: 'read-news', component: ReadNewsComponent, canActivate: [AdminGuard] },
+  { path: 'check-weather', component: CheckWeatherComponent, canActivate: [AdminGuard] },
+  { path: 'chat-with-gpt', component: ChatWithGptComponent, canActivate: [AdminGuard] },
+  { path: 'play-fow', component: PlayFowComponent, canActivate: [AdminGuard] },
   { path: 'login', component: LoginPageComponent },
   { path: 'sign-up', component: SignUpPageComponent },
-  { path: 'online-shooter', component: OnlineShooterComponent },
-  { path: 'number-sorting', component: NumberSortingComponent }
+  { path: 'online-shooter', component: OnlineShooterComponent, canActivate: [AdminGuard] },
+  { path: 'number-sorting', component: NumberSortingComponent, canActivate: [AdminGuard] }
 ];
 
 @NgModule({
