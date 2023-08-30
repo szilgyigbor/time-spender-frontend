@@ -20,7 +20,6 @@ export class DialogService {
       if (result === 'ok' && navigateTo) {
         this.router.navigate([navigateTo]);
       }
-      console.log(`A modál bezárva: ${result}`);
     });
   }
 }
