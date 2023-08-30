@@ -8,7 +8,6 @@
     color: white;
 }
 
-
 .home-page-container {
     /*background-color: #6b7280;*/  /*#E8E8E8;*/  
     background: linear-gradient(85deg,#434343,#262626);
@@ -130,6 +129,27 @@ hr {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+    .button {
+        padding: 5px 10px;
+        font-size: 16px;
+        margin: 10px 5px;
+    }
+}
+
+.numberSortingButton {
+    background: linear-gradient(85deg,#222222,#343434);
+    color: #b8a2cf;
+    border: 2px solid #b8a2cf;
+}
+
+.numberSortingButton:hover {
+    background: linear-gradient(85deg,#b8a2cf,#343434);    
+    /*background: #4CAF50;*/
+    color: white;
+}
+
+
 .amobaButton {
     background: linear-gradient(85deg,#222222,#343434);
     color: #4CAF50;
@@ -189,75 +209,3 @@ hr {
     color: white;
 }
 
-@media only screen and (max-width: 768px) {
-    .button {
-        color: white;
-        padding: 5px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 10px 5px;
-        transition-duration: 0.4s;
-        cursor: pointer;
-    }
-    
-    .amobaButton {
-        background: linear-gradient(85deg,#222222,#343434);
-        color: #4CAF50;
-        border: 2px solid #4CAF50;
-    }
-    
-    .amobaButton:hover {
-        background: linear-gradient(85deg,#4CAF50,#343434);    
-        /*background: #4CAF50;*/
-        color: white;
-    }
-    
-    .newsButton {
-        background: linear-gradient(85deg,#222222,#343434);
-        color: #008CBA;
-        border: 2px solid #008CBA;
-    }
-    
-    .newsButton:hover {
-        background: linear-gradient(85deg,#008CBA,#343434);
-        /*background: #008CBA;*/
-        color: white;
-    }
-    
-    .botButton {
-        background: linear-gradient(85deg,#222222,#343434);
-        color: #f78da7;
-        border: 2px solid #f78da7;
-    }
-    
-    .botButton:hover {
-        background: linear-gradient(85deg,#f78da7,#343434);
-        /*background: #f78da7;*/
-        color: white;
-    }
-    
-    .weatherButton {
-        background: linear-gradient(85deg,#222222,#343434);
-        color: darkgoldenrod;
-        border: 2px solid darkgoldenrod;
-    }
-    
-    .weatherButton:hover {
-        background: linear-gradient(85deg,darkgoldenrod,#343434);
-        /*background: darkgoldenrod;*/
-        color: white;
-    }
-    
-    .button5 {
-        background: linear-gradient(85deg,#222222,#343434);
-        color: black;
-        border: 2px solid #555555;
-    }
-    
-    .button5:hover {
-        background: #555555;
-        color: white;
-    }
-}
