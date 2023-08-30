@@ -1,0 +1,48 @@
+.uni-dialog-container {
+    background: linear-gradient(85deg,#434343,#262626);
+    color: white;
+}
+
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 20px 20px;
+    font-weight: 300;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+.ok-button {
+    border: 2px solid #4CAF50;
+    background: linear-gradient(85deg,#222222,#343434);
+    padding: 3px 13px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .ok-button {
+        font-size: 16px;
+    }
+}
+
+.ok-button:hover {
+    background: linear-gradient(85deg,#4CAF50,#343434);
+    color: white;
+}
