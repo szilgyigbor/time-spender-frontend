@@ -4,7 +4,7 @@
     <button Class="home-button" [ngClass]="isDarkMode ? 'dark-mode' : 'light-mode'" routerLink="/">Home</button>
 
     <button [ngClass]="isDarkMode ? 'light-theme-button' : 'dark-theme-button'"
-    (click)="toggleMode()">Theme</button>
+    (click)="toggleMode()"></button>
 
     <div ngClass="logout" *ngIf="(isLoggedIn$ | async); else notLoggedIn">
       <div Class="logout-text" [ngClass]="isDarkMode ? 'dark-mode' : 'light-mode'">
