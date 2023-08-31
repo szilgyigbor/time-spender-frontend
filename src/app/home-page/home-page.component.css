@@ -72,7 +72,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0,0,0,0);*/
     /*background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);*/
-    background-image: conic-gradient(#856cc8, #2b79ee, #00cb51, #856cc8);
+    background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -81,7 +81,6 @@ h1 {
 
 @media only screen and (max-width: 768px) {
     .welcomeString {
-        background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb);
         font-size: 35px;
         line-height: 1;
         padding: 30px 0px;
@@ -240,7 +239,7 @@ hr {
     background: linear-gradient(to right, rgba(245, 160, 67, 0.2117647059), rgba(146, 30, 94, 0.0470588235));
     backdrop-filter: blur(5px);
     font-family: "Radiance","Noto Sans",sans-serif;
-    margin: 10px 100px;
+    margin: 20px 100px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -250,7 +249,7 @@ hr {
 }
 
 .yelloParagraphText {
-    color: #b6b6b6;
+    color: #cdcdcd;
     line-height: 1.1;
     font-size: 20px;
     font-weight: 400;
@@ -285,8 +284,8 @@ hr {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    padding: 0 0 20px 0;
-    font-size: 26px;
+    padding: 0 0 30px 0;
+    font-size: 36px;
     letter-spacing: 1px;
     text-transform: uppercase;
     line-height: 40px;
