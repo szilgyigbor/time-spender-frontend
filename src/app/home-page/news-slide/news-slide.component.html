@@ -1,11 +1,19 @@
 <div class="titleText">News from Hungary</div>
 <div class="news-container">
-    <button class="arrow-button left" (click)="prev()"></button>
-    <div *ngFor="let item of displayedNews; let i = index">
-        <div class="news-card">"{{item.title}}"
-            <br>
-            <a [href]="item.url" target="_blank">Check this</a>
-        </div>
+    <div @myInsertRemoveTrigger *ngIf="isShown"  class="news-card">
+        The news service is currently unavailable.
+        <br>
+        I had too many requests to the news API, so I'm banned for a while.
+        <br>
+        <a [href]="" target="_blank">Check this</a>
     </div>
-    <button class="arrow-button right" (click)="next()"></button>
 </div>
+
+
+<!--<div class="titleText">News from Hungary</div>
+<div class="news-container">
+    <div @myInsertRemoveTrigger *ngIf="isShown"  class="news-card">"{{displayedNews.title}}"
+        <br>
+        <a [href]="displayedNews.url" target="_blank">Check this</a>
+    </div>
+</div>-->
