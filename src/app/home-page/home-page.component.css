@@ -11,6 +11,7 @@
 .home-page-container {
     /*background-color: #6b7280;*/  /*#E8E8E8;*/  
     /*background: linear-gradient(85deg,#434343,#262626);*/
+    /*padding: 0px 200px;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +51,7 @@ p {
     }
 }
 
-/*h1 {
+h1 {
     font-size: 60px;
     font-weight: 600;
     background-image: linear-gradient(85deg, #b8a2cf, #765eb8);
@@ -58,24 +59,32 @@ p {
     background-clip: text;
     -webkit-background-clip: text;
     padding: 30px 0px;
-}*/
+}
 
-h1 {
-    font-size: clamp(32px,4vw,50px);
+.welcomeString {
+    font-size: 60px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 3px;
-    background: -webkit-linear-gradient(#CAB197, #EADFD4);
+    line-height: 1;
+    /*background: -webkit-linear-gradient(85deg, #c8b0e1, #8268ca);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(0,0,0,0);
-    padding: 30px 0px;
+    -webkit-text-fill-color: rgba(0,0,0,0);*/
+    /*background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);*/
+    background-image: conic-gradient(#856cc8, #2b79ee, #00cb51, #856cc8);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding: 80px 0px 80px 0px;
 }
 
 @media only screen and (max-width: 768px) {
-    h1 {
+    .welcomeString {
+        background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb);
         font-size: 35px;
-        padding: 15px 0px;
+        line-height: 1;
+        padding: 30px 0px;
     }
 }
 
@@ -223,20 +232,69 @@ hr {
 
 
 .yelloParagraph {
-    width: 70%;
+    /*width: 70%;*/
     padding: calc(2vw + 10px);
     justify-content: center;
     filter: drop-shadow(0 2px 2px #000);
     border-left: 4px solid #f5a043;
     background: linear-gradient(to right, rgba(245, 160, 67, 0.2117647059), rgba(146, 30, 94, 0.0470588235));
     backdrop-filter: blur(5px);
-    /*box-sizing: border-box;*/
     font-family: "Radiance","Noto Sans",sans-serif;
+    margin: 10px 100px;
+}
+
+@media only screen and (max-width: 768px) {
+    .yelloParagraph {
+        margin: 10px 20px;
+    }
 }
 
 .yelloParagraphText {
-    margin: 15px 0 0 0;
     color: #b6b6b6;
+    line-height: 1.1;
     font-size: 20px;
     font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+    .yelloParagraphText {
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 400;
+    }
+}
+
+.horizonDivider {
+    margin: 100px 30px;
+    height: 2px;
+    /*box-sizing: border-box;*/
+    background: linear-gradient(to right, rgba(146, 30, 94, 0), #921E5E, #F5A043, #921E5E, rgba(146, 30, 94, 0));
+}
+
+@media only screen and (max-width: 768px) {
+    .horizonDivider {
+        margin: 50px 30px;
+        height: 2px;
+        /*box-sizing: border-box;*/
+        background: linear-gradient(to right, rgba(146, 30, 94, 0), #921E5E, #F5A043, #921E5E, rgba(146, 30, 94, 0));
+    }
+}
+
+.titleText {
+    background-image: linear-gradient(to left, #5bc284, #a458ac);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding: 0 0 20px 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+    .titleText {
+        font-size: 22px;
+    }
 }

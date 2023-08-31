@@ -3,13 +3,16 @@
 }*/
 
 h1 {
-    font-size: 30px;
-    font-weight: 400;
     background-image: linear-gradient(to left, #fac04c, #1a5243);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    padding: 20px 0px;
+    padding: 0 0 20px 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-weight: 500;
 }
 
 @media only screen and (max-width: 768px) {
