@@ -1,34 +1,38 @@
-<div class="home-page-header-container">
-    <div>
-        <h1>Welcome to my digital playground!</h1>
-        <p>
-            If you are bored, come and check this site.
-            <br>
-            You can play games, read news, check the weather, speak with an AI, and more!
-        </p>
-    </div>
-</div>
-
-<hr>
-<tisp-news-slide>
-</tisp-news-slide>
-<hr>
-
-<div class="home-page-container">
-    <div>
-        <h2>What would you like to do?</h2>
+<div class="background" [style.background-image]="backgroundImage" [style.background-position]="backgroundPosition">
+    <div class="home-page-header-container">
         <div>
-            <button class="button amobaButton" routerLink="/online-shooter">Play Online shooter</button>
-            <button class="button numberSortingButton" routerLink="/number-sorting">Play Number Sorting</button>
-            <button class="button newsButton" routerLink="/read-news">Read more news</button>
-            <button class="button botButton" routerLink="/chat-with-gpt">Speak with the AI</button>
-            <button class="button weatherButton" routerLink="/check-weather">Check the Weather</button>
+            <h1>Welcome to my digital playground!</h1>
+            <div class="yelloParagraph">
+                <div class="yelloParagraphText">
+                    If you are bored, come and check this site.
+                    <br>
+                    You can play games, read news, check the weather, speak with an AI, and more!
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<hr>
-<div>
-    <tisp-home-page-messages>
-    </tisp-home-page-messages>
+
+    <hr>
+    <tisp-news-slide>
+    </tisp-news-slide>
+    <hr>
+
+    <div class="home-page-container">
+        <div>
+            <h2>What would you like to do?</h2>
+            <div>
+                <button class="button amobaButton" routerLink="/online-shooter">Play Online shooter</button>
+                <button class="button numberSortingButton" routerLink="/number-sorting">Play Number Sorting</button>
+                <button class="button newsButton" routerLink="/read-news">Read more news</button>
+                <button class="button botButton" routerLink="/chat-with-gpt">Speak with the AI</button>
+                <button class="button weatherButton" routerLink="/check-weather">Check the Weather</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <tisp-home-page-messages>
+        </tisp-home-page-messages>
+    </div>
 </div>
 

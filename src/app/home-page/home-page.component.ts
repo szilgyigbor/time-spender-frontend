@@ -10,12 +10,17 @@ import { NewsItem } from '../interfaces/news-item';
 export class HomePageComponent {
   title = 'time-spender-frontend';
   randomNews: NewsItem = {} as NewsItem;
+  backgroundImage = 'url("assets/background_app.jpg")';
+  backgroundPosition = '0 0';
 
   constructor(private getRequestsService: GetRequestsService) {
   }
 
   ngOnInit(): void {
     this.getANews();
+    const pageHeight = document.body.scrollHeight;
+    this.backgroundPosition = `0 0, 0 ${pageHeight}px`;
+
   }
 
   getANews() {

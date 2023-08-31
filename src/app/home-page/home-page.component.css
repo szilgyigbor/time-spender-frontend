@@ -1,7 +1,7 @@
 .home-page-header-container {
     padding-top: 50px;
     /*background-color: #6b7280;*/  /*#E8E8E8;*/  
-    background: linear-gradient(85deg,#434343,#262626);
+    /*background: linear-gradient(85deg,#434343,#262626);*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,7 +10,7 @@
 
 .home-page-container {
     /*background-color: #6b7280;*/  /*#E8E8E8;*/  
-    background: linear-gradient(85deg,#434343,#262626);
+    /*background: linear-gradient(85deg,#434343,#262626);*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,13 +50,25 @@ p {
     }
 }
 
-h1 {
+/*h1 {
     font-size: 60px;
     font-weight: 600;
     background-image: linear-gradient(85deg, #b8a2cf, #765eb8);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    padding: 30px 0px;
+}*/
+
+h1 {
+    font-size: clamp(32px,4vw,50px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: -webkit-linear-gradient(#CAB197, #EADFD4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0,0,0,0);
     padding: 30px 0px;
 }
 
@@ -209,3 +221,22 @@ hr {
     color: white;
 }
 
+
+.yelloParagraph {
+    width: 70%;
+    padding: calc(2vw + 10px);
+    justify-content: center;
+    filter: drop-shadow(0 2px 2px #000);
+    border-left: 4px solid #f5a043;
+    background: linear-gradient(to right, rgba(245, 160, 67, 0.2117647059), rgba(146, 30, 94, 0.0470588235));
+    backdrop-filter: blur(5px);
+    /*box-sizing: border-box;*/
+    font-family: "Radiance","Noto Sans",sans-serif;
+}
+
+.yelloParagraphText {
+    margin: 15px 0 0 0;
+    color: #b6b6b6;
+    font-size: 20px;
+    font-weight: 400;
+}

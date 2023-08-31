@@ -1,6 +1,6 @@
-.messages-container {
+/*.messages-container {
     background: linear-gradient(85deg,#434343,#262626);
-}
+}*/
 
 h1 {
     font-size: 30px;
@@ -70,7 +70,7 @@ h1 {
 
 
 .message-container {
-    background: linear-gradient(85deg,#434343,#262626);
+    /*background: linear-gradient(85deg,#434343,#262626);*/
     display: flex;
     flex-wrap: wrap;
 }

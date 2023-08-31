@@ -1,12 +1,10 @@
-<div class="messages-container">
-    <h1>Opinions about the website</h1>
-    <div class="message-container">
-        <div *ngFor="let message of messagesData" class="message-card">
-            <div class="content">{{message.message}}</div>
-            <div class="author">{{message.username}}</div>
-            <div class="date">{{message.postedAt | date:'YYYY-MM-dd' }}</div>
-        </div>
+<h1>Opinions about the website</h1>
+<div class="message-container">
+    <div *ngFor="let message of messagesData" class="message-card">
+        <div class="content">{{message.message}}</div>
+        <div class="author">{{message.username}}</div>
+        <div class="date">{{message.postedAt | date:'YYYY-MM-dd' }}</div>
     </div>
-    <input ngClass="input-field" type="text" [(ngModel)]="messageContent" placeholder="Tell your opinion here..." (keyup.enter)="sendMessage()">
-    <button ngClass="send-button" (click)="sendMessage()">Send</button>
 </div>
+<input ngClass="input-field" type="text" [(ngModel)]="messageContent" placeholder="Tell your opinion here..." (keyup.enter)="sendMessage()">
+<button ngClass="send-button" (click)="sendMessage()">Send</button>
