@@ -12,7 +12,7 @@ header {
 }
 
 header.dark-mode {
-  background: linear-gradient(to left, #2f2f2f, #2f3f46);
+  background: linear-gradient(to left, #272727, #1f2e34);
 }
 
 header.light-mode {
