@@ -12,7 +12,7 @@ header {
 }
 
 header.dark-mode {
-  background-color: #212529;
+  background: linear-gradient(to left, #2f2f2f, #2f3f46);
 }
 
 header.light-mode {
@@ -52,18 +52,18 @@ nav {
 
 .home-button {
   text-decoration: none;
-  background: linear-gradient(85deg,#151515,#262626);
+  /*background: linear-gradient(85deg,#656565,#343434);
   border: 2px solid darkgoldenrod;
-  color: darkgoldenrod;
+  color: darkgoldenrod;*/
   margin-left: 10px;
   height: 30px;
   font-size: 21px;
 }
 
 .home-button.dark-mode {
-  background: linear-gradient(85deg,#151515,#262626);
-  border: 2px solid darkgoldenrod;
-  color: darkgoldenrod;
+  background: linear-gradient(85deg,#2f2f2f,#463b3b);
+  border: 2px solid rgb(227, 166, 13);
+  color: rgb(227, 166, 13);
 }
 
 .home-button.light-mode {
@@ -85,9 +85,9 @@ nav {
 }
 
 .login-button.dark-mode, .signup-button.dark-mode {
-  border: 2px solid #4CAF50;
-  background: linear-gradient(85deg,#151515,#262626);
-  color: #4CAF50;
+  border: 2px solid #53c457;
+  background: linear-gradient(85deg,#2f2f2f,#463b3b);
+  color: #53c457;
   margin-left: 10px;
   height: 30px;
   font-size: 21px;
@@ -113,9 +113,9 @@ nav {
 }
 
 .logout-button.dark-mode {
-  border: 2px solid #f44336;
-  background: linear-gradient(85deg,#151515,#262626);
-  color: #f44336;
+  border: 2px solid #ff4f43;
+  background: linear-gradient(85deg,#2f2f2f,#463b3b);
+  color: #ff4f43;
   height: 30px;
   font-size: 21px;
 }
@@ -202,6 +202,7 @@ nav {
   color: rgb(26, 41, 10);
   width: 30px;
   margin-left: 30px;
+  margin-top: 3px;
   font-size: 16px;
   cursor: pointer;
   height: 25px;
@@ -221,6 +222,7 @@ nav {
   color: rgb(170, 170, 170);
   width: 30px;
   margin-left: 30px;
+  margin-top: 3px;
   font-size: 16px;
   cursor: pointer;
   height: 25px;
@@ -239,6 +241,7 @@ nav {
     height: 22px;
     width: 22px;
     margin-left: 26px;
+    margin-top: 4px;
   }
 
   .dark-theme-button {
@@ -246,5 +249,6 @@ nav {
     height: 22px;
     width: 22px;
     margin-left: 26px;
+    margin-top: 4px;
   }
 }
