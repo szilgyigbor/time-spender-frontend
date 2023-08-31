@@ -1,25 +1,35 @@
 <div class="background" [style.background-image]="backgroundImage" [style.background-position]="backgroundPosition">
     <div class="home-page-header-container">
         <div>
-            <h1>Welcome to my digital playground!</h1>
+            <div class="welcomeString">Welcome to my digital 
+                <br> playground!
+            </div>
             <div class="yelloParagraph">
                 <div class="yelloParagraphText">
-                    If you are bored, come and check this site.
-                    <br>
-                    You can play games, read news, check the weather, speak with an AI, and more!
+                    This is a place where I can try out new technologies, and show them to you.
+                    Come and check out what I have made!
                 </div>
             </div>
         </div>
+        
     </div>
+    
 
-    <hr>
+    <div class="horizonDivider"></div>
     <tisp-news-slide>
     </tisp-news-slide>
-    <hr>
+    <div class="horizonDivider"></div>
 
     <div class="home-page-container">
+        
         <div>
-            <h2>What would you like to do?</h2>
+            <div class="titleText">What would you like to do?</div>
+            <div class="yelloParagraph">
+                <div class="yelloParagraphText">
+                    You can play games, read news, check the weather, speak with an AI, and more!
+                </div>
+            </div>
+            <br>
             <div>
                 <button class="button amobaButton" routerLink="/online-shooter">Play Online shooter</button>
                 <button class="button numberSortingButton" routerLink="/number-sorting">Play Number Sorting</button>
@@ -29,10 +39,10 @@
             </div>
         </div>
     </div>
-    <hr>
-    <div>
-        <tisp-home-page-messages>
-        </tisp-home-page-messages>
-    </div>
+    <div class="horizonDivider"></div>
+    
+    <tisp-home-page-messages>
+    </tisp-home-page-messages>
+    
 </div>
 
