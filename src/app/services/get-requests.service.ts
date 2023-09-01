@@ -30,7 +30,7 @@ export class GetRequestsService {
     return this.http.get(`${environment.backend_url}/api/pagenews/getpagenews`);
   }
 
-  getUsernames() {
+  getUsernamesRequest() {
     return this.http.get(`${environment.backend_url}/api/user/getusernames`);
   }
   
