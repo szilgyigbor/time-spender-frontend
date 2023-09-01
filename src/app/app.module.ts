@@ -18,7 +18,7 @@ import { WeatherDataComponent } from './check-weather/weather-data/weather-data.
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { OnlineShooterComponent } from './online-shooter/online-shooter.component';
-import { HomePageMessagesComponent } from './home-page/home-page-messages/home-page-messages.component';
+import { HomePageOpinionsComponent } from './home-page/home-page-opinions/home-page-opinions.component';
 import { NumberSortingComponent } from './number-sorting/number-sorting.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -38,7 +38,7 @@ import { UniDialogComponent } from './uni-dialog/uni-dialog.component';
     LoginPageComponent,
     SignUpPageComponent,
     OnlineShooterComponent,
-    HomePageMessagesComponent,
+    HomePageOpinionsComponent,
     NumberSortingComponent,
     NewsSlideComponent,
     UniDialogComponent

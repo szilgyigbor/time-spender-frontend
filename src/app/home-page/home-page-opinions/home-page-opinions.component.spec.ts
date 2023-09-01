@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomePageMessagesComponent } from './home-page-messages.component';
+import { HomePageOpinionsComponent } from './home-page-opinions.component';
 
 describe('HomePageMessagesComponent', () => {
-  let component: HomePageMessagesComponent;
-  let fixture: ComponentFixture<HomePageMessagesComponent>;
+  let component: HomePageOpinionsComponent;
+  let fixture: ComponentFixture<HomePageOpinionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomePageMessagesComponent ]
+      declarations: [ HomePageOpinionsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HomePageMessagesComponent);
+    fixture = TestBed.createComponent(HomePageOpinionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

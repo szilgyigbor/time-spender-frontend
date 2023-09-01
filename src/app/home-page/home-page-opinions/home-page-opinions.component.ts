@@ -5,11 +5,11 @@ import { GetRequestsService } from 'src/app/services/get-requests.service';
 import { DialogService } from 'src/app/services/dialog.service';
 
 @Component({
-  selector: 'tisp-home-page-messages',
-  templateUrl: './home-page-messages.component.html',
-  styleUrls: ['./home-page-messages.component.css']
+  selector: 'tisp-home-page-opinions',
+  templateUrl: './home-page-opinions.component.html',
+  styleUrls: ['./home-page-opinions.component.css']
 })
-export class HomePageMessagesComponent {
+export class HomePageOpinionsComponent {
 
   messagesData: MessageData[] = [];
   newMessage: MessageData = {} as MessageData;
