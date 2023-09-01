@@ -4,6 +4,7 @@ import { UserData } from '../interfaces/user-data';
 import { OpinionData } from '../interfaces/opinion-data';
 import { environment } from '../../environments/environment';
 import { SortingGameResult } from '../interfaces/sorting-result-data';
+import { PageNewsData } from '../interfaces/page-news-data';
 
 @Injectable({
   providedIn: 'root'
@@ -77,6 +78,15 @@ export class PostRequestsService {
 
    sendSortingGameResult(sortingGameResult: SortingGameResult) {
     return this.http.post(`${environment.backend_url}/api/addsortinggameresult`, JSON.stringify(sortingGameResult), {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+  
+   }
+
+   sendPageNews(pageNewsData: PageNewsData) {
+    return this.http.post(`${environment.backend_url}/api/pagenews/addpagenews`, JSON.stringify(pageNewsData), {
       headers: {
         'Content-Type': 'application/json'
       }
