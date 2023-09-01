@@ -29,5 +29,9 @@ export class GetRequestsService {
   getPageNewsRequest() {
     return this.http.get(`${environment.backend_url}/api/pagenews/getpagenews`);
   }
+
+  getUsernames() {
+    return this.http.get(`${environment.backend_url}/api/user/getusernames`);
+  }
   
 }
