@@ -25,5 +25,9 @@ export class GetRequestsService {
   getSortingGameResultsRequest() {
     return this.http.get(`${environment.backend_url}/api/getsortinggameresults`);
   }
+
+  getPageNewsRequest() {
+    return this.http.get(`${environment.backend_url}/api/pagenews/getpagenews`);
+  }
   
 }
