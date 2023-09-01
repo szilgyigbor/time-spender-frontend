@@ -13,4 +13,9 @@ export class LoginService {
     setLoggedIn(val: boolean) {
         this._isLoggedIn.next(val);
     }
+
+    removeLoggedIn() {
+        this._isLoggedIn.next(false);
+        localStorage.removeItem('currentUser');
+    }
 }
