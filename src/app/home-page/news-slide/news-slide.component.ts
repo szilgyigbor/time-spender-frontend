@@ -11,11 +11,11 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     trigger('myInsertRemoveTrigger', [
       state('in', style({ transform: 'translateX(0)' })),
       transition('void => *', [
-        style({ transform: 'translateX(-150%)' }),
+        style({ transform: 'translateX(-170%)' }),
         animate(1000)
       ]),
       transition('* => void', [
-        animate(1000, style({ transform: 'translateX(150%)' }))
+        animate(1000, style({ transform: 'translateX(170%)' }))
       ])
     ])
   ]
