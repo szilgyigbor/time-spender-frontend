@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { DialogService } from '../services/dialog.service';
+import { LoginService } from '../services/login.service';
 
 @Injectable({providedIn: 'root'})
 export class AdminGuard {
-  constructor(private dialogService: DialogService) {}
+  constructor(private dialogService: DialogService, private loginService: LoginService) {}
   
   canActivate(): boolean {
 
@@ -17,6 +18,7 @@ export class AdminGuard {
 
     if (currentTime > expiresTime) {
         this.dialogService.openDialog('Your session has expired. Please log in again.', '/login');
+        this.loginService.removeLoggedIn();
         return false;
     }
     
