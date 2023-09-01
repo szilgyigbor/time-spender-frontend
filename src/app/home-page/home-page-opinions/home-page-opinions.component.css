@@ -79,9 +79,9 @@ h1 {
     /*background: linear-gradient(85deg,#174b62,#905434);*/
     background: linear-gradient(85deg,#22211f, #1a5243);
     color: #cdcdcd;
-    border: 2px solid #211c1e;
+    border: 2px solid #422430;
     border-radius: 10px;
-    box-shadow: 0px 2px 20px rgba(176, 10, 179, 0.784);
+    box-shadow: 0px 2px 20px #1a5243;
     margin: 25px;
     max-width: 350px;
     padding: 10px;
