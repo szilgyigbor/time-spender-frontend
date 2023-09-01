@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NewsSlideComponent } from './home-page/news-slide/news-slide.component';
 import { UniDialogComponent } from './uni-dialog/uni-dialog.component';
+import { ShowUsernamesComponent } from './home-page/show-usernames/show-usernames.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { UniDialogComponent } from './uni-dialog/uni-dialog.component';
     HomePageOpinionsComponent,
     NumberSortingComponent,
     NewsSlideComponent,
-    UniDialogComponent
+    UniDialogComponent,
+    ShowUsernamesComponent
   ],
   imports: [
     BrowserModule,
