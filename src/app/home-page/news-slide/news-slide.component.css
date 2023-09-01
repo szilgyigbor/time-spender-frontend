@@ -89,6 +89,13 @@ h1 {
         color: #aaa;
     }
 
+.news-card:hover {
+    cursor: pointer;
+    border: 2px solid #d6296e;
+    color: #fff;
+    box-shadow: 0px 2px 30px #6f7624;
+}
+
 @media screen and (max-width: 768px) {
     .news-card {
         font-size: 18px;
