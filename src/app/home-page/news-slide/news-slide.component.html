@@ -1,19 +1,10 @@
-<div class="titleText">News from Hungary</div>
+<div class="titleText">News about the page</div>
 <div class="news-container">
-    <div @myInsertRemoveTrigger *ngIf="isShown"  class="news-card">
-        The news service is currently unavailable.
-        <br>
-        I had too many requests to the news API, so I'm banned for a while.
-        <br>
-        <a [href]="" target="_blank">Check this</a>
+    <div *ngIf="displayedNews !== undefined">
+        <div @myInsertRemoveTrigger *ngIf="isShown"  class="news-card">
+            {{displayedNews.message}}
+            <br>
+            <div class="date">{{displayedNews.postedAt | date:'YYYY-MM-dd'}}</div>
+        </div>
     </div>
 </div>
-
-
-<!--<div class="titleText">News from Hungary</div>
-<div class="news-container">
-    <div @myInsertRemoveTrigger *ngIf="isShown"  class="news-card">"{{displayedNews.title}}"
-        <br>
-        <a [href]="displayedNews.url" target="_blank">Check this</a>
-    </div>
-</div>-->

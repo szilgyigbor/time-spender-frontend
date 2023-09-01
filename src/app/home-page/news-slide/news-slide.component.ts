@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsItem } from 'src/app/interfaces/news-item';
+import { PageNewsData } from 'src/app/interfaces/page-news-data';
 import { GetRequestsService } from 'src/app/services/get-requests.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
@@ -21,8 +21,8 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class NewsSlideComponent {
-  news: NewsItem[] = [];
-  displayedNews: NewsItem = {} as NewsItem;
+  news: PageNewsData[] = [];
+  displayedNews: PageNewsData = {} as PageNewsData;
   isShown: boolean = false;
 
   currentNewsIndex: number = 0;
@@ -32,15 +32,15 @@ export class NewsSlideComponent {
 
   ngOnInit(): void {
     
-    /*this.getRequestsService.getNewsRequest().subscribe({
+    this.getRequestsService.getPageNewsRequest().subscribe({
       next: (data: any) => {
-        this.news = data.articles;
+        this.news = data;
         this.updateDisplayedNews();
       },
       error: (error: any) => {
         console.log(error);
       }
-    });*/
+    });
     this.startSlideShow();
 
   }
