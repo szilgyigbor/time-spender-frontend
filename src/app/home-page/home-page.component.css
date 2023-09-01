@@ -72,7 +72,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0,0,0,0);*/
     /*background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);*/
-    background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb);
+    background-image: conic-gradient( #553c9a, #00c2cb, #ee4b2b, #553c9a );
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -81,6 +81,7 @@ h1 {
 
 @media only screen and (max-width: 768px) {
     .welcomeString {
+        background-image: conic-gradient(#553c9a,  #ee4b2b, #00c2cb);
         font-size: 35px;
         line-height: 1;
         padding: 30px 0px;
