@@ -32,7 +32,11 @@ export class SignUpPageComponent {
       alert('Passwords do not match!');
       return;
     }
-    
+
+    this.signUpData.registratedAt = new Date().toISOString();
+    this.signUpData.isAdmin = false;
+    this.signUpData.isFriend = false;
+    this.signUpData.id = 0;
 
     this.postRequestsService.sendSignUpData(this.signUpData).subscribe((response: any) => {
       localStorage.setItem('currentUser', JSON.stringify(response));
