@@ -1,0 +1,50 @@
+.titleText {
+    background-image: linear-gradient(85deg, #ee4b2b, #5c78d1);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding: 0 0 30px 0;
+    font-size: 36px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+    .titleText {
+        font-size: 22px;
+    }
+}
+
+.usernames-container {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .usernames-container {
+        padding: 0px 10px;
+    }
+}
+
+.usernames {
+    color: #f5a043;
+    text-shadow: 0px 0px 15px #f5a043;
+    font-size: 28px;
+    font-weight: 400;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+    .usernames {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
