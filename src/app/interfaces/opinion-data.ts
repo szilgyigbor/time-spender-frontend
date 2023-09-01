@@ -1,4 +1,4 @@
-export interface MessageData {
+export interface OpinionData {
     id: number;
     message: string;
     username: string;

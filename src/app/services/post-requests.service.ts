@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserData } from '../interfaces/user-data';
-import { MessageData } from '../interfaces/message-data';
+import { OpinionData } from '../interfaces/opinion-data';
 import { environment } from '../../environments/environment';
 import { SortingGameResult } from '../interfaces/sorting-result-data';
 
@@ -66,8 +66,8 @@ export class PostRequestsService {
   
    }
 
-   sendMainPageMessage(messageData: MessageData) {
-    return this.http.post(`${environment.backend_url}/api/messages/addmessage`, JSON.stringify(messageData), {
+   sendMainPageOpinion(opinionData: OpinionData) {
+    return this.http.post(`${environment.backend_url}/api/opinion/addopinion`, JSON.stringify(opinionData), {
       headers: {
         'Content-Type': 'application/json'
       }

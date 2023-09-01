@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MessageData } from 'src/app/interfaces/message-data';
+import { OpinionData } from 'src/app/interfaces/opinion-data';
 import { PostRequestsService } from 'src/app/services/post-requests.service';
 import { GetRequestsService } from 'src/app/services/get-requests.service';
 import { DialogService } from 'src/app/services/dialog.service';
@@ -11,38 +11,38 @@ import { DialogService } from 'src/app/services/dialog.service';
 })
 export class HomePageOpinionsComponent {
 
-  messagesData: MessageData[] = [];
-  newMessage: MessageData = {} as MessageData;
-  messageContent: string = '';
+  opinionData: OpinionData[] = [];
+  newOpinion: OpinionData = {} as OpinionData;
+  opinionContent: string = '';
   userName: string = '';
 
   constructor(private getRequestService: GetRequestsService, private postRequestService: PostRequestsService,
     private dialogService: DialogService) { }
 
   ngOnInit(): void {
-    this.getAllMessages();
+    this.getAllOpinions();
   }
 
-  sendMessage() {
+  sendOpinion() {
     if (!!localStorage.getItem('currentUser') ==  false) {
       this.dialogService.openDialog('You must be logged in to use this feature!', '/login');
       return;
     }
 
-    else if (this.messageContent == '' || this.messageContent == ' ') {
+    else if (this.opinionContent == '' || this.opinionContent == ' ') {
       this.dialogService.openDialog('You cannot send empty message!');
       return;
     }
 
     this.userName = JSON.parse(localStorage.getItem('currentUser')!).username;
-    this.newMessage.id = 0;
-    this.newMessage.username = this.userName;
-    this.newMessage.message = this.messageContent;
-    this.newMessage.postedAt = new Date().toISOString()
-    this.messageContent = '';
-    this.postRequestService.sendMainPageMessage(this.newMessage).subscribe({
+    this.newOpinion.id = 0;
+    this.newOpinion.username = this.userName;
+    this.newOpinion.message = this.opinionContent;
+    this.newOpinion.postedAt = new Date().toISOString()
+    this.opinionContent = '';
+    this.postRequestService.sendMainPageOpinion(this.newOpinion).subscribe({
       next: () => {
-        this.getAllMessages();
+        this.getAllOpinions();
       },
       error: (error) => {
         console.log('Error', error);
@@ -50,9 +50,9 @@ export class HomePageOpinionsComponent {
     });
   }
 
-  getAllMessages() {
-    this.getRequestService.getMainPageMessagesRequest().subscribe((messageData : any) => {
-      this.messagesData = (messageData as MessageData[]).sort((a, b) => new Date(b.postedAt).getTime() - new Date(a.postedAt).getTime());
+  getAllOpinions() {
+    this.getRequestService.getMainPageOpinionsRequest().subscribe((opinionData : any) => {
+      this.opinionData = (opinionData as OpinionData[]).sort((a, b) => new Date(b.postedAt).getTime() - new Date(a.postedAt).getTime());
     });
   }
 
