@@ -22,6 +22,7 @@
     </div>
 
     <div *ngIf="isGameOver">
+        <br>
         <h1>You finished this round.</h1>
         <h2>It took you <span> {{ tenthsOfSecondPassed / 10 }} </span> seconds.</h2>
         <button class="ok-button" (click)="restartGame()">Restart</button>

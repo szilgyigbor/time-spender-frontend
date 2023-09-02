@@ -3,7 +3,7 @@ h1 {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    padding: 0 0 30px 0;
+    padding: 0 0 50px 0;
     /*margin: 0 0 20px 0;*/
     font-size: 36px;
     letter-spacing: 1px;
@@ -15,7 +15,7 @@ h1 {
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 22px;
-        padding: 0px 0px;
+        padding: 0 0 20px 0;
     }
 }
 
@@ -23,6 +23,7 @@ h1 {
     background: linear-gradient(85deg,#222222,#343434);
     color: white;
     padding: 8px;
+    margin-top: 60px;
     font-size: 22px;
     width: 300px;
     height: 23px;
@@ -33,7 +34,8 @@ h1 {
     .input-field {
         width: 200px;
         height: 16px;
-        padding: 8px;
+        padding: 6px;
+        margin-top: 40px;
         font-size: 15px;
     }
 
@@ -113,24 +115,25 @@ h1 {
 @media only screen and (max-width: 768px) {
     .message-card {
         margin: 16px;
-        max-width: 200px;
+        max-width: 150px;
         padding: 4px;
         text-align: center;
     }
     
     .message-card .content {
-        font-size: 13px;
-        line-height: 1.3;
-        font-weight: 350;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 250;
     }
     
     .message-card .author {
-        font-size: 11px;
+        font-size: 10px;
+        font-weight: 350;
         color: #ccc;
     }
     
     .message-card .date {
-        font-size: 10px;
+        font-size: 9px;
         color: #aaa;
         padding: 0px;
     }
