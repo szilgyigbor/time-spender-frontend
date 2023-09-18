@@ -17,6 +17,7 @@ export class HomePageComponent {
   ngOnInit(): void {
     const pageHeight = document.body.scrollHeight;
     this.backgroundPosition = `0 0, 0 ${pageHeight}px`;
+    this.createPoints();
   }
   
   createPoints() {
