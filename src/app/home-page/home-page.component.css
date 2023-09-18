@@ -298,3 +298,41 @@ hr {
         font-size: 22px;
     }
 }
+
+@keyframes movePoints {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+    }
+    25% {
+        transform: translateY(-15px) scale(0.7);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-30px) scale(0.9);
+        opacity: 0.7;
+    }
+    75% {
+        transform: translateY(-45px) scale(0.7);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-60px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+
+.point {
+    position: absolute;
+    border: 3px solid #d4598a;
+    border-radius: 10px;
+    transform-origin: center bottom;
+    animation: movePoints 8s linear infinite;
+}
+
+@media only screen and (max-width: 768px) {
+    .point {
+        border: 2px solid #d4598a;
+    }
+}
