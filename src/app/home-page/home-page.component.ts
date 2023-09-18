@@ -34,4 +34,11 @@ export class HomePageComponent {
     console.log(maxWidth);
     return Math.floor(Math.random() * maxWidth) + 30;
   }
+
+  randomY(): number {
+    const pageHeight = document.body.scrollHeight;
+    return Math.floor(Math.random() * pageHeight) + 20;
+  }
+  
+
 }
