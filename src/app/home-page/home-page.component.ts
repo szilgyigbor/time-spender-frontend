@@ -19,4 +19,12 @@ export class HomePageComponent {
     this.backgroundPosition = `0 0, 0 ${pageHeight}px`;
   }
   
+  createPoints() {
+    for (let i= 0; i < 120; i++) {
+      this.points.push({
+        x: this.randomX(), 
+        y: this.randomY(), 
+      });
+    }
+  }
 }
