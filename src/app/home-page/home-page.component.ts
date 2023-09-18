@@ -27,4 +27,11 @@ export class HomePageComponent {
       });
     }
   }
+
+  randomX(): number {
+    const pageWidth = window.innerWidth;
+    const maxWidth = pageWidth > 768 ? pageWidth - 100 : pageWidth - 60;
+    console.log(maxWidth);
+    return Math.floor(Math.random() * maxWidth) + 30;
+  }
 }
