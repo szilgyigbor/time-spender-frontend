@@ -9,6 +9,7 @@ export class HomePageComponent {
   title = 'time-spender-frontend';
   backgroundImage = 'url("assets/background_app.jpg")';
   backgroundPosition = '0 0';
+  points: any = [];
 
   constructor() {
   }
