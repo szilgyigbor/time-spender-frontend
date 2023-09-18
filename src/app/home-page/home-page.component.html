@@ -1,5 +1,6 @@
 <div class="background" [style.background-image]="backgroundImage" [style.background-position]="backgroundPosition">
     <div class="home-page-header-container">
+        <div *ngFor="let point of points" class="point" [style.left.px]="point.x" [style.top.px]="point.y"></div>
         <div>
             <div class="welcomeString">Welcome to my digital 
                 <br> playground!
