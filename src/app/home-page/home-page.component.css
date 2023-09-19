@@ -1,7 +1,11 @@
+.background {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url('/assets/background_app.jpg');
+}
+
 .home-page-header-container {
     padding-top: 50px;
-    /*background-color: #6b7280;*/  /*#E8E8E8;*/  
-    /*background: linear-gradient(85deg,#434343,#262626);*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,9 +13,6 @@
 }
 
 .home-page-container {
-    /*background-color: #6b7280;*/  /*#E8E8E8;*/  
-    /*background: linear-gradient(85deg,#434343,#262626);*/
-    /*padding: 0px 200px;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,11 +68,6 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 3px;
     line-height: 1;
-    /*background: -webkit-linear-gradient(85deg, #c8b0e1, #8268ca);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(0,0,0,0);*/
-    /*background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);*/
     background-image: conic-gradient( #553c9a, #00c2cb, #ee4b2b, #553c9a );
     color: transparent;
     background-clip: text;
