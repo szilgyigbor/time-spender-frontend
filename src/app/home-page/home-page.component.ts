@@ -7,16 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
   title = 'time-spender-frontend';
-  backgroundImage = 'url("assets/background_app.jpg")';
-  backgroundPosition = '0 0';
   points: any = [];
+  pageWidth: number = 0;
 
   constructor() {
   }
 
   ngOnInit(): void {
-    const pageHeight = document.body.scrollHeight;
-    this.backgroundPosition = `0 0, 0 ${pageHeight}px`;
+    this.pageWidth = window.innerWidth;
     this.createPoints();
   }
   
@@ -30,15 +28,13 @@ export class HomePageComponent {
   }
 
   randomX(): number {
-    const pageWidth = window.innerWidth;
-    const maxWidth = pageWidth > 768 ? pageWidth - 100 : pageWidth - 60;
-    console.log(maxWidth);
+    const maxWidth = this.pageWidth > 768 ? this.pageWidth - 100 : this.pageWidth - 60;
     return Math.floor(Math.random() * maxWidth) + 30;
   }
 
   randomY(): number {
-    const pageHeight = document.body.scrollHeight;
-    return Math.floor(Math.random() * pageHeight) + 20;
+    const maxHeight = this.pageWidth > 768 ? 2200 : 1500;
+    return Math.floor(Math.random() * maxHeight) + 20;
   }
   
 
