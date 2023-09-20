@@ -3,7 +3,7 @@
 }
 
 header {
-  background: linear-gradient(to left, #272727, #1f2e34);
+  background: linear-gradient(to right, #312640 , #152b32);
   height: 50px;
   position: fixed;
   top: 0;
@@ -37,9 +37,9 @@ nav {
 }
 
 .home-button {
-  background: linear-gradient(85deg,#2f2f2f,#463b3b);
-  border: 2px solid rgb(227, 166, 13);
-  color: rgb(227, 166, 13);
+  background: linear-gradient(85deg,#34444c,#0C4A60 );
+  border: 2px solid #85DCBB;
+  color: #85DCBB;
   text-decoration: none;
   margin-left: 10px;
   height: 30px;
@@ -47,7 +47,7 @@ nav {
 }
 
 .home-button:hover {
-  background: linear-gradient(85deg,darkgoldenrod,#262626);
+  background: linear-gradient(85deg,#6ab296,#0C4A60);
   color: white;
 }
 
