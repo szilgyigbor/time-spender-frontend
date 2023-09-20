@@ -3,20 +3,13 @@
 }
 
 header {
+  background: linear-gradient(to left, #272727, #1f2e34);
   height: 50px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-}
-
-header.dark-mode {
-  background: linear-gradient(to left, #272727, #1f2e34);
-}
-
-header.light-mode {
-  background: linear-gradient(85deg,#1270ce, #20da1a);
 }
 
 nav {
@@ -34,14 +27,7 @@ nav {
 .logout-text {
   font-size: 20px;
   margin-right: 10px;
-}
-
-.logout-text.dark-mode {
   color: white;
-}
-
-.logout-text.light-mode {
-  color: #281d0a;
 }
 
 .right-buttons {
@@ -51,52 +37,24 @@ nav {
 }
 
 .home-button {
-  text-decoration: none;
-  /*background: linear-gradient(85deg,#656565,#343434);
-  border: 2px solid darkgoldenrod;
-  color: darkgoldenrod;*/
-  margin-left: 10px;
-  height: 30px;
-  font-size: 21px;
-}
-
-.home-button.dark-mode {
   background: linear-gradient(85deg,#2f2f2f,#463b3b);
   border: 2px solid rgb(227, 166, 13);
   color: rgb(227, 166, 13);
-}
-
-.home-button.light-mode {
-  background: linear-gradient(85deg,#d26314, #20da1a);
-  border: 2px solid #382323;
-  color: #362424;
+  text-decoration: none;
+  margin-left: 10px;
+  height: 30px;
+  font-size: 21px;
 }
 
 .home-button:hover {
   background: linear-gradient(85deg,darkgoldenrod,#262626);
-  /*background: darkgoldenrod;*/
   color: white;
 }
 
 .login-button, .signup-button {
-  margin-left: 10px;
-  height: 30px;
-  font-size: 21px;
-}
-
-.login-button.dark-mode, .signup-button.dark-mode {
   border: 2px solid #53c457;
   background: linear-gradient(85deg,#2f2f2f,#463b3b);
   color: #53c457;
-  margin-left: 10px;
-  height: 30px;
-  font-size: 21px;
-}
-
-.login-button.light-mode, .signup-button.light-mode {
-  border: 2px solid #12355d;
-  background: linear-gradient(85deg,#4CAF50,#3befbf);
-  color: #12355d;
   margin-left: 10px;
   height: 30px;
   font-size: 21px;
@@ -108,22 +66,9 @@ nav {
 }
 
 .logout-button {
-  height: 30px;
-  font-size: 21px;
-}
-
-.logout-button.dark-mode {
   border: 2px solid #ff4f43;
   background: linear-gradient(85deg,#2f2f2f,#463b3b);
   color: #ff4f43;
-  height: 30px;
-  font-size: 21px;
-}
-
-.logout-button.light-mode {
-  border: 2px solid #12355d;
-  background: linear-gradient(85deg,#f44336,#f56969);
-  color: #12355d;
   height: 30px;
   font-size: 21px;
 }
@@ -159,23 +104,19 @@ nav {
   
   .home-button:hover {
     background: linear-gradient(85deg,darkgoldenrod,#262626);
-    /*background: darkgoldenrod;*/
     color: white;
   }
   
   .login-button, .signup-button {
-    /*text-decoration: none;*/
     border: 2px solid #4CAF50;
     background: linear-gradient(85deg,#151515,#262626);
     color: #4CAF50;
     margin-left: 8px;
     font-size: 20px;
-    /*padding-right: 10px;*/
   }
   
   .login-button:hover, .signup-button:hover {
     background: linear-gradient(85deg,#4CAF50,#262626);
-    /*background: #4CAF50;*/
     color: white;
   }
   
@@ -188,67 +129,6 @@ nav {
   
   .logout-button:hover {
     background: linear-gradient(85deg,#f44336,#262626);
-    /*background: #f44336;*/
     color: white;
-  }
-}
-
-
-.light-theme-button {
-  text-decoration: none;
-  background: linear-gradient(85deg,#1e9372,#2ba3df);
-  border: 2px solid rgb(130, 66, 190);
-  border-radius: 20px;
-  color: rgb(26, 41, 10);
-  width: 30px;
-  margin-left: 30px;
-  margin-top: 3px;
-  font-size: 16px;
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-}
-
-.light-theme-button:hover {
-  color: rgb(200, 200, 200);
-  border: 4px solid rgb(207, 139, 71);
-}
-
-.dark-theme-button {
-  text-decoration: none;
-  background: linear-gradient(85deg,#151515,#262626);
-  border: 2px solid rgb(130, 66, 190);
-  border-radius: 20px;
-  color: rgb(170, 170, 170);
-  width: 30px;
-  margin-left: 30px;
-  margin-top: 3px;
-  font-size: 16px;
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-}
-
-.dark-theme-button:hover {
-  color:rgb(157, 100, 211);
-  border: 4px solid rgb(207, 139, 71);
-}
-
-@media only screen and (max-width: 768px) {
-  
-  .light-theme-button {
-    font-size: 14px;
-    height: 22px;
-    width: 22px;
-    margin-left: 26px;
-    margin-top: 4px;
-  }
-
-  .dark-theme-button {
-    font-size: 14px;
-    height: 22px;
-    width: 22px;
-    margin-left: 26px;
-    margin-top: 4px;
   }
 }
