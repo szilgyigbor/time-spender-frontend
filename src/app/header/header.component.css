@@ -95,15 +95,12 @@ nav {
   
   .home-button {
     text-decoration: none;
-    background: linear-gradient(85deg,#151515,#262626);
-    border: 2px solid darkgoldenrod;
-    color: darkgoldenrod;
     margin-left: 8px;
     font-size: 20px;
   }
   
   .home-button:hover {
-    background: linear-gradient(85deg,darkgoldenrod,#262626);
+    background: linear-gradient(85deg,#6ab296,#0C4A60);
     color: white;
   }
   
