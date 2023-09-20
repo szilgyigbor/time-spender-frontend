@@ -272,9 +272,6 @@ hr {
 @media only screen and (max-width: 768px) {
     .horizonDivider {
         margin: 50px 30px;
-        height: 2px;
-        /*box-sizing: border-box;*/
-        background: linear-gradient(to right, rgba(146, 30, 94, 0), #921E5E, #F5A043, #921E5E, rgba(146, 30, 94, 0));
     }
 }
 
@@ -331,6 +328,6 @@ hr {
 
 @media only screen and (max-width: 768px) {
     .point {
-        border: 1px solid #FFFEE6;
+        border: 2px solid #FFFEE6;
     }
 }
