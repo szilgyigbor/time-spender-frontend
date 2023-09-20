@@ -19,7 +19,7 @@ export class HomePageComponent {
   }
   
   createPoints() {
-    for (let i= 0; i < 120; i++) {
+    for (let i= 0; i < 50; i++) {
       this.points.push({
         x: this.randomX(), 
         y: this.randomY(), 
