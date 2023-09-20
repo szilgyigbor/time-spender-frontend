@@ -1,5 +1,5 @@
 .titleText {
-    background-image: linear-gradient(85deg, #ee4b2b, #5c78d1);
+    background-image: linear-gradient(85deg, #fdfcea, #fbf699 );
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -32,8 +32,8 @@
 }
 
 .usernames {
-    color: #f5a043;
-    text-shadow: 0px 0px 15px #f5a043;
+    color: #39e4ea;
+    text-shadow: 0px 0px 15px #45f9ff;
     font-size: 28px;
     font-weight: 400;
     padding: 20px;
@@ -51,9 +51,9 @@
 
 .usernames:hover {
     cursor: pointer;
-    background-image: linear-gradient(85deg, #385aca , #5b8418);
+    background-image: linear-gradient(85deg, #49e4b8 , #98e41d);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    text-shadow: 0px 0px 25px #b4cf19;
+    text-shadow: 0px 0px 25px #49e4b8;
 }
