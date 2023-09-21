@@ -1,5 +1,5 @@
 h1 {
-    background-image: linear-gradient(85deg, #FFFEE6, #F4ED6E );
+    background-image: linear-gradient(85deg, #ffffff, #fffbb4 );
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -76,7 +76,7 @@ h1 {
 }
 
 .message-card {
-    background: linear-gradient(to right, #a66231 , #69657c );
+    background: linear-gradient(85deg,#9b70c5,#463250);
     color: #e9e9e9;
     border: 2px solid #59d9db;
     border-radius: 10px;

@@ -5,7 +5,7 @@
 }
 
 .no-background {
-    background: linear-gradient(to left, #58446e,#a06c7c);
+    background: linear-gradient(to right, #4e3c62,#25a6b756);
 }
 
 .home-page-header-container {
@@ -72,7 +72,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 3px;
     line-height: 1;
-    background-image: linear-gradient(85deg, #fdfcea, #fbf699 );
+    background-image: linear-gradient(85deg, #ffffff, #fffbb4 );
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -236,7 +236,7 @@ hr {
     justify-content: center;
     filter: drop-shadow(0 2px 2px #000);
     border-left: 4px solid #F4ED6E;
-    background: linear-gradient(to right, #244369, #964937);
+    background: linear-gradient(to left, #58446e,#a06c7c);
     backdrop-filter: blur(5px);
     font-family: "Radiance","Noto Sans",sans-serif;
     margin: 20px 100px;
@@ -276,7 +276,7 @@ hr {
 }
 
 .titleText {
-    background-image: linear-gradient(85deg, #fdfcea, #fbf699 );
+    background-image: linear-gradient(85deg, #ffffff, #fffbb4 );
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -304,7 +304,7 @@ hr {
         opacity: 0.5;
     }
     50% {
-        transform: translateY(-30px) scale(0.9);
+        transform: translateY(-30px) scale(0.8);
         opacity: 0.7;
     }
     75% {

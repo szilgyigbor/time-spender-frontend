@@ -26,7 +26,7 @@ h1 {
 }
 
 .titleText {
-    background-image: linear-gradient(85deg, #fdfcea, #fbf699 );
+    background-image: linear-gradient(85deg, #ffffff, #fffbb4 );
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -64,7 +64,7 @@ h1 {
 }
 
 .news-card {
-    background: linear-gradient(to right, #244369, #964937);
+    background: linear-gradient(to left, #58446e,#a06c7c);
     backdrop-filter: blur(5px);
     border: 2px solid #6edbf4;
     font-size: 21px;
