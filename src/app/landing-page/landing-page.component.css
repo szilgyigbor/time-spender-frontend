@@ -1,0 +1,24 @@
+.landing-page-container {
+    background-image: url('/assets/good_wall.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.content  {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 1000;
+    color: #746AB0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 2;
+}

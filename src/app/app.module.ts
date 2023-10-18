@@ -25,6 +25,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NewsSlideComponent } from './home-page/news-slide/news-slide.component';
 import { UniDialogComponent } from './uni-dialog/uni-dialog.component';
 import { ShowUsernamesComponent } from './home-page/show-usernames/show-usernames.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ShowUsernamesComponent } from './home-page/show-usernames/show-username
     NumberSortingComponent,
     NewsSlideComponent,
     UniDialogComponent,
-    ShowUsernamesComponent
+    ShowUsernamesComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
