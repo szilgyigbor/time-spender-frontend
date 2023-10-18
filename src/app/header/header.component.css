@@ -3,18 +3,33 @@
 }
 
 header {
-  background: linear-gradient(to right, #312640 , #152b32);
-  height: 50px;
+  background: #ffffff;
+  height: 70px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  align-items: center;
 }
 
 nav {
-  padding: 10px 0px;
+  padding: 16px 15%;
   display: flex;
+}
+
+@media (max-width: 1500px) {
+  nav {
+    padding: 16px 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 10px;
+  }
 }
 
 .logout{
@@ -24,79 +39,90 @@ nav {
   align-items: center;
   }
 
-.logout-text {
-  font-size: 20px;
-  margin-right: 10px;
-  color: white;
-}
-
 .right-buttons {
   margin-left: auto;
   display: flex;
   margin-right: 10px;
+  align-items: center;
 }
 
 .home-button {
-  background: linear-gradient(85deg,#34444c,#0C4A60 );
-  border: 2px solid #85DCBB;
-  color: #85DCBB;
+  background: none;       
+  border: none;   
   text-decoration: none;
+  cursor: pointer;  
+  color: #746AB0;    
   margin-left: 10px;
   height: 30px;
-  font-size: 21px;
-}
-
-.home-button:hover {
-  background: linear-gradient(85deg,#6ab296,#0C4A60);
-  color: white;
+  font-size: 25px;
+  font-weight: 1000;
 }
 
 .login-button, .signup-button {
-  border: 2px solid #53c457;
-  background: linear-gradient(85deg,#2f2f2f,#463b3b);
-  color: #53c457;
-  margin-left: 10px;
-  height: 30px;
-  font-size: 21px;
+  font-family: "Source Sans Pro", Sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #4cb3f5;
+  border-radius: 30px 30px 30px 30px;
+  border: none;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+  padding: 10px 10px 10px 10px;
+  margin-left: 8px;
+  cursor: pointer;  
 }
 
 .login-button:hover, .signup-button:hover {
-  background: linear-gradient(85deg,#4CAF50,#262626);
+  background: #ffb040;
   color: white;
 }
 
 .logout-button {
-  border: 2px solid #ff4f43;
-  background: linear-gradient(85deg,#2f2f2f,#463b3b);
-  color: #ff4f43;
-  height: 30px;
-  font-size: 21px;
+  font-family: "Source Sans Pro", Sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #ff4f43;
+  border-radius: 30px 30px 30px 30px;
+  border: none;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+  padding: 10px 10px 10px 10px;
+  margin-left: 8px;
+  cursor: pointer;  
 }
 
 .logout-button:hover {
-  background: linear-gradient(85deg,#f44336,#262626);
+  background: #ffb040;
   color: white;
 }
 
-@media only screen and (max-width: 768px) {
-  .logout-text {
-    color: white;
-    font-size: 12px;
-    margin-right: 10px;
-    width: 100px;
-    line-height: 1rem;
-  }
-
+@media (max-width: 768px) {
   .right-buttons {
     margin-left: auto;
     display: flex;
-    margin-right: 10px;
+    margin-right: 5px;
+  }
+
+  .login-button, .signup-button {
+    font-family: "Source Sans Pro", Sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #4cb3f5;
+    border-radius: 30px 30px 30px 30px;
+    border: none;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    padding: 8px 8px 8px 8px;
+    margin-left: 4px;
+    margin-top: 2px;
+    cursor: pointer;  
   }
   
   .home-button {
-    text-decoration: none;
-    margin-left: 8px;
-    font-size: 20px;
+    margin-top: 4px;
+    font-size: 18px;
+    margin-left: 0px;
+    padding-top: 0px;
   }
   
   .home-button:hover {
@@ -104,28 +130,4 @@ nav {
     color: white;
   }
   
-  .login-button, .signup-button {
-    border: 2px solid #4CAF50;
-    background: linear-gradient(85deg,#151515,#262626);
-    color: #4CAF50;
-    margin-left: 8px;
-    font-size: 20px;
-  }
-  
-  .login-button:hover, .signup-button:hover {
-    background: linear-gradient(85deg,#4CAF50,#262626);
-    color: white;
-  }
-  
-  .logout-button {
-    border: 2px solid #f44336;
-    background: linear-gradient(85deg,#151515,#262626);
-    color: #f44336;
-    font-size: 20px;
-  }
-  
-  .logout-button:hover {
-    background: linear-gradient(85deg,#f44336,#262626);
-    color: white;
-  }
 }
