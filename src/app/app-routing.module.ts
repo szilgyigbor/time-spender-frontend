@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ReadNewsComponent } from './read-news/read-news.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CheckWeatherComponent } from './check-weather/check-weather.component';
 import { ChatWithGptComponent } from './chat-with-gpt/chat-with-gpt.component';
@@ -13,7 +14,8 @@ import { NumberSortingComponent } from './number-sorting/number-sorting.componen
 import { AdminGuard } from './guards/auth-guard';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
+  { path: '', component: LandingPageComponent },
+  { path: 'old-home', component: HomePageComponent },
   { path: 'read-news', component: ReadNewsComponent, canActivate: [AdminGuard] },
   { path: 'check-weather', component: CheckWeatherComponent, canActivate: [AdminGuard] },
   { path: 'chat-with-gpt', component: ChatWithGptComponent, canActivate: [AdminGuard] },
