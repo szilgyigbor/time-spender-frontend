@@ -1,13 +1,13 @@
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 70px;
+    padding-top: 40px;
     background: #52524f09;
 }
 
 @media screen and (max-width: 768px) {
     .card-container {
-        margin-top: 50px;
+        padding-top: 50px;
     }
 }
 
@@ -52,13 +52,6 @@
     padding: 20px;
     height: auto;
     max-width: 300px;
-}
-
-
-@media screen and (max-width: 1500px) {
-    .card {
-        max-width: 300px;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -108,4 +101,60 @@
         width: 300px;
         height: 300px;
     }
+}
+
+.button {
+    font-family: "Source Sans Pro", Sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #4cb3f5;
+    border-radius: 30px 30px 30px 30px;
+    border: none;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    padding: 10px 10px 10px 10px;
+    margin-left: 8px;
+    cursor: pointer;  
+  }
+  
+.button:hover {
+background: #ffb040;
+color: white;
+}
+
+.feature-card {
+    flex: 1;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    height: auto;
+    max-width: 250px;
+}
+
+@media screen and (max-width: 768px) {
+    .feature-card {
+        min-width: 300px;
+        margin-left: 45px; 
+        padding: 10px;
+    }
+}
+
+.feature-card.purple {
+    background: #4f2170a5;
+    color: #fff;
+}
+
+.feature-card.pink {
+    background: #cd355bae;
+    color: #fff;
+}
+
+.feature-card.green {
+    background: #5d872aa5;
+    color: #fff;
+}
+
+.feature-card.yellow {
+    background: #85762aa5;
+    color: #fff;
 }
