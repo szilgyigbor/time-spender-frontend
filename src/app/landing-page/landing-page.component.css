@@ -158,3 +158,15 @@ color: white;
     background: #85762aa5;
     color: #fff;
 }
+
+.ending-card {
+    position: relative;
+    font-weight: 300;
+    font-size: 120%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 130%;
+    padding-left: 30px;
+    margin: 80px;
+    color: #6b2d97;
+    border-left: 4px solid #6b2d97;
+}
