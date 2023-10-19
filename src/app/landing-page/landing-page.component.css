@@ -162,11 +162,24 @@ color: white;
 .ending-card {
     position: relative;
     font-weight: 300;
-    font-size: 120%;
+    font-size: 110%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 130%;
     padding-left: 30px;
     margin: 80px;
     color: #6b2d97;
     border-left: 4px solid #6b2d97;
+}
+
+.custom-link {
+    text-decoration: none;
+    color: #4cb3f5;
+    font-weight: 600;
+    font-size: 110%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.custom-link:hover {
+    border-bottom: 2px solid #4cb3f5;
 }
