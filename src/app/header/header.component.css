@@ -63,6 +63,10 @@ nav {
   font-size: 25px;
   font-weight: 1000;
 }
+  
+.home-button:hover {
+  color: #4cb3f5;
+}
 
 .login-button, .signup-button {
   font-family: "Source Sans Pro", Sans-serif;
@@ -130,10 +134,6 @@ nav {
     margin-left: 0px;
     padding-top: 0px;
   }
-  
-  .home-button:hover {
-    background: linear-gradient(85deg,#6ab296,#0C4A60);
-    color: white;
-  }
+
   
 }
