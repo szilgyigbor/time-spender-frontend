@@ -189,3 +189,10 @@ color: white;
 .custom-link:hover {
     border-bottom: 2px solid #4cb3f5;
 }
+
+.visit-number {
+    font-size: 200%;
+    font-weight: 600;
+    color: #4cb3f5;
+    margin-bottom: 20px;
+}
