@@ -9,4 +9,10 @@ import { VisitData } from '../interfaces/visit-data';
 })
 export class LandingPageComponent {
 
+  visitData: VisitData = {
+    id: 0,
+    allVisits: 0,
+    lastVisit: new Date()
+  };
+
 }
