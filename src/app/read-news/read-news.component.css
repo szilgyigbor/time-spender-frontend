@@ -6,8 +6,10 @@
 h1 {
     font-size: 30px;
     font-weight: 500;
-    color: white;
-    padding: 30px 0px;
+    color: #6b2d97;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 @media screen and (max-width: 768px) {
@@ -18,15 +20,14 @@ h1 {
 }
 
 .read-news-container {
-    background: linear-gradient(85deg,#434343,#262626);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #6b2d97;
 }
 
 .card {
-    background: linear-gradient(85deg,#222222,#343434);
+    background: #c7597421;
     border: 2px solid #36515b;
     font-size: 16px;
     border-radius: 5px;
@@ -48,14 +49,17 @@ h1 {
 
     .card a {
         font-size: 20px;
-        color: #fcb900;
+        font-weight: 600;
+        color: #28165a;
         text-decoration: none;
+    }
+
+    .card a:hover {
+        text-shadow: 0px 0px 15px #b5ff3d;
     }
 
 @media screen and (max-width: 768px) {
     .card {
-        background: linear-gradient(85deg,#222222,#343434);
-        border: 2px solid #36515b;
         border-radius: 5px;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
         margin: 3px;
@@ -72,7 +76,5 @@ h1 {
 
     .card a {
         font-size: 12px;
-        color: #fcb900;
-        text-decoration: none;
     }
 }

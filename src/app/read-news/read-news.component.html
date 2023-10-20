@@ -1,10 +1,10 @@
 <div ngClass="header-container">
-    <h1>Read News</h1>
+    <h1>Hírek</h1>
     <div class="read-news-container">
         <div id="cards">
             <div *ngFor="let item of news" class="card">
                 <h2>{{ item.title }}</h2>
-                <a [href]="item.url" target="_blank">Read more</a>
+                <a [href]="item.url" target="_blank">Olvass tovább</a>
             </div>
         </div>
     </div>
