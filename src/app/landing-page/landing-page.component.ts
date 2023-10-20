@@ -15,4 +15,6 @@ export class LandingPageComponent {
     lastVisit: new Date()
   };
 
+  constructor(private visitorService: VisitorService) { }
+
 }
