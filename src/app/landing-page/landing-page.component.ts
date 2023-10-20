@@ -16,6 +16,41 @@ export class LandingPageComponent {
   };
 
   constructor(private visitorService: VisitorService) { }
+  private checkVisitor(): void {
+    const storedVisitor = localStorage.getItem('Visitor');
+    
+    if (storedVisitor) {
+      const storedDate = new Date(JSON.parse(storedVisitor).date);
+      const currentDate = new Date();
+      
+      const timeDifference = Math.abs(currentDate.getTime() - storedDate.getTime()) / 60000;
+
+      if (timeDifference > 10) {
+        this.updateVisitor();
+        this.visitorService.raiseVisitNumber().subscribe(
+          (data) => {
+            this.visitData = data;
+          }
+        );
+      } else {
+        this.visitorService.getVisits().subscribe(
+          (data) => {
+            this.visitData = data;
+          }
+        );
+      }
+      
+    } else {
+      this.createVisitor();
+      this.visitorService.raiseVisitNumber().subscribe(
+        (data) => {
+          this.visitData = data;
+        }
+      );
+      
+    }
+  }
+
   private createVisitor(): void {
     const visitor = {
       date: new Date().toISOString()
