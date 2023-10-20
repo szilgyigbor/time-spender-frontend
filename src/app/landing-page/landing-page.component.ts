@@ -17,4 +17,12 @@ export class LandingPageComponent {
 
   constructor(private visitorService: VisitorService) { }
 
+  private updateVisitor(): void {
+    const updatedVisitor = {
+      date: new Date().toISOString()
+    };
+    
+    localStorage.setItem('Visitor', JSON.stringify(updatedVisitor));
+  }
+
 }
