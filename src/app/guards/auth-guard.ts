@@ -9,7 +9,7 @@ export class AdminGuard {
   canActivate(): boolean {
 
     if (!!localStorage.getItem('currentUser') ==  false) {
-      this.dialogService.openDialog('You must be logged in to use this feature!', '/login');
+      this.dialogService.openDialog('Be kell jelentkezned, hogy használni tudd ezt.', '/login');
       return false;
     }
     
@@ -17,7 +17,7 @@ export class AdminGuard {
     const expiresTime = new Date(JSON.parse(localStorage.getItem('currentUser')!).expires_at).getTime();
 
     if (currentTime > expiresTime) {
-        this.dialogService.openDialog('Your session has expired. Please log in again.', '/login');
+        this.dialogService.openDialog('Lejárt a bejelentkezésed, lépj be újra!', '/login');
         this.loginService.removeLoggedIn();
         return false;
     }
