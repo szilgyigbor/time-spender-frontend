@@ -16,6 +16,11 @@ export class LandingPageComponent {
   };
 
   constructor(private visitorService: VisitorService) { }
+
+  ngOnInit(): void {
+    this.checkVisitor();
+  }
+
   private checkVisitor(): void {
     const storedVisitor = localStorage.getItem('Visitor');
     
