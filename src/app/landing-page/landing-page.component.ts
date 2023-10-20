@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { VisitorService } from '../services/visitor.service';
+import { VisitData } from '../interfaces/visit-data';
 
 @Component({
   selector: 'tisp-landing-page',
