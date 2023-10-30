@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'number-sorting', component: NumberSortingComponent, canActivate: [AdminGuard] },
   { path: 'forum', component: ForumPageComponent },
   { path: 'forum/:id', component: SinglePostComponent },
-  { path: 'forum/add-post', component: AddPostComponent, canActivate: [AdminGuard] }
+  { path: 'add-post', component: AddPostComponent, canActivate: [AdminGuard] }
 ];
 
 @NgModule({
