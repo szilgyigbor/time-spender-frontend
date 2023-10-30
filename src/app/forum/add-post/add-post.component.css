@@ -1,0 +1,60 @@
+.add-post-container{
+    margin-top: 100px;
+}
+
+.button {
+    font-family: "Source Sans Pro", Sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #4cb3f5;
+    border-radius: 30px 30px 30px 30px;
+    border: none;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    padding: 10px 10px 10px 10px;
+    margin-left: 8px;
+    cursor: pointer;  
+  }
+  
+.button:hover {
+background: #ffb040;
+color: white;
+}
+
+.input-field {
+    background: #d9e0e5;
+    color: #4f2170;
+    padding: 8px;
+    font-size: 16px;
+    width: 300px;
+    height: 20px;
+    border: #4CAF50;
+}
+
+@media only screen and (max-width: 768px) {
+    .input-field {
+        font-size: 14px;
+        width: 200px;
+        height: 16px;
+        border: #4CAF50;
+    }
+}
+
+.textarea-field {
+    background: #d9e0e5;
+    color: #4f2170;
+    padding: 8px;
+    font-size: 16px;
+    width: 400px;
+    height: 200px;
+    border: #4CAF50;
+}
+
+@media only screen and (max-width: 768px) {
+    .textarea-field {
+        font-size: 14px;
+        width: 200px;
+        height: 150px;
+        border: #4CAF50;
+    }
+}
