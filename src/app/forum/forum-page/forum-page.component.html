@@ -1,1 +1,20 @@
-<p>forum-page works!</p>
+<div class="forum-page-container">
+    <button class="button" routerLink="/add-post">Új poszt létrehozása</button>
+    <br>
+    <p>Kattints valamelyik posztra a részletekért</p>
+    <div class="card-container">
+        <div class="card" *ngFor="let post of allPosts">
+            <div class="title">{{post.title}}</div>
+            <div class="content">{{post.content}}</div>
+            <div class="author">{{post.author}}</div>
+            <div class="date">{{post.createdAt | date:'YYYY-MM-dd' }}</div>
+            <br>
+            <div *ngIf="post.comments?.length; else noComments">
+                {{post.comments?.length}} hozzászólás
+              </div>
+              <ng-template #noComments>
+                Nincsenek hozzászólások
+              </ng-template>
+        </div>
+    </div>
+</div>

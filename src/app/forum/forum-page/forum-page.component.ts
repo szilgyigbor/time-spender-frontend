@@ -9,6 +9,7 @@ import { ForumService } from 'src/app/services/forum.service';
 })
 export class ForumPageComponent {
 
+  allPosts: PostData[] = [];
 
   constructor(private forumService: ForumService) { }
 
@@ -21,6 +22,7 @@ export class ForumPageComponent {
   getPosts() {
     this.forumService.getPosts().subscribe(
       (data) => {
+        this.allPosts = data;
         console.log(data);
       }
     );
