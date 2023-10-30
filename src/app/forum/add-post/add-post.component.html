@@ -1,12 +1,14 @@
 <div class="add-post-container">
-<div>
-    <h2>A poszt címe:</h2>
-    <input Class="input-field" [(ngModel)]="newPost.title" type="text">
-</div>
-<div>
-    <h2>A poszt tartalma</h2>
-    <textarea Class="textarea-field" [(ngModel)]="newPost.content" type="text" rows="5">
-    </textarea>
-</div>
-<button Class="button" (click)="addPost()">Létrehozás</button>
+    <div>
+        <h2>A poszt címe:</h2>
+        <input Class="input-field" [(ngModel)]="newPost.title" type="text">
+    </div>
+    <div>
+        <br>
+        <h2>A poszt tartalma</h2>
+        <textarea Class="textarea-field" [(ngModel)]="newPost.content" type="text" rows="5">
+        </textarea>
+    </div>
+    <br>
+    <button Class="button" (click)="addPost()">Létrehozás</button>
 </div>

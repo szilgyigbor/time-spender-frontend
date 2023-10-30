@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PostData } from 'src/app/interfaces/post-data';
 import { ForumService } from 'src/app/services/forum.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tisp-add-post',
@@ -12,7 +13,7 @@ export class AddPostComponent {
   newPost: PostData = {} as PostData;
   username: string = "";
 
-  constructor( private forumService: ForumService) { }
+  constructor( private forumService: ForumService, private router: Router) { }
 
   ngOnInit(): void {
     this.username = JSON.parse(localStorage.getItem('currentUser')!).username;
@@ -25,7 +26,7 @@ export class AddPostComponent {
     this.newPost.dislikeCount = 0;
     this.forumService.addPost(this.newPost).subscribe(
       (data) => {
-        console.log(data);
+        this.router.navigate(['/forum']);
       }
     );
   }
