@@ -26,6 +26,9 @@ import { NewsSlideComponent } from './home-page/news-slide/news-slide.component'
 import { UniDialogComponent } from './uni-dialog/uni-dialog.component';
 import { ShowUsernamesComponent } from './home-page/show-usernames/show-usernames.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ForumPageComponent } from './forum/forum-page/forum-page.component';
+import { SinglePostComponent } from './forum/single-post/single-post.component';
+import { AddPostComponent } from './forum/add-post/add-post.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     NewsSlideComponent,
     UniDialogComponent,
     ShowUsernamesComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ForumPageComponent,
+    SinglePostComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,
