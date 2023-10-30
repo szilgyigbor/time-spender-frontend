@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { PostData } from 'src/app/interfaces/post-data';
 import { ForumService } from 'src/app/services/forum.service';
 
@@ -11,21 +12,23 @@ export class ForumPageComponent {
 
   allPosts: PostData[] = [];
 
-  constructor(private forumService: ForumService) { }
+  constructor(private forumService: ForumService, private router: Router) { }
 
   ngOnInit(): void {
 
     this.getPosts();
   }
 
-
   getPosts() {
     this.forumService.getPosts().subscribe(
       (data) => {
         this.allPosts = data;
-        console.log(data);
       }
     );
+  }
+
+  goToPost(id: number) {
+    this.router.navigate(['/forum', id]);
   }
 
 }
