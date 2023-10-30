@@ -12,6 +12,9 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { OnlineShooterComponent } from './online-shooter/online-shooter.component';
 import { NumberSortingComponent } from './number-sorting/number-sorting.component';
 import { AdminGuard } from './guards/auth-guard';
+import { ForumPageComponent } from './forum/forum-page/forum-page.component';
+import { SinglePostComponent } from './forum/single-post/single-post.component';
+import { AddPostComponent } from './forum/add-post/add-post.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -23,7 +26,10 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'sign-up', component: SignUpPageComponent },
   { path: 'online-shooter', component: OnlineShooterComponent, canActivate: [AdminGuard] },
-  { path: 'number-sorting', component: NumberSortingComponent, canActivate: [AdminGuard] }
+  { path: 'number-sorting', component: NumberSortingComponent, canActivate: [AdminGuard] },
+  { path: 'forum', component: ForumPageComponent },
+  { path: 'forum/:id', component: SinglePostComponent },
+  { path: 'forum/add-post', component: AddPostComponent, canActivate: [AdminGuard] }
 ];
 
 @NgModule({
