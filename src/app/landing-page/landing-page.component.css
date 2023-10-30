@@ -124,8 +124,8 @@
   }
   
 .button:hover {
-background: #ffb040;
-color: white;
+    background: #ffb040;
+    color: white;
 }
 
 .feature-card {
