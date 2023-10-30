@@ -12,10 +12,10 @@ import { environment } from '../../environments/environment';
     constructor(private http: HttpClient) { }
   
     getPosts() {
-      return this.http.get<PostData[]>(`${environment.backend_url}/forum/getposts`);
+      return this.http.get<PostData[]>(`${environment.backend_url}/api/forum/getposts`);
     }
   
     addPost( postdata: PostData) {
-      return this.http.post(`${environment.backend_url}/forum/addpost`, postdata );
+      return this.http.post(`${environment.backend_url}/api/forum/addpost`, postdata );
     }
   }
