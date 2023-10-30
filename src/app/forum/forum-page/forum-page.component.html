@@ -3,7 +3,7 @@
     <br>
     <p>Kattints valamelyik posztra a részletekért</p>
     <div class="card-container">
-        <div class="card" *ngFor="let post of allPosts">
+        <div class="card" *ngFor="let post of allPosts" (click)="goToPost(post.id)">
             <div class="title">{{post.title}}</div>
             <div class="content">{{post.content}}</div>
             <div class="author">{{post.author}}</div>
