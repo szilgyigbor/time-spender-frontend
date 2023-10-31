@@ -22,7 +22,10 @@ export class DialogService {
         if (result === 'ok' && navigateTo) {
           this.router.navigate([navigateTo]);
           resolve(true);
-        } else if (result === 'cancel') {
+        } else if (result === 'ok') {
+          resolve(true);
+        }
+          else if (result === 'cancel') {
           resolve(false);
         }
       });
