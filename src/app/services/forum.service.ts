@@ -31,4 +31,8 @@ import { environment } from '../../environments/environment';
         return this.http.delete(`${environment.backend_url}/api/forum/deletepost/${id}`);
     }
 
+    deleteComment(id: number) {
+        return this.http.delete(`${environment.backend_url}/api/forum/deletecomment/${id}`);
+    }
+
   }
