@@ -16,7 +16,8 @@ export class SinglePostComponent {
   username: string = "";
   showTextarea: boolean = false;
 
-  constructor(private forumService: ForumService, private route: ActivatedRoute) {}
+  constructor(private forumService: ForumService, private route: ActivatedRoute, private router: Router,
+    private dialogService: DialogService) {}
 
   ngOnInit() {
     const id = this.route.snapshot.params['id'];
