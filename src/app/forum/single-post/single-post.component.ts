@@ -48,4 +48,21 @@ export class SinglePostComponent {
     
   }
 
+  deleteComment(id: number) {
+    this.dialogService.openDialog('Biztos, hogy törölni akarod ezt a kommentet?').then(result => {
+      if (result) {
+        this.forumService.deleteComment(id).subscribe(
+          (data) => {
+            console.log("Comment deleted");
+            this.getPostById(this.currentPost.id);
+          }
+        );
+      } 
+      else {
+        return;
+      }
+    });
+    
+  }
+
 }
