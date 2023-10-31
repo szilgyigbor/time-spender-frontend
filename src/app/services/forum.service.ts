@@ -16,10 +16,15 @@ import { environment } from '../../environments/environment';
     }
 
     getPostById(id: number) {
-        return this.http.get<PostData>(`${environment.backend_url}/api/forum/getpost/${id}`);
-      }
-  
-    addPost(postdata: PostData) {
-      return this.http.post(`${environment.backend_url}/api/forum/addpost`, postdata );
+      return this.http.get<PostData>(`${environment.backend_url}/api/forum/getpost/${id}`);
     }
+  
+    addPost(postData: PostData) {
+      return this.http.post(`${environment.backend_url}/api/forum/addpost`, postData);
+    }
+
+    addComment(commentData: CommentData) {
+        return this.http.post(`${environment.backend_url}/api/forum/addcomment`, commentData);
+    }
+
   }
