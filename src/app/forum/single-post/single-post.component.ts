@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ForumService } from 'src/app/services/forum.service';
 import { PostData } from 'src/app/interfaces/post-data';
 import { CommentData } from 'src/app/interfaces/comment-data';
+import { DialogService } from 'src/app/services/dialog.service';
 
 @Component({
   selector: 'tisp-single-post',
@@ -31,7 +32,6 @@ export class SinglePostComponent {
   getPostById(id: number) {
     this.forumService.getPostById(id).subscribe(
       (data) => {
-        console.log(data);
         this.currentPost = data;
       }
     );
