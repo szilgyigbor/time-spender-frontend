@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import { ThemeService } from '../services/theme.service';
 import { Subscription } from 'rxjs';
+import { DialogService } from 'src/app/services/dialog.service';
 
 @Component({
   selector: 'tisp-header',
@@ -15,7 +16,8 @@ export class HeaderComponent implements OnInit {
   isLoggedIn$ = this.loginService.isLoggedIn$;
   isDarkMode: boolean = true;
 
-  constructor(private loginService: LoginService, private themeService: ThemeService) { 
+  constructor(private loginService: LoginService, private themeService: ThemeService, 
+    private dialogService: DialogService) { 
     this.isLoggedIn$.subscribe((isLoggedIn: any) => {
       if (isLoggedIn) {
         this.currentUser = JSON.parse(localStorage.getItem('currentUser')!);
@@ -36,10 +38,16 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    localStorage.clear();
-    this.loginService.setLoggedIn(false);
+    this.dialogService.openDialog('Ki szeretnél jelentkezni?').then(result => {
+      if (result) {
+        this.loginService.setLoggedIn(false);
+        localStorage.clear();
+      } 
+      else {
+        return;
+      }
+    });
   }
-
 
   toggleMode() {
     this.themeService.toggleTheme();
