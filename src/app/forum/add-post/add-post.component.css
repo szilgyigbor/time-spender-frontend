@@ -37,7 +37,7 @@ color: white;
 @media only screen and (max-width: 768px) {
     .input-field {
         font-size: 14px;
-        width: 200px;
+        width: 280px;
         height: 16px;
         border: #4CAF50;
     }
@@ -56,7 +56,7 @@ color: white;
 @media only screen and (max-width: 768px) {
     .textarea-field {
         font-size: 14px;
-        width: 200px;
+        width: 280px;
         height: 150px;
         border: #4CAF50;
     }
