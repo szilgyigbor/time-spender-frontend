@@ -38,17 +38,10 @@ nav {
   }
 }
 
-.logout{
+.logout, .right-buttons {
   margin-left: auto;
   margin-right: 10px;
   display: flex;
-  align-items: center;
-  }
-
-.right-buttons {
-  margin-left: auto;
-  display: flex;
-  margin-right: 10px;
   align-items: center;
 }
 
@@ -60,38 +53,11 @@ nav {
   }
 }
 
-.home-button {
-  background: none;       
-  border: none;   
-  text-decoration: none;
-  cursor: pointer;  
-  color: #746AB0;    
-  margin-left: 10px;
-  height: 30px;
-  font-size: 25px;
-  font-weight: 1000;
-}
-
-@media (max-width: 768px) {
-  .home-button {
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 5px;
-    margin-left: 15px;
-    padding-top: 0px;
-  }
-}
-  
-.home-button:hover {
-  color: #4cb3f5;
-}
-
-.login-button, .signup-button {
+.button {
   font-family: "Source Sans Pro", Sans-serif;
   font-size: 1em;
   font-weight: 600;
   color: #ffffff;
-  background-color: #4cb3f5;
   border-radius: 30px 30px 30px 30px;
   border: none;
   box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
@@ -101,7 +67,7 @@ nav {
 }
 
 @media (max-width: 768px) {
-  .login-button, .signup-button {
+  .button {
     padding: 8px 8px 8px 8px;
     margin-left: 4px;
     margin-top: 2px;
@@ -109,54 +75,23 @@ nav {
   }
 }
 
-.login-button:hover, .signup-button:hover {
-  background: #ffb040;
-  color: white;
+.button.home {
+  background-color: #4cb3f5;
 }
 
-.logout-button {
-  font-family: "Source Sans Pro", Sans-serif;
-  font-size: 1em;
-  font-weight: 600;
-  color: #ffffff;
+.button.login {
+  background-color: #4cb3f5;
+}
+
+.button.logout {
   background-color: #ff4f43;
-  border-radius: 30px 30px 30px 30px;
-  border: none;
-  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
-  padding: 10px 10px 10px 10px;
-  margin-left: 8px;
-  cursor: pointer;  
 }
 
-.logout-button:hover {
-  background: #ffb040;
-  color: white;
+.button.forum {
+  background-color: #95b920;
 }
 
-.forum-button {
-  font-family: "Source Sans Pro", Sans-serif;
-  font-size: 1em;
-  font-weight: 600;
-  color: #ffffff;
-  background: #95b920;
-  border-radius: 30px 30px 30px 30px;
-  border: none;
-  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
-  padding: 10px 10px 10px 10px;
-  margin-left: 120px;
-  cursor: pointer;  
-}
-
-@media (max-width: 768px) {
-  .forum-button {
-    padding: 8px 8px 8px 8px;
-    margin-left: 4px;
-    margin-top: 0px;
-    cursor: pointer;
-  }
-}
-  
-.forum-button:hover {
+.button:hover {
   background: #ffb040;
   color: white;
 }
