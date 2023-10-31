@@ -4,15 +4,16 @@
             <div class="title">{{currentPost.title}}</div>
             <div class="content">{{currentPost.content}}</div>
             <div class="author">{{currentPost.author}}</div>
-            <div class="date">{{currentPost.createdAt | date:'YYYY-MM-dd' }}</div>
-            <br>
+            <div class="date">{{currentPost.createdAt | date:'YYYY-MM-dd HH:mm' }}</div>
+            <button class="button delete" *ngIf="username == currentPost.author" (click)="deletePost(currentPost.id)">Törlés</button>
             <div class="middle-container">
                 <div *ngIf="currentPost.comments?.length; else noComments">
-                    <h1>Hozzászólások:</h1>
+                    <h2>Hozzászólások:</h2>
                     <div class="comment-card" *ngFor="let comment of currentPost.comments">
                         <div class="content"> {{comment.content}} </div>
                         <div class="author"> {{comment.author}} </div>
                         <div class="date"> {{comment.createdAt | date:'YYYY-MM-dd HH:mm' }} </div>
+                        <button class="button delete" *ngIf="username == comment.author" (click)="deleteComment(comment.id)">Törlés</button>
                     </div>
                 </div>
             </div>
@@ -21,12 +22,15 @@
             </ng-template>
         </div>
     </div>
-    <div>
+    <div *ngIf="showTextarea">
         <br>
         <h2>Új hozzászólás</h2>
-        <textarea Class="textarea-field" [(ngModel)]="newComment.content" type="text" rows="5">
+        <textarea class="textarea-field" [(ngModel)]="newComment.content" type="text" rows="5">
         </textarea>
     </div>
+    <ng-template #pushComment>
+        <div></div>
+    </ng-template>
     <div class="middle-container">
         <button class="button" (click)="addComment()">Hozzászólok</button>
     </div>
