@@ -10,16 +10,22 @@ export class DialogService {
 
   constructor(private dialog: MatDialog, private router: Router) { }
 
-  openDialog(message: string, navigateTo?: string) {
-    const dialogRef = this.dialog.open(UniDialogComponent, {
-      data: { message: message },
-      disableClose: true
-    });
-  
-    dialogRef.afterClosed().subscribe(result => {
-      if (result === 'ok' && navigateTo) {
-        this.router.navigate([navigateTo]);
-      }
+  openDialog(message: string, navigateTo?: string): Promise<boolean> {
+    return new Promise<boolean>((resolve, reject) => {
+      const dialogRef = this.dialog.open(UniDialogComponent, {
+        data: { message: message },
+        disableClose: true,
+        autoFocus: false,
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        if (result === 'ok' && navigateTo) {
+          this.router.navigate([navigateTo]);
+          resolve(true);
+        } else if (result === 'cancel') {
+          resolve(false);
+        }
+      });
     });
   }
 }
