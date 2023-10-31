@@ -5,7 +5,7 @@
 
 @media screen and (max-width: 768px) {
     .single-post-container {
-        margin-top: 50px;
+        margin-top: 20px;
     }
 }
 
@@ -87,12 +87,12 @@ h2 {
 }
 
 .post .author {
-    font-size: 14px;
+    font-size: 13px;
     color: #5522ba;
 }
 
 .post .date {
-    font-size: 14px;
+    font-size: 13px;
     color: #5522ba;
 }
 
@@ -143,12 +143,11 @@ h2 {
 }
 
 .comment-card {
-    background-color: rgba(192, 206, 211, 0.155);
-    color: #132846;
+    background: #5d872a44;
+    color: white;
     flex: 1;
     margin: 20px;
     border-radius: 5px;
-    border: 2px solid #24467d75;
     padding: 10px;
     height: auto;
     min-width: 200px;
@@ -175,11 +174,11 @@ h2 {
 }
 
 .comment-card .author {
-    font-size: 14px;
+    font-size: 13px;
     color: #5522ba;
 }
 
 .comment-card .date {
-    font-size: 14px;
+    font-size: 13px;
     color: #5522ba;
 }
