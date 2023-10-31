@@ -34,18 +34,25 @@ export class SinglePostComponent {
   }
 
   addComment() {
-    this.newComment.postId = this.currentPost.id;
-    this.newComment.createdAt = new Date();
-    this.newComment.author = this.username;
-    this.forumService.addComment(this.newComment).subscribe(
-      (data) => {
-        console.log("Comment added");
-        console.log(data);
-        this.getPostById(this.currentPost.id);
-        this.newComment = {} as CommentData;
-      }
-    );
-    
+
+    if (!this.showTextarea) {
+      this.showTextarea = true;
+      return;
+    }
+
+    if (this.showTextarea) {
+        this.newComment.postId = this.currentPost.id;
+        this.newComment.createdAt = new Date();
+        this.newComment.author = this.username;
+        this.forumService.addComment(this.newComment).subscribe(
+        (data) => {
+          console.log("Comment added");
+          this.getPostById(this.currentPost.id);
+          this.newComment = {} as CommentData;
+          this.showTextarea = false;
+        }
+      );
+    }
   }
 
   deleteComment(id: number) {
