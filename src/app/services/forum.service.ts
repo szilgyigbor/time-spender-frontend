@@ -27,4 +27,8 @@ import { environment } from '../../environments/environment';
         return this.http.post(`${environment.backend_url}/api/forum/addcomment`, commentData);
     }
 
+    deletePost(id: number) {
+        return this.http.delete(`${environment.backend_url}/api/forum/deletepost/${id}`);
+    }
+
   }
