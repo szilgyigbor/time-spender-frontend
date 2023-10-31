@@ -14,6 +14,7 @@ export class SinglePostComponent {
   currentPost: PostData = {} as PostData;
   newComment: CommentData = {} as CommentData;
   username: string = "";
+  showTextarea: boolean = false;
 
   constructor(private forumService: ForumService, private route: ActivatedRoute) {}
 
