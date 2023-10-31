@@ -7,7 +7,7 @@
             <div class="title">{{post.title}}</div>
             <div class="content">{{post.content}}</div>
             <div class="author">{{post.author}}</div>
-            <div class="date">{{post.createdAt | date:'YYYY-MM-dd' }}</div>
+            <div class="date">{{post.createdAt | date:'YYYY-MM-dd HH:mm' }}</div>
             <br>
             <div *ngIf="post.comments?.length; else noComments">
                 {{post.comments?.length}} hozzászólás
