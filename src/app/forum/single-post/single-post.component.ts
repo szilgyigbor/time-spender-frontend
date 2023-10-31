@@ -65,4 +65,20 @@ export class SinglePostComponent {
     
   }
 
+  deletePost(id: number) {
+    this.dialogService.openDialog('Biztos, hogy törölni akarod ezt a posztot?').then(result => {
+      if (result) {
+        this.forumService.deletePost(id).subscribe(
+          (data) => {
+            console.log("Post deleted");
+            this.router.navigate(['/forum']);
+          }
+        );
+      } 
+      else {
+        return;
+      }
+    });
+  }
+
 }
