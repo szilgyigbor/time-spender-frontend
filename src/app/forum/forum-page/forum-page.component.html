@@ -10,10 +10,10 @@
             <div class="date">{{post.createdAt | date:'YYYY-MM-dd HH:mm' }}</div>
             <br>
             <div *ngIf="post.comments?.length; else noComments">
-                {{post.comments?.length}} hozzászólás
+              <h3>{{post.comments?.length}} hozzászólás</h3>
               </div>
               <ng-template #noComments>
-                Nincsenek hozzászólások
+                <h3>Nincsenek hozzászólások</h3>
               </ng-template>
         </div>
     </div>
