@@ -81,4 +81,9 @@ export class SinglePostComponent {
     });
   }
 
+  checkUser() {
+    if (localStorage.getItem('currentUser')) {
+      this.username = JSON.parse(localStorage.getItem('currentUser')!).username;
+    }
+  }
 }
