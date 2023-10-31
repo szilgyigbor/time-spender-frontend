@@ -1,3 +1,35 @@
 <div class="single-post-container">
-    <p>single-post works!</p>
+    <div class="middle-container">
+        <div class="post">
+            <div class="title">{{currentPost.title}}</div>
+            <div class="content">{{currentPost.content}}</div>
+            <div class="author">{{currentPost.author}}</div>
+            <div class="date">{{currentPost.createdAt | date:'YYYY-MM-dd' }}</div>
+            <br>
+            <div class="middle-container">
+                <div *ngIf="currentPost.comments?.length; else noComments">
+                    <h1>Hozzászólások:</h1>
+                    <div class="comment-card" *ngFor="let comment of currentPost.comments">
+                        <div class="content"> {{comment.content}} </div>
+                        <div class="author"> {{comment.author}} </div>
+                        <div class="date"> {{comment.createdAt | date:'YYYY-MM-dd HH:mm' }} </div>
+                    </div>
+                </div>
+            </div>
+            <ng-template #noComments>
+                <h2>Nincsenek hozzászólások</h2>
+            </ng-template>
+        </div>
+    </div>
+    <div>
+        <br>
+        <h2>Új hozzászólás</h2>
+        <textarea Class="textarea-field" [(ngModel)]="newComment.content" type="text" rows="5">
+        </textarea>
+    </div>
+    <div class="middle-container">
+        <button class="button" (click)="addComment()">Hozzászólok</button>
+    </div>
+    <br>
+    <div></div>
 </div>
