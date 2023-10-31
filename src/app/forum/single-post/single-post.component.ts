@@ -21,7 +21,9 @@ export class SinglePostComponent {
 
   ngOnInit() {
     const id = this.route.snapshot.params['id'];
-    this.username = JSON.parse(localStorage.getItem('currentUser')!).username;
+
+    this.checkUser();
+
     console.log(id);
     this.getPostById(id);
   }
