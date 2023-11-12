@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, HostListener } from '@angular/core';
 import { VisitorService } from '../services/visitor.service';
 import { VisitData } from '../interfaces/visit-data';
 
@@ -7,7 +7,7 @@ import { VisitData } from '../interfaces/visit-data';
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css'],
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements AfterViewInit{
 
   visitData: VisitData = {
     id: 0,
@@ -15,10 +15,40 @@ export class LandingPageComponent {
     lastVisit: new Date()
   };
 
+  @ViewChild('lastCard') private lastCard!: ElementRef;
+
+  @HostListener('document:scroll', ['$event'])
+  onScroll() {
+/*
+    if (this.lastCard.nativeElement.getBoundingClientRect().top < window.innerHeight - 200) {
+      this.lastCard.nativeElement.getBoundingClientRect().classList.remove('hidden');
+      this.lastCard.nativeElement.getBoundingClientRect().classList.add('visible');
+    } else {
+      this.lastCard.nativeElement.getBoundingClientRect().classList.remove('visible');
+      this.lastCard.nativeElement.getBoundingClientRect().classList.add('hidden');
+    }*/
+
+    
+    const divs = Array.from(document.querySelectorAll('div'));
+    for (const div of divs) {
+      if (div.getBoundingClientRect().top < window.innerHeight - 250) {
+        div.classList.remove('hidden');
+        div.classList.add('visible');
+      } else {
+        div.classList.remove('visible');
+        div.classList.add('hidden');
+      }
+    }
+
+  }
+
   constructor(private visitorService: VisitorService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.checkVisitor();
+  }
+
+  ngAfterViewInit() {
   }
 
   private checkVisitor(): void {
