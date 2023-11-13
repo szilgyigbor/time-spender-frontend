@@ -45,6 +45,15 @@
     }
 }
 
+.card-picture {
+    flex: 1;
+    margin: 40px;
+    border-radius: 5px;
+    padding: 20px;
+    height: auto;
+    max-width: 300px;
+}
+
 .card {
     flex: 1;
     margin: 40px;

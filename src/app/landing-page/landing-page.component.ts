@@ -19,17 +19,7 @@ export class LandingPageComponent implements AfterViewInit{
 
   @HostListener('document:scroll', ['$event'])
   onScroll() {
-/*
-    if (this.lastCard.nativeElement.getBoundingClientRect().top < window.innerHeight - 200) {
-      this.lastCard.nativeElement.getBoundingClientRect().classList.remove('hidden');
-      this.lastCard.nativeElement.getBoundingClientRect().classList.add('visible');
-    } else {
-      this.lastCard.nativeElement.getBoundingClientRect().classList.remove('visible');
-      this.lastCard.nativeElement.getBoundingClientRect().classList.add('hidden');
-    }*/
-
-    
-    const divs = Array.from(document.querySelectorAll('div'));
+    const divs = Array.from(document.querySelectorAll('.card'));
     for (const div of divs) {
       if (div.getBoundingClientRect().top < window.innerHeight - 250) {
         div.classList.remove('hidden');
@@ -39,7 +29,6 @@ export class LandingPageComponent implements AfterViewInit{
         div.classList.add('hidden');
       }
     }
-
   }
 
   constructor(private visitorService: VisitorService) { }
