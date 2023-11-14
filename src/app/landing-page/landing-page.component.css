@@ -54,6 +54,12 @@
     max-width: 300px;
 }
 
+@media screen and (max-width: 768px) {
+    .card-picture {
+        padding: 0px 0px 0px 10px;
+    }
+}
+
 .card {
     flex: 1;
     margin: 40px;
