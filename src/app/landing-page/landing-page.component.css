@@ -132,6 +132,7 @@
 }
 
 .button {
+    
     font-family: "Source Sans Pro", Sans-serif;
     font-size: 1em;
     font-weight: 600;
@@ -142,8 +143,38 @@
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
     padding: 10px 10px 10px 10px;
     margin-left: 8px;
-    cursor: pointer;  
-  }
+    cursor: pointer;
+}
+
+.button.forum {
+    position: relative;
+}
+
+button.forum::before {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 3px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 2s infinite;  
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+    }
+}
   
 .button:hover {
     background: #ffb040;
