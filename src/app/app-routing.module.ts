@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ReadNewsComponent } from './read-news/read-news.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { MyHomeComponent } from './my-home/my-home.component';
 import { CheckWeatherComponent } from './check-weather/check-weather.component';
 import { ChatWithGptComponent } from './chat-with-gpt/chat-with-gpt.component';
 import { PlayFowComponent } from './play-fow/play-fow.component';
@@ -18,7 +18,7 @@ import { AddPostComponent } from './forum/add-post/add-post.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
-  { path: 'old-home', component: HomePageComponent },
+  { path: 'my-home', component: MyHomeComponent },
   { path: 'read-news', component: ReadNewsComponent, canActivate: [AdminGuard] },
   { path: 'check-weather', component: CheckWeatherComponent, canActivate: [AdminGuard] },
   { path: 'chat-with-gpt', component: ChatWithGptComponent, canActivate: [AdminGuard] },
