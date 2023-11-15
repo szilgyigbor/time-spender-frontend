@@ -46,12 +46,19 @@
 }
 
 .card-picture {
-    flex: 1;
     margin: 40px;
-    border-radius: 5px;
     padding: 20px;
-    height: auto;
-    max-width: 300px;
+}
+
+.mask-image {
+    mask-image: url("/assets/mask.png");
+    -webkit-mask-image: url("/assets/mask.png");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    mask-position: center;
+    -webkit-mask-position: center;
 }
 
 @media screen and (max-width: 768px) {
