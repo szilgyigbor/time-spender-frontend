@@ -47,7 +47,7 @@ h1 {
 }
 
 .button:hover {
-    background: #ffb040;
+    background-color: #ffb040;
     color: white;
 }
 
@@ -59,4 +59,9 @@ h1 {
 .button.cancel {
     background-color: #ff4f43;
     margin-left: 15px;
+}
+
+.button.cancel:hover, .button.ok:hover {
+    background-color: #ffb040;
+    color: white;
 }
