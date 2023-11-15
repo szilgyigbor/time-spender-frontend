@@ -9,7 +9,7 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReadNewsComponent } from './read-news/read-news.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { MyHomeComponent } from './my-home/my-home.component';
 import { HeaderComponent } from './header/header.component';
 import { CheckWeatherComponent } from './check-weather/check-weather.component';
 import { ChatWithGptComponent } from './chat-with-gpt/chat-with-gpt.component';
@@ -18,13 +18,10 @@ import { WeatherDataComponent } from './check-weather/weather-data/weather-data.
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { OnlineShooterComponent } from './online-shooter/online-shooter.component';
-import { HomePageOpinionsComponent } from './home-page/home-page-opinions/home-page-opinions.component';
 import { NumberSortingComponent } from './number-sorting/number-sorting.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { NewsSlideComponent } from './home-page/news-slide/news-slide.component';
 import { UniDialogComponent } from './uni-dialog/uni-dialog.component';
-import { ShowUsernamesComponent } from './home-page/show-usernames/show-usernames.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ForumPageComponent } from './forum/forum-page/forum-page.component';
 import { SinglePostComponent } from './forum/single-post/single-post.component';
@@ -34,7 +31,7 @@ import { AddPostComponent } from './forum/add-post/add-post.component';
   declarations: [
     AppComponent,
     ReadNewsComponent,
-    HomePageComponent,
+    MyHomeComponent,
     HeaderComponent,
     CheckWeatherComponent,
     ChatWithGptComponent,
@@ -43,11 +40,8 @@ import { AddPostComponent } from './forum/add-post/add-post.component';
     LoginPageComponent,
     SignUpPageComponent,
     OnlineShooterComponent,
-    HomePageOpinionsComponent,
     NumberSortingComponent,
-    NewsSlideComponent,
     UniDialogComponent,
-    ShowUsernamesComponent,
     LandingPageComponent,
     ForumPageComponent,
     SinglePostComponent,
