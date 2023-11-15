@@ -1,9 +1,22 @@
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
 body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
     /*background: linear-gradient(85deg,#434343,#262626);*/
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     position: relative;
-    background-image: url('/assets/good_wall.jpg');
+    /*background-image: url('/assets/good_wall.jpg');*/
     background-repeat: no-repeat;
     background-position: 0px 70px;
     background-size: cover;
