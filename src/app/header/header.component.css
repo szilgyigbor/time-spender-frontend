@@ -75,19 +75,15 @@ nav {
   }
 }
 
-.button.home {
+.button.blue {
   background-color: #4cb3f5;
 }
 
-.button.login {
-  background-color: #4cb3f5;
-}
-
-.button.logout {
+.button.red {
   background-color: #ff4f43;
 }
 
-.button.forum {
+.button.green {
   background-color: #95b920;
 }
 
