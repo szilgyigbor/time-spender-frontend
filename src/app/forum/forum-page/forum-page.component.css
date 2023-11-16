@@ -11,12 +11,16 @@
 }
 
 p {
-    font-weight: 300;
-    font-size: 18px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: #6b2d97;
+    margin-top: 2%;
+    font-size: 160%;
+}
+
+@media screen and (max-width: 768px) {
+    p {
+        margin-top: 5%;
+        font-size: 140%;
+        
+    }
 }
 
 .card-container {
@@ -37,7 +41,7 @@ p {
 }
 
 .card {
-    background: #4e4d492d;
+    background: #4e4d491c;
     flex: 1;
     margin: 20px;
     border-radius: 5px;
@@ -78,12 +82,16 @@ p {
 
 .card .content {
     position: relative;
-    font-weight: 300;
-    font-size: 100%;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    line-height: 130%;
+    font-family: "__Montserrat_cce811","__Montserrat_Fallback_cce811",
+    BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue";
+    line-height: 1.2;
+    font-weight: 400;
+    color: #1E2029;
+    font-size: 120%;
+    /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 130%;*/
     margin-bottom: 30px;
-    color: #6b2d97;
+    /*color: #6b2d97;*/
     border-left: 4px solid #4f2170;
     padding-left: 5px;
 }
