@@ -15,25 +15,26 @@
 .content-right {
     width: 40%;
     float: right;
-    padding-top: 10%;
+    padding-top: 5%;
+    justify-content: center;
 }
 
 h1 {
-    font-size: 3.75rem;
+    font-size: 3.75vw;
     font-family: "__Montserrat_cce811","__Montserrat_Fallback_cce811",
     BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue";
     line-height: 1.2;
     font-weight: 700;
-    color: rgb(27 27 27);
+    color: #1E2029;
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     font-family: "__Montserrat_cce811","__Montserrat_Fallback_cce811",
     BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue";
     line-height: 1.2;
     font-weight: 400;
-    color: rgb(27 27 27);
+    color: #1E2029;
 }
 
 .card-picture {
@@ -70,11 +71,11 @@ p {
     }
 
     h1 {
-        font-size: 2.75rem;
+        font-size: 10.0vw;
     }
     
     p {
-        font-size: 1.3rem;
+        font-size: 5.5vw;
     }
 }
 
