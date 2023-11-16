@@ -3,7 +3,7 @@
   <nav>
     <button class="button blue" routerLink="/">DIGITAL PLAYGROUND</button>
     <button class="button green" routerLink="/forum">fórum</button>
-    <button class="button green" routerLink="/my-home">ÉN</button>
+    <button class="button green" routerLink="/about-me">rólam</button>
     <div class="logout" *ngIf="(isLoggedIn$ | async); else notLoggedIn">
         <button class="button red" (click)="logout()">{{ currentUser?.username}}</button>
     </div>
