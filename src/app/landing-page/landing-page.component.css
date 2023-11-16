@@ -46,7 +46,7 @@
 }
 
 .card-picture {
-    margin: 40px;
+    margin: 0px 40px 40px 40px;
     padding: 20px;
 }
 
@@ -63,7 +63,8 @@
 
 @media screen and (max-width: 768px) {
     .card-picture {
-        padding: 0px 0px 0px 10px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
     }
 }
 
@@ -73,7 +74,7 @@
     border-radius: 5px;
     padding: 20px;
     height: auto;
-    max-width: 300px;
+    max-width: 400px;
 }
 
 @media screen and (max-width: 768px) {
@@ -88,7 +89,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 46px;
     font-weight: 700;
-    color: #4f2170;
+    color: #1E2029;
     line-height: 105%;
     margin-bottom: 25px;
 }
@@ -103,13 +104,13 @@
 .card p {
     position: relative;
     font-weight: 300;
-    font-size: 100%;
+    font-size: 115%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 130%;
     padding-left: 20px;
     margin-bottom: 30px;
-    color: #6b2d97;
-    border-left: 4px solid #4f2170;
+    color: #1E2029;
+    border-left: 4px solid #9A6AFF;
 }
 
 @media screen and (max-width: 768px) {
@@ -119,15 +120,15 @@
 }
 
 .playground-img{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
     .playground-img {
-        width: 300px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
     }
 }
 
@@ -181,6 +182,12 @@ button.forum::before {
     color: white;
 }
 
+p {
+    position: relative;
+    font-weight: 300;
+    font-size: 110%;
+}
+
 .feature-card {
     flex: 1;
     margin: 20px;
@@ -220,8 +227,8 @@ button.forum::before {
 
 .ending-card {
     position: relative;
-    font-weight: 300;
-    font-size: 110%;
+    font-weight: 200;
+    font-size: 150%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 130%;
     padding-left: 20px;
