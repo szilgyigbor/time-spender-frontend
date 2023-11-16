@@ -4,7 +4,7 @@
             <div class="title">{{currentPost.title}}</div>
             <div class="content">{{currentPost.content}}</div>
             <div class="author">{{currentPost.author}}</div>
-            <div class="date">{{currentPost.createdAt | date:'YYYY-MM-dd HH:mm' }}</div>
+            <div class="author">{{currentPost.createdAt | date:'YYYY-MM-dd HH:mm' }}</div>
             <button class="button delete" *ngIf="username == currentPost.author" (click)="deletePost(currentPost.id)">Törlés</button>
             <div class="middle-container">
                 <div *ngIf="currentPost.comments?.length; else noComments">
@@ -12,7 +12,7 @@
                     <div class="comment-card" *ngFor="let comment of currentPost.comments">
                         <div class="content"> {{comment.content}} </div>
                         <div class="author"> {{comment.author}} </div>
-                        <div class="date"> {{comment.createdAt | date:'YYYY-MM-dd HH:mm' }} </div>
+                        <div class="author"> {{comment.createdAt | date:'YYYY-MM-dd HH:mm' }} </div>
                         <button class="button delete" *ngIf="username == comment.author" (click)="deleteComment(comment.id)">Törlés</button>
                     </div>
                 </div>
