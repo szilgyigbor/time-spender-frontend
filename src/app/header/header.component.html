@@ -1,15 +1,16 @@
 <div class="header-container">
 <header>
   <nav>
-    <button class="button home" routerLink="/">DIGITAL PLAYGROUND</button>
-    <button class="button forum" routerLink="/forum">fórum</button>
+    <button class="button blue" routerLink="/">DIGITAL PLAYGROUND</button>
+    <button class="button green" routerLink="/forum">fórum</button>
+    <button class="button green" routerLink="/my-home">ÉN</button>
     <div class="logout" *ngIf="(isLoggedIn$ | async); else notLoggedIn">
-        <button class="button logout" (click)="logout()">{{ currentUser?.username}}</button>
+        <button class="button red" (click)="logout()">{{ currentUser?.username}}</button>
     </div>
     <ng-template #notLoggedIn>
       <div class="right-buttons">
-        <button class="button login" routerLink="/login">Login</button>
-        <button class="button login" routerLink="/sign-up">Sign Up</button>
+        <button class="button blue" routerLink="/login">Login</button>
+        <button class="button blue" routerLink="/sign-up">Sign Up</button>
       </div>
     </ng-template>
   </nav>
