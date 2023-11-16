@@ -9,7 +9,7 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReadNewsComponent } from './read-news/read-news.component';
-import { MyHomeComponent } from './my-home/my-home.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 import { HeaderComponent } from './header/header.component';
 import { CheckWeatherComponent } from './check-weather/check-weather.component';
 import { ChatWithGptComponent } from './chat-with-gpt/chat-with-gpt.component';
@@ -31,7 +31,7 @@ import { AddPostComponent } from './forum/add-post/add-post.component';
   declarations: [
     AppComponent,
     ReadNewsComponent,
-    MyHomeComponent,
+    AboutMeComponent,
     HeaderComponent,
     CheckWeatherComponent,
     ChatWithGptComponent,
