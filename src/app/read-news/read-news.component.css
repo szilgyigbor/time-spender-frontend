@@ -2,9 +2,8 @@
     padding-top: 50px;
   }
 
-
 h1 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 500;
     color: #6b2d97;
     padding: 20px;
@@ -23,11 +22,11 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6b2d97;
+    color: #1E2029;
 }
 
 .card {
-    background: #c7597421;
+    background: rgba(140, 168, 207, 0.069);
     border: 2px solid #36515b;
     font-size: 16px;
     border-radius: 5px;
@@ -42,7 +41,7 @@ h1 {
 }
 
     .card h2 {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 1.4;
         margin: 10px 0;
     }
