@@ -1,9 +1,9 @@
 <div class="header-container">
 <header>
   <nav>
-    <button class="button blue" routerLink="/">DIGITAL PLAYGROUND</button>
-    <button class="button green" routerLink="/forum">fórum</button>
-    <button class="button green" routerLink="/about-me">rólam</button>
+    <button class="button blue" routerLink="/">Home</button>
+    <button class="button green" routerLink="/forum">Fórum</button>
+    <button class="button green" routerLink="/about-me">Rólam</button>
     <div class="logout" *ngIf="(isLoggedIn$ | async); else notLoggedIn">
         <button class="button red" (click)="logout()">{{ currentUser?.username}}</button>
     </div>
