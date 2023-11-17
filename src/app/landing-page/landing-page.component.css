@@ -81,7 +81,7 @@
     .card {
         max-width: 300px;
         margin: 0px 0px 0px 20px; 
-        padding: 10px 0px 0px 30px;
+        padding: 20px 0px 0px 0px;
     }
 }
 
@@ -115,6 +115,7 @@
 
 @media screen and (max-width: 768px) {
     .card p {
+        font-size: 110%;
         padding-left: 5px;
     }
 }
@@ -127,8 +128,8 @@
 
 @media screen and (max-width: 768px) {
     .playground-img {
-        width: 400px;
-        height: 400px;
+        width: 340px;
+        height: 340px;
     }
 }
 
@@ -200,7 +201,7 @@ p {
 @media screen and (max-width: 768px) {
     .feature-card {
         min-width: 300px;
-        margin-left: 45px; 
+        margin-left: 10px; 
         padding: 10px;
     }
 }
