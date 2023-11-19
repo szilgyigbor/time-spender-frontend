@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { ReadNewsComponent } from './read-news/read-news.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -15,6 +14,7 @@ import { AdminGuard } from './guards/auth-guard';
 import { ForumPageComponent } from './forum/forum-page/forum-page.component';
 import { SinglePostComponent } from './forum/single-post/single-post.component';
 import { AddPostComponent } from './forum/add-post/add-post.component';
+import { ParallaxComponent } from './parallax/parallax.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -29,7 +29,8 @@ const routes: Routes = [
   { path: 'number-sorting', component: NumberSortingComponent, canActivate: [AdminGuard] },
   { path: 'forum', component: ForumPageComponent },
   { path: 'forum/:id', component: SinglePostComponent },
-  { path: 'add-post', component: AddPostComponent, canActivate: [AdminGuard] }
+  { path: 'add-post', component: AddPostComponent, canActivate: [AdminGuard] },
+  { path: 'parallax', component: ParallaxComponent }
 ];
 
 @NgModule({
