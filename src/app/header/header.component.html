@@ -4,6 +4,7 @@
     <button class="button blue" routerLink="/">Home</button>
     <button class="button green" routerLink="/forum">Fórum</button>
     <button class="button green" routerLink="/about-me">Rólam</button>
+    <button class="button green" routerLink="/parallax">Parallax</button>
     <div class="logout" *ngIf="(isLoggedIn$ | async); else notLoggedIn">
         <button class="button red" (click)="logout()">{{ currentUser?.username}}</button>
     </div>
