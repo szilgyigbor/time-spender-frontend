@@ -26,6 +26,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ForumPageComponent } from './forum/forum-page/forum-page.component';
 import { SinglePostComponent } from './forum/single-post/single-post.component';
 import { AddPostComponent } from './forum/add-post/add-post.component';
+import { ParallaxComponent } from './parallax/parallax.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AddPostComponent } from './forum/add-post/add-post.component';
     LandingPageComponent,
     ForumPageComponent,
     SinglePostComponent,
-    AddPostComponent
+    AddPostComponent,
+    ParallaxComponent
   ],
   imports: [
     BrowserModule,
