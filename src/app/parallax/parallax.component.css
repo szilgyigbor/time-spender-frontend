@@ -1,0 +1,110 @@
+.parallax-container {
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/assets/parallax/background.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width: 768px) { 
+    .parallax { 
+        background-attachment: scroll; 
+    } 
+}
+
+#text {
+    position: absolute;
+    font-size: 9em;
+    color: #1b283a;
+    text-shadow: 2px 4px 5px #f9f9f9;
+}
+
+@media only screen and (max-width: 768px) { 
+    #text { 
+        font-size: 5em;
+        line-height: normal;
+    } 
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 768px) { 
+    .parallax img#grass { display: none; } 
+}
+
+.parallax img#gate-left {
+    position: fixed;
+    transform: translateX(-282px);
+}
+
+.parallax img#gate-right {
+    position: fixed;
+    transform: translateX(305px);
+}
+
+.sec {
+    position: relative;
+    background: #020912;
+    padding: 10px 10px;
+}
+
+.sec h2 {
+    color: #fff;
+    font-size: 5em;
+    margin: 50px;
+}
+
+@media only screen and (max-width: 768px) { 
+    .sec h2 {
+        font-size: 3em;
+        margin: 50px;
+    }
+}
+
+.sec h3 {
+    color: #fff;
+    font-size: 3em;
+    margin: 30px;
+    line-height: normal;
+}
+
+@media only screen and (max-width: 768px) { 
+    .sec h3 {
+        font-size: 1.5em;
+        margin: 20px;
+    }
+}
+
+.sec p {
+    color: #fff;
+    font-size: 2em;
+    line-height: normal;
+    font-weight: 300;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 768px) { 
+    .sec p {
+        font-size: 1em;
+    }
+}
+
