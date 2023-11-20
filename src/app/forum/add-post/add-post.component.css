@@ -1,7 +1,26 @@
 .add-post-container{
-    margin-top: 40px;
     padding-top: 50px;
+    margin-top: 60px;
+    background: url("/assets/forum_wall.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
+
+
+.forum-page-container {
+    margin-top: 60px;
+    background: url("/assets/forum_wall.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px;
+}
+
 
 h2 {
     font-family: 'Montserrat', sans-serif;
