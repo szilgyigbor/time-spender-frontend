@@ -291,3 +291,38 @@ p {
     opacity: 1;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
+
+.link {
+    margin-top: 3rem;
+    width: 14rem;
+    height: 14rem;
+    display: inline-block;
+    font: 200 1.3rem/1.1 "Josefin Sans";
+    text-transform: uppercase;
+    letter-spacing: 0.1175em;
+    word-spacing: 0.3em;
+    text-decoration: none;
+}
+.link__svg {
+    width: 100%;
+    height: auto;
+    transform-box: fill-box;
+    fill: #483D8B;
+}
+
+.link__text {
+    animation: rotateReverse normal infinite 20s linear;
+    transform-origin: 50% 50%;
+}
+
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+   }
+}
+@keyframes rotateReverse {
+    to {
+        transform: rotate(-360deg);
+   }
+}
