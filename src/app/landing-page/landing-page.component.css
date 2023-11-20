@@ -79,7 +79,7 @@
 
 @media screen and (max-width: 768px) {
     .card-picture {
-        margin: 0px 0px 0px 10px;
+        margin: 0px 0px 0px 5px;
         padding: 0px 0px 0px 0px;
     }
 }
@@ -96,7 +96,7 @@
 @media screen and (max-width: 768px) {
     .card {
         max-width: 300px;
-        margin: 0px 0px 0px 30px;
+        margin: 0px 0px 0px 20px;
         padding: 20px 0px 0px 0px;
     }
 }
@@ -216,7 +216,7 @@ p {
 @media screen and (max-width: 768px) {
     .feature-card {
         min-width: 300px;
-        margin-left: 20px; 
+        margin-left: 10px; 
         padding: 10px;
     }
 }
