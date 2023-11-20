@@ -1,19 +1,25 @@
-<div class="header-container">
 <header>
   <nav>
-    <button class="button blue" routerLink="/">Home</button>
-    <button class="button green" routerLink="/forum">Fórum</button>
-    <button class="button green" routerLink="/about-me">Rólam</button>
-    <button class="button green" routerLink="/parallax">Parallax</button>
-    <div class="logout" *ngIf="(isLoggedIn$ | async); else notLoggedIn">
-        <button class="button red" (click)="logout()">{{ currentUser?.username}}</button>
-    </div>
-    <ng-template #notLoggedIn>
-      <div class="right-buttons">
+    <label for="" class="icons">
+      <i class='bx bx-home-alt-2' routerLink="/"></i>
+    </label>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons display">
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    <div class="buttons">
+      <button class="button green" routerLink="/forum">Fórum</button>
+      <button class="button green" routerLink="/about-me">Rólam</button>
+      <button class="button green" routerLink="/parallax">Parallax</button>
+      
+      <div *ngIf="(isLoggedIn$ | async); else notLoggedIn">
+          <button class="button red" (click)="logout()">{{ currentUser?.username}}</button>
+      </div>
+      <ng-template #notLoggedIn>
         <button class="button blue" routerLink="/login">Login</button>
         <button class="button blue" routerLink="/sign-up">Sign Up</button>
-      </div>
-    </ng-template>
+      </ng-template>
+    </div>
   </nav>
 </header>
-</div>
