@@ -44,7 +44,7 @@ nav {
   }
 
   #check:checked ~ .buttons {
-    height: 17rem;
+    height: 16rem;
   }
 }
 
@@ -59,6 +59,7 @@ nav {
   padding: 10px;
   margin-left: 1.5rem;
   cursor: pointer;  
+  
 }
 
 @media (max-width: 768px) {
@@ -69,6 +70,15 @@ nav {
     cursor: pointer;  
     text-align: center;
     margin-right: 2rem;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: .3s ease;
+  }
+
+  #check:checked ~ .buttons .button {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(.15s * var(--i));
   }
 
 }
