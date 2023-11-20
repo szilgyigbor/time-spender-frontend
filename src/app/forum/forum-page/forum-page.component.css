@@ -1,7 +1,12 @@
 .forum-page-container {
-    margin-top: 70px;
-    background: #eaeacf0d;
-    color: #4f2170;
+    margin-top: 60px;
+    background: url("/assets/forum_wall.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -41,7 +46,7 @@ p {
 }
 
 .card {
-    background: #4e4d491c;
+    background: #e0e0df73;
     flex: 1;
     margin: 20px;
     border-radius: 5px;
