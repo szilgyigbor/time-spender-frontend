@@ -9,16 +9,16 @@
       <i class='bx bx-x' id="close-icon"></i>
     </label>
     <div class="buttons">
-      <button class="button green" routerLink="/forum">Fórum</button>
-      <button class="button green" routerLink="/about-me">Rólam</button>
-      <button class="button green" routerLink="/parallax">Parallax</button>
+      <button class="button green" style="--i:0;" routerLink="/forum">Fórum</button>
+      <button class="button green" style="--i:1;" routerLink="/about-me">Rólam</button>
+      <button class="button green" style="--i:2;" routerLink="/parallax">Parallax</button>
       
       <div *ngIf="(isLoggedIn$ | async); else notLoggedIn">
-          <button class="button red" (click)="logout()">{{ currentUser?.username}}</button>
+          <button class="button red" style="--i:3;" (click)="logout()">{{ currentUser?.username}}</button>
       </div>
       <ng-template #notLoggedIn>
-        <button class="button blue" routerLink="/login">Login</button>
-        <button class="button blue" routerLink="/sign-up">Sign Up</button>
+        <button class="button blue" style="--i:3;" routerLink="/login">Login</button>
+        <button class="button blue" style="--i:4;" routerLink="/sign-up">Sign Up</button>
       </ng-template>
     </div>
   </nav>
