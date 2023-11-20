@@ -1,8 +1,24 @@
+.landing-container {
+    margin-top: 60px;
+    background: url("/assets/good_wall.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 768px) {
+    .landing-container {
+        margin-top: 20px;
+        background-position: 0px 0px;
+    }
+}
+
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
     padding-top: 40px;
-    /*background: #52524f09;*/
 }
 
 @media screen and (max-width: 768px) {
@@ -63,7 +79,7 @@
 
 @media screen and (max-width: 768px) {
     .card-picture {
-        margin: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 10px;
         padding: 0px 0px 0px 0px;
     }
 }
@@ -80,7 +96,7 @@
 @media screen and (max-width: 768px) {
     .card {
         max-width: 300px;
-        margin: 0px 0px 0px 20px; 
+        margin: 0px 0px 0px 30px;
         padding: 20px 0px 0px 0px;
     }
 }
@@ -134,7 +150,6 @@
 }
 
 .button {
-    
     font-family: "Source Sans Pro", Sans-serif;
     font-size: 1em;
     font-weight: 600;
@@ -156,9 +171,9 @@ button.forum::before {
     content: '';
     width: 30px; height: 30px;
     border-radius: 100%;
-    border: 3px solid #00FFCB;
+    border: 3px solid #00d5ff;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -201,7 +216,7 @@ p {
 @media screen and (max-width: 768px) {
     .feature-card {
         min-width: 300px;
-        margin-left: 10px; 
+        margin-left: 20px; 
         padding: 10px;
     }
 }
