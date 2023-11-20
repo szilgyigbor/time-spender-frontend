@@ -9,9 +9,9 @@
       <i class='bx bx-x' id="close-icon"></i>
     </label>
     <div class="buttons">
-      <button class="button green" style="--i:0;" routerLink="/forum">Fórum</button>
-      <button class="button green" style="--i:1;" routerLink="/about-me">Rólam</button>
-      <button class="button green" style="--i:2;" routerLink="/parallax">Parallax</button>
+      <button class="button grey" style="--i:0;" routerLink="/forum">Fórum</button>
+      <button class="button grey" style="--i:1;" routerLink="/about-me">Rólam</button>
+      <button class="button grey" style="--i:2;" routerLink="/parallax">Parallax</button>
       
       <div *ngIf="(isLoggedIn$ | async); else notLoggedIn">
           <button class="button red" style="--i:3;" (click)="logout()">{{ currentUser?.username}}</button>
