@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent {
+
+  descriptions: string[] = ["szoftverfejlesztő", "álmodozó", "dota2 legenda", "szerető férj"];
+  currentDescriptionIndex: number = 0;
+  currentDescription: string = this.descriptions[0];
   
   constructor() {
   }
