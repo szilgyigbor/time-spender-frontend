@@ -39,11 +39,20 @@
 }
 
 h1 {
-    font-size: 3.75vw;
+    font-size: 3.5vw;
     font-family: "__Montserrat_cce811","__Montserrat_Fallback_cce811",
     BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue";
     line-height: 1.2;
     font-weight: 700;
+    color: #EDFFCC;
+}
+
+h2 {
+    font-size: 2.2vw;
+    font-family: "__Montserrat_cce811","__Montserrat_Fallback_cce811",
+    BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue";
+    line-height: 1.2;
+    font-weight: 400;
     color: #d6d6d6;
 }
 
@@ -62,7 +71,19 @@ p {
     height: auto;
     margin: 0px;
     padding: 0px;
+    position: relative;
+    animation: up-down 6s infinite;
 }
+
+@keyframes up-down {
+    0%, 100% {
+      top: 0;
+    }
+  
+    50% {
+      top: 20px;
+    }
+  }
 
 .text {
     display: inline-block;
@@ -92,6 +113,10 @@ p {
     h1 {
         font-size: 11.0vw;
     }
+
+    h2 {
+        font-size: 9.0vw;
+    }
     
     p {
         font-size: 6.0vw;
@@ -108,3 +133,16 @@ p {
     mask-position: center;
     -webkit-mask-position: center;
 }
+
+.cursor {
+    animation: cursor-blink 1s infinite;
+  }
+  
+  @keyframes cursor-blink {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
