@@ -15,6 +15,8 @@ export class AboutMeComponent {
   }
 
   ngOnInit(): void {
+    this.animateDescription();
+  }
 
   async animateDescription() {
     while (true) {
