@@ -6,7 +6,7 @@
     background-size: cover;
     background-attachment: fixed;
     display: flex;
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 20px;
     border-radius: 5px;
 }
