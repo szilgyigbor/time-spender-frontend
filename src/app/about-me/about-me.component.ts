@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
 
-  descriptions: string[] = ["szoftverfejlesztő", "álmodozó", "dota2 legenda", "szerető férj"];
+  descriptions: string[] = ["szoftverfejlesztő", "álmodozó", "dota2 legenda", "büszke férj"];
   currentDescriptionIndex: number = 0;
   currentDescription: string = this.descriptions[0];
   
@@ -35,7 +35,7 @@ export class AboutMeComponent {
       const targetDescription = this.descriptions[this.currentDescriptionIndex];
       for (let i = 0; i <= targetDescription.length; i++) {
         this.currentDescription = targetDescription.slice(0, i);
-        await this.delay(250);
+        await this.delay(200);
       }
     }
   }
