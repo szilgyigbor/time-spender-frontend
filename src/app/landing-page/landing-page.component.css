@@ -296,10 +296,10 @@ p {
     width: 14rem;
     height: 14rem;
     display: inline-block;
-    font: 200 1.3rem/1.1 "Josefin Sans";
+    font: 200 1.2em/1.1 "Josefin Sans";
     text-transform: uppercase;
     letter-spacing: 0.1175em;
-    word-spacing: 0.3em;
+    word-spacing: 0.1em;
     text-decoration: none;
 }
 .link__svg {
@@ -307,6 +307,7 @@ p {
     height: auto;
     transform-box: fill-box;
     fill: #483D8B;
+    overflow: visible;
 }
 
 .link__text {
