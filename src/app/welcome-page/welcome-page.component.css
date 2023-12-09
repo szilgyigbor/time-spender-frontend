@@ -1,0 +1,90 @@
+.main {
+    background-color: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    padding: 20px;
+    border-radius: 5px;
+    color: #454545;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        align-items: flex-start;
+    }
+}
+
+.background {
+    background: url("/assets/new_year_background.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: reveal 3.5s;
+    color: #61a54a;
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 12.5vw;
+    font-family: "__Montserrat_cce811","__Montserrat_Fallback_cce811",
+    BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue";
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24.5vw;
+        font-weight: 600;
+    }
+}
+
+h2 {
+    font-size: 4.5vw;
+    font-family: "__Montserrat_cce811","__Montserrat_Fallback_cce811",
+    BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue";
+    line-height: 1.2;
+    font-weight: 800;
+    color: #a3ab3c;
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        padding-top: 120px;
+        font-size: 16.5vw;
+        font-weight: 600;
+    }
+}
+
+.cursor {
+    animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-410px);
+}
+  
+.visible {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
