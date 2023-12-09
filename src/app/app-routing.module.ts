@@ -15,9 +15,11 @@ import { ForumPageComponent } from './forum/forum-page/forum-page.component';
 import { SinglePostComponent } from './forum/single-post/single-post.component';
 import { AddPostComponent } from './forum/add-post/add-post.component';
 import { ParallaxComponent } from './parallax/parallax.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
+  { path: '', component: WelcomePageComponent },
+  { path: 'landing-page', component: LandingPageComponent },
   { path: 'about-me', component: AboutMeComponent },
   { path: 'read-news', component: ReadNewsComponent, canActivate: [AdminGuard] },
   { path: 'check-weather', component: CheckWeatherComponent, canActivate: [AdminGuard] },
@@ -30,7 +32,7 @@ const routes: Routes = [
   { path: 'forum', component: ForumPageComponent },
   { path: 'forum/:id', component: SinglePostComponent },
   { path: 'add-post', component: AddPostComponent, canActivate: [AdminGuard] },
-  { path: 'parallax', component: ParallaxComponent }
+  { path: 'parallax', component: ParallaxComponent },
 ];
 
 @NgModule({
