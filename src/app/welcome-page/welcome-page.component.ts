@@ -23,7 +23,6 @@ export class WelcomePageComponent {
 
   async animateDescription() {
 
-    console.log(this.newYear);
     await this.delay(3000);
     this.currentYear = this.currentYear.slice(0, -1);
 
@@ -34,7 +33,6 @@ export class WelcomePageComponent {
 
     this.newYear.classList.remove('hidden');
     this.newYear.classList.add('visible');
-    this.wallpaper.classList.add('background');
 
     await this.delay(5000);
     this.router.navigate(['/landing-page']);
