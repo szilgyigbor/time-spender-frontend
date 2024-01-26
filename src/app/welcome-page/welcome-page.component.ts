@@ -35,7 +35,7 @@ export class WelcomePageComponent {
     this.newYear.classList.add('visible');
 
     await this.delay(5000);
-    this.router.navigate(['/landing-page']);
+    this.router.navigate(['/']);
 
   }
 

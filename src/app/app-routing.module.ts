@@ -18,8 +18,8 @@ import { ParallaxComponent } from './parallax/parallax.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 
 const routes: Routes = [
-  { path: '', component: WelcomePageComponent },
-  { path: 'landing-page', component: LandingPageComponent },
+  { path: '', component: LandingPageComponent },
+  { path: 'welcome', component: WelcomePageComponent },
   { path: 'about-me', component: AboutMeComponent },
   { path: 'read-news', component: ReadNewsComponent, canActivate: [AdminGuard] },
   { path: 'check-weather', component: CheckWeatherComponent, canActivate: [AdminGuard] },
